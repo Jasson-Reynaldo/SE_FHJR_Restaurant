@@ -32,10 +32,10 @@ Partial Class feedbackForm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Raleway Medium", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.Location = New System.Drawing.Point(188, 20)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(254, 29)
+        Me.Label1.Size = New System.Drawing.Size(248, 29)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Customer Feedback"
         '
@@ -71,13 +71,13 @@ Partial Class feedbackForm
         '
         'feedbackForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(51, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(730, 525)
         Me.Controls.Add(Me.btnSubmitFB)
         Me.Controls.Add(Me.Panel1)
-        Me.Font = New System.Drawing.Font("Raleway Medium", 9.5!, System.Drawing.FontStyle.Bold)
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Bold)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(4, 3, 4, 3)
         Me.Name = "feedbackForm"
