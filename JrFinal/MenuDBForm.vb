@@ -1,12 +1,12 @@
 ﻿Imports System.Data.SqlClient
-Public Class CustomerDataForm
+Public Class MenuDBForm
     Dim CusGend, sortCategory As String
     Sub totalCus()
         CMDiceJr = New SqlCommand("SELECT COUNT(CUS_ID) AS TOTAL_CUSTOMER FROM Customer", DBicecream)
         DTRiceJr = CMDiceJr.ExecuteReader
         DTRiceJr.Close()
         Dim totalcus As Integer = Convert.ToInt16(CMDiceJr.ExecuteScalar())
-        lblTotalCus.Text = totalcus.ToString
+        lblTotalMenu.Text = totalcus.ToString
     End Sub
 
     Sub ShowData()
@@ -20,46 +20,29 @@ Public Class CustomerDataForm
     End Sub
 
     Sub resetValue()
-        txtCusName.Clear()
-        dtpCus.ResetText()
-        mskPhoneCus.Clear()
-        txtCusEmail.Clear()
-        rdFemaleCus.Checked = False
-        rdMaleCus.Checked = True
-        cmbGend.ResetText()
+        txtMenuName.Clear()
+        txtMenuPrice.Clear()
         cmbSearchChoice.ResetText()
         txtFind.Clear()
     End Sub
 
     Sub resetcondition()
         btnConfirmation.Visible = False
-        txtCusName.Enabled = False
-        dtpCus.Enabled = False
-        rdFemaleCus.Enabled = False
-        rdMaleCus.Enabled = False
-        mskPhoneCus.Enabled = False
-        txtCusEmail.Enabled = False
+        txtMenuName.Enabled = False
+        txtMenuPrice.Enabled = False
         resetValue()
     End Sub
 
     Sub resetpartial()
         btnConfirmation.Visible = False
-        txtCusName.Enabled = False
-        dtpCus.Enabled = False
-        rdFemaleCus.Enabled = False
-        rdMaleCus.Enabled = False
-        mskPhoneCus.Enabled = False
-        txtCusEmail.Enabled = False
+        txtMenuName.Enabled = False
+        txtMenuPrice.Enabled = False
     End Sub
 
     Sub enablecondition()
         btnConfirmation.Visible = True
-        txtCusName.Enabled = True
-        dtpCus.Enabled = True
-        rdFemaleCus.Enabled = True
-        rdMaleCus.Enabled = True
-        mskPhoneCus.Enabled = True
-        txtCusEmail.Enabled = True
+        txtMenuName.Enabled = True
+        txtMenuPrice.Enabled = True
     End Sub
 
     Sub autoID()
@@ -77,20 +60,16 @@ Public Class CustomerDataForm
             countcode = Microsoft.VisualBasic.Right(DTRiceJr.GetString(0), 7) + 1
             propercode = "C" + Microsoft.VisualBasic.Right("0000000" & countcode, 7)
         End If
-        lblCusID.Text = propercode
-        txtCusName.Focus()
+        lblMenuID.Text = propercode
+        txtMenuName.Focus()
         DTRiceJr.Close()
     End Sub
 
     Sub Addingdata()
         CMDiceJr = New SqlCommand("insert into Customer " &
                    " values (
-                           '" & lblCusID.Text & "'," &
-                   "'" & txtCusName.Text & "'," &
-                   "'" & dtpCus.Value.ToString("yyyy/MM/dd") & "'," &
-                   "'" & CusGend & "'," &
-                   "'" & mskPhoneCus.Text & "'," &
-                   "'" & txtCusEmail.Text & "')", DBicecream)
+                           '" & lblMenuID.Text & "'," &
+                   "'" & txtMenuName.Text & "')", DBicecream)
         CMDiceJr.ExecuteNonQuery()
         MsgBox("Succesfull Adding data!")
         lblStats.Text = "New Data Added!"
@@ -100,13 +79,8 @@ Public Class CustomerDataForm
 
     Sub Updatingdata()
         CMDiceJr = New SqlCommand("UPDATE Customer set " &
-                    "CUS_ID ='" & lblCusID.Text & "'," &
-                    "CUS_NAME ='" & txtCusName.Text & "'," &
-                    "CUS_DOB ='" & dtpCus.Value.ToString("yyyy/MM/dd") & "'," &
-                    "CUS_GENDER ='" & CusGend & "'," &
-                    "CUS_PHONE ='" & mskPhoneCus.Text & "'," &
-                    "CUS_EMAIL ='" & txtCusEmail.Text & "' where " &
-                    "CUS_ID ='" & lblCusID.Text & "'", DBicecream)
+                    "CUS_ID ='" & lblMenuID.Text & "'," &
+                    "CUS_NAME ='" & txtMenuName.Text & "'", DBicecream)
         CMDiceJr.ExecuteNonQuery()
         MsgBox("Succesfull Editting data!")
         lblStats.Text = "Data Updated!"
@@ -117,13 +91,13 @@ Public Class CustomerDataForm
     Sub editcondition()
         enablecondition()
         btnConfirmation.Text = "Confirm Edit"
-        If txtCusName.Text Is "" Then
+        If txtMenuName.Text Is "" Then
             resetcondition()
         End If
     End Sub
 
     Sub editValidation()
-        CMDiceJr = New SqlCommand("SELECT * FROM Customer WHERE CUS_ID ='" & lblCusID.Text & "'", DBicecream)
+        CMDiceJr = New SqlCommand("SELECT * FROM Customer WHERE CUS_ID ='" & lblMenuID.Text & "'", DBicecream)
         DTRiceJr = CMDiceJr.ExecuteReader
         If DTRiceJr.Read Then
             editcondition()
@@ -152,16 +126,8 @@ Public Class CustomerDataForm
     Private Sub dgCustomer_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgCustomer.CellClick
         Dim cusrow = dgCustomer.CurrentRow.Index
         With dgCustomer
-            lblCusID.Text = .Item(0, cusrow).Value
-            txtCusName.Text = .Item(1, cusrow).Value
-            dtpCus.Value = .Item(2, cusrow).Value
-            If .Item(3, cusrow).Value = "Male" Then
-                rdMaleCus.Checked = True
-            Else
-                rdFemaleCus.Checked = True
-            End If
-            mskPhoneCus.Text = .Item(4, cusrow).Value
-            txtCusEmail.Text = .Item(5, cusrow).Value
+            lblMenuID.Text = .Item(0, cusrow).Value
+            txtMenuName.Text = .Item(1, cusrow).Value
         End With
     End Sub
 
@@ -190,11 +156,6 @@ Public Class CustomerDataForm
     End Sub
 
     Private Sub btnConfirmation_Click(sender As Object, e As EventArgs) Handles btnConfirmation.Click
-        If rdMaleCus.Checked = True Then
-            CusGend = "Male"
-        ElseIf rdFemaleCus.Checked = True Then
-            CusGend = "Female"
-        End If
         If btnConfirmation.Text = "Confirm Input" Then
             Addingdata()
         ElseIf btnConfirmation.Text = "Confirm Edit" Then
@@ -213,13 +174,6 @@ Public Class CustomerDataForm
 
     Private Sub txtFind_TextChanged(sender As Object, e As EventArgs) Handles txtFind.TextChanged
         AdptCustomer = New SqlDataAdapter("SELECT * FROM Customer WHERE " & cmbSearchChoice.Text & " like '%" & txtFind.Text & "%'", DBicecream)
-        TblCustomer.Clear()
-        AdptCustomer.Fill(TblCustomer)
-        dgCustomer.DataSource = TblCustomer
-    End Sub
-
-    Private Sub cmbGend_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbGend.SelectedIndexChanged
-        AdptCustomer = New SqlDataAdapter("SELECT * FROM Customer WHERE CUS_GENDER like '" & cmbGend.Text & "'", DBicecream)
         TblCustomer.Clear()
         AdptCustomer.Fill(TblCustomer)
         dgCustomer.DataSource = TblCustomer
@@ -259,7 +213,7 @@ Public Class CustomerDataForm
         SortingDataASC()
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+    Private Sub Splitter1_SplitterMoved(sender As Object, e As SplitterEventArgs)
 
     End Sub
 
