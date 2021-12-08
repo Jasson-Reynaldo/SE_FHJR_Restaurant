@@ -27,11 +27,11 @@ Partial Class MainForm
         Me.imgBtn = New System.Windows.Forms.ImageList(Me.components)
         Me.MainTips = New System.Windows.Forms.ToolTip(Me.components)
         Me.btnExit = New System.Windows.Forms.Button()
-        Me.btnDataAnalayze = New System.Windows.Forms.Button()
-        Me.btnAssets = New System.Windows.Forms.Button()
-        Me.btnTransData = New System.Windows.Forms.Button()
-        Me.btnCusData = New System.Windows.Forms.Button()
-        Me.btnOrderStatus = New System.Windows.Forms.Button()
+        Me.btnTransactionDB = New System.Windows.Forms.Button()
+        Me.btnOrderDB = New System.Windows.Forms.Button()
+        Me.btnMenuDB = New System.Windows.Forms.Button()
+        Me.btnFeedBack = New System.Windows.Forms.Button()
+        Me.btnTransaction = New System.Windows.Forms.Button()
         Me.btnOrder = New System.Windows.Forms.Button()
         Me.btnMenu = New System.Windows.Forms.Button()
         Me.pnlTop = New System.Windows.Forms.Panel()
@@ -47,6 +47,7 @@ Partial Class MainForm
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.pnlMain = New System.Windows.Forms.Panel()
+        Me.btnFeedbackDB = New System.Windows.Forms.Button()
         Me.pnlTop.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -76,79 +77,79 @@ Partial Class MainForm
         Me.MainTips.SetToolTip(Me.btnExit, "Exit Form")
         Me.btnExit.UseVisualStyleBackColor = True
         '
-        'btnDataAnalayze
+        'btnTransactionDB
         '
-        Me.btnDataAnalayze.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.btnDataAnalayze.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnDataAnalayze.FlatAppearance.BorderSize = 0
-        Me.btnDataAnalayze.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnDataAnalayze.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.btnDataAnalayze.Location = New System.Drawing.Point(0, 360)
-        Me.btnDataAnalayze.Name = "btnDataAnalayze"
-        Me.btnDataAnalayze.Size = New System.Drawing.Size(203, 60)
-        Me.btnDataAnalayze.TabIndex = 7
-        Me.btnDataAnalayze.Text = "Data Analyze"
-        Me.MainTips.SetToolTip(Me.btnDataAnalayze, "Opening Data Anlyze Form" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10))
-        Me.btnDataAnalayze.UseVisualStyleBackColor = False
+        Me.btnTransactionDB.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btnTransactionDB.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnTransactionDB.FlatAppearance.BorderSize = 0
+        Me.btnTransactionDB.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnTransactionDB.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnTransactionDB.Location = New System.Drawing.Point(0, 360)
+        Me.btnTransactionDB.Name = "btnTransactionDB"
+        Me.btnTransactionDB.Size = New System.Drawing.Size(203, 60)
+        Me.btnTransactionDB.TabIndex = 7
+        Me.btnTransactionDB.Text = "Transaction DB"
+        Me.MainTips.SetToolTip(Me.btnTransactionDB, "Opening Data Anlyze Form" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10))
+        Me.btnTransactionDB.UseVisualStyleBackColor = False
         '
-        'btnAssets
+        'btnOrderDB
         '
-        Me.btnAssets.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.btnAssets.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnAssets.FlatAppearance.BorderSize = 0
-        Me.btnAssets.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnAssets.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.btnAssets.Location = New System.Drawing.Point(0, 300)
-        Me.btnAssets.Name = "btnAssets"
-        Me.btnAssets.Size = New System.Drawing.Size(203, 60)
-        Me.btnAssets.TabIndex = 6
-        Me.btnAssets.Text = "Assets"
-        Me.MainTips.SetToolTip(Me.btnAssets, "Go to Assets")
-        Me.btnAssets.UseVisualStyleBackColor = False
+        Me.btnOrderDB.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btnOrderDB.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnOrderDB.FlatAppearance.BorderSize = 0
+        Me.btnOrderDB.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnOrderDB.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnOrderDB.Location = New System.Drawing.Point(0, 300)
+        Me.btnOrderDB.Name = "btnOrderDB"
+        Me.btnOrderDB.Size = New System.Drawing.Size(203, 60)
+        Me.btnOrderDB.TabIndex = 6
+        Me.btnOrderDB.Text = "Order DB"
+        Me.MainTips.SetToolTip(Me.btnOrderDB, "Go to Assets")
+        Me.btnOrderDB.UseVisualStyleBackColor = False
         '
-        'btnTransData
+        'btnMenuDB
         '
-        Me.btnTransData.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.btnTransData.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnTransData.FlatAppearance.BorderSize = 0
-        Me.btnTransData.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnTransData.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.btnTransData.Location = New System.Drawing.Point(0, 240)
-        Me.btnTransData.Name = "btnTransData"
-        Me.btnTransData.Size = New System.Drawing.Size(203, 60)
-        Me.btnTransData.TabIndex = 5
-        Me.btnTransData.Text = "Transaction Data"
-        Me.MainTips.SetToolTip(Me.btnTransData, "Go to Transaction Data" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10))
-        Me.btnTransData.UseVisualStyleBackColor = False
+        Me.btnMenuDB.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btnMenuDB.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnMenuDB.FlatAppearance.BorderSize = 0
+        Me.btnMenuDB.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnMenuDB.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnMenuDB.Location = New System.Drawing.Point(0, 240)
+        Me.btnMenuDB.Name = "btnMenuDB"
+        Me.btnMenuDB.Size = New System.Drawing.Size(203, 60)
+        Me.btnMenuDB.TabIndex = 5
+        Me.btnMenuDB.Text = "Menu DB"
+        Me.MainTips.SetToolTip(Me.btnMenuDB, "Go to Transaction Data" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10))
+        Me.btnMenuDB.UseVisualStyleBackColor = False
         '
-        'btnCusData
+        'btnFeedBack
         '
-        Me.btnCusData.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.btnCusData.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnCusData.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnCusData.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.btnCusData.Location = New System.Drawing.Point(0, 180)
-        Me.btnCusData.Name = "btnCusData"
-        Me.btnCusData.Size = New System.Drawing.Size(203, 60)
-        Me.btnCusData.TabIndex = 4
-        Me.btnCusData.Text = "Customer Data"
-        Me.MainTips.SetToolTip(Me.btnCusData, "Go to Customer Data" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10))
-        Me.btnCusData.UseVisualStyleBackColor = False
+        Me.btnFeedBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btnFeedBack.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnFeedBack.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnFeedBack.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnFeedBack.Location = New System.Drawing.Point(0, 180)
+        Me.btnFeedBack.Name = "btnFeedBack"
+        Me.btnFeedBack.Size = New System.Drawing.Size(203, 60)
+        Me.btnFeedBack.TabIndex = 4
+        Me.btnFeedBack.Text = "Feedback"
+        Me.MainTips.SetToolTip(Me.btnFeedBack, "Go to Customer Data" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10))
+        Me.btnFeedBack.UseVisualStyleBackColor = False
         '
-        'btnOrderStatus
+        'btnTransaction
         '
-        Me.btnOrderStatus.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.btnOrderStatus.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnOrderStatus.FlatAppearance.BorderSize = 0
-        Me.btnOrderStatus.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.btnOrderStatus.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.btnOrderStatus.Location = New System.Drawing.Point(0, 120)
-        Me.btnOrderStatus.Name = "btnOrderStatus"
-        Me.btnOrderStatus.Size = New System.Drawing.Size(203, 60)
-        Me.btnOrderStatus.TabIndex = 3
-        Me.btnOrderStatus.Text = "Order Status"
-        Me.MainTips.SetToolTip(Me.btnOrderStatus, "Go to Order Status")
-        Me.btnOrderStatus.UseVisualStyleBackColor = False
+        Me.btnTransaction.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btnTransaction.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnTransaction.FlatAppearance.BorderSize = 0
+        Me.btnTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.btnTransaction.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnTransaction.Location = New System.Drawing.Point(0, 120)
+        Me.btnTransaction.Name = "btnTransaction"
+        Me.btnTransaction.Size = New System.Drawing.Size(203, 60)
+        Me.btnTransaction.TabIndex = 3
+        Me.btnTransaction.Text = "Transaction"
+        Me.MainTips.SetToolTip(Me.btnTransaction, "Go to Order Status")
+        Me.btnTransaction.UseVisualStyleBackColor = False
         '
         'btnOrder
         '
@@ -262,11 +263,12 @@ Partial Class MainForm
         'Panel3
         '
         Me.Panel3.AutoScroll = True
-        Me.Panel3.Controls.Add(Me.btnDataAnalayze)
-        Me.Panel3.Controls.Add(Me.btnAssets)
-        Me.Panel3.Controls.Add(Me.btnTransData)
-        Me.Panel3.Controls.Add(Me.btnCusData)
-        Me.Panel3.Controls.Add(Me.btnOrderStatus)
+        Me.Panel3.Controls.Add(Me.btnFeedbackDB)
+        Me.Panel3.Controls.Add(Me.btnTransactionDB)
+        Me.Panel3.Controls.Add(Me.btnOrderDB)
+        Me.Panel3.Controls.Add(Me.btnMenuDB)
+        Me.Panel3.Controls.Add(Me.btnFeedBack)
+        Me.Panel3.Controls.Add(Me.btnTransaction)
         Me.Panel3.Controls.Add(Me.btnOrder)
         Me.Panel3.Controls.Add(Me.btnMenu)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
@@ -278,8 +280,8 @@ Partial Class MainForm
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.Label3)
-        Me.Panel2.Controls.Add(Me.PictureBox1)
         Me.Panel2.Controls.Add(Me.Label2)
+        Me.Panel2.Controls.Add(Me.PictureBox1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
@@ -291,11 +293,11 @@ Partial Class MainForm
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("A little sunshine", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label3.Location = New System.Drawing.Point(62, 119)
+        Me.Label3.Location = New System.Drawing.Point(46, 107)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(82, 15)
+        Me.Label3.Size = New System.Drawing.Size(112, 15)
         Me.Label3.TabIndex = 1
-        Me.Label3.Text = "Ice Cream Shop"
+        Me.Label3.Text = "Fast Food Restaurant"
         '
         'PictureBox1
         '
@@ -310,13 +312,13 @@ Partial Class MainForm
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Milkshake", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Milkshake", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(228, Byte), Integer), CType(CType(182, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(39, 77)
+        Me.Label2.Location = New System.Drawing.Point(3, 74)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(131, 41)
+        Me.Label2.Size = New System.Drawing.Size(208, 33)
         Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Frost JR"
+        Me.Label2.Text = "Delicioso Restaurant"
         '
         'pnlMain
         '
@@ -326,6 +328,20 @@ Partial Class MainForm
         Me.pnlMain.Name = "pnlMain"
         Me.pnlMain.Size = New System.Drawing.Size(730, 525)
         Me.pnlMain.TabIndex = 11
+        '
+        'btnFeedbackDB
+        '
+        Me.btnFeedbackDB.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btnFeedbackDB.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnFeedbackDB.FlatAppearance.BorderSize = 0
+        Me.btnFeedbackDB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnFeedbackDB.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnFeedbackDB.Location = New System.Drawing.Point(0, 420)
+        Me.btnFeedbackDB.Name = "btnFeedbackDB"
+        Me.btnFeedbackDB.Size = New System.Drawing.Size(203, 60)
+        Me.btnFeedbackDB.TabIndex = 0
+        Me.btnFeedbackDB.Text = "FeedBack  DB"
+        Me.btnFeedbackDB.UseVisualStyleBackColor = False
         '
         'MainForm
         '
@@ -359,13 +375,13 @@ Partial Class MainForm
     Friend WithEvents pnlMain As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents btnCusData As Button
-    Friend WithEvents btnOrderStatus As Button
+    Friend WithEvents btnFeedBack As Button
+    Friend WithEvents btnTransaction As Button
     Friend WithEvents btnOrder As Button
     Friend WithEvents btnMenu As Button
-    Friend WithEvents btnDataAnalayze As Button
-    Friend WithEvents btnAssets As Button
-    Friend WithEvents btnTransData As Button
+    Friend WithEvents btnTransactionDB As Button
+    Friend WithEvents btnOrderDB As Button
+    Friend WithEvents btnMenuDB As Button
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Label3 As Label
@@ -373,4 +389,5 @@ Partial Class MainForm
     Friend WithEvents lblUrName As Label
     Friend WithEvents lblStatsRole As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents btnFeedbackDB As Button
 End Class

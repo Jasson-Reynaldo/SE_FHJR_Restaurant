@@ -32,3 +32,37 @@ D:\Users\jasso\source\repos\JrFinal\obj\Debug\JrFinal.DataAnalyzingForm.resource
 D:\Users\jasso\source\repos\JrFinal\obj\Debug\JrFinal.BlankForm.resources
 D:\Users\jasso\source\repos\JrFinal\obj\Debug\JrFinal.Transactions_Data.resources
 D:\Users\jasso\source\repos\JrFinal\obj\Debug\JrFinal.HomeForm.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\bin\Debug\JrFinal.exe.config
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\bin\Debug\JrFinal.exe
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\bin\Debug\JrFinal.pdb
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\bin\Debug\JrFinal.xml
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\bin\Debug\Interop.AcroPDFLib.dll
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\bin\Debug\AxInterop.AcroPDFLib.dll
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.vbprojAssemblyReference.cache
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\Interop.AcroPDFLib.dll
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\AxInterop.AcroPDFLib.dll
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.vbproj.ResolveComReference.cache
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.BlankForm.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.CustomerDataForm.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.Assets.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.CVHolderForm.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.DummyForm.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.EmployeeData.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.FlavorData.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.HomeForm.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.IceCreamData.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.IceMenu.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.OrderStatusForm.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.DataAnalyzingForm.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.OrderForm.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.LoadingForm.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.LoginForm.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.MainForm.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.Resources.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.ToppingData.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.Transactions_Data.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.vbproj.GenerateResource.cache
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.vbproj.CoreCompileInputs.cache
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.exe
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.xml
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.pdb

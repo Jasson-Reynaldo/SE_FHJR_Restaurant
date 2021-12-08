@@ -24,21 +24,17 @@ Partial Class IceMenu
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(IceMenu))
-        Dim ListViewGroup1 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Ice Cream", System.Windows.Forms.HorizontalAlignment.Center)
-        Dim ListViewGroup2 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Toppings", System.Windows.Forms.HorizontalAlignment.Center)
-        Dim ListViewGroup3 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Ice Cream Flavor", System.Windows.Forms.HorizontalAlignment.Center)
-        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Ice Cream Cone (10K)", 1)
-        Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Ice Cream Sundae (15k)", 2)
-        Dim ListViewItem3 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Ice Cream Waffle (18K)", 3)
-        Dim ListViewItem4 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Crushed Almon (5k)", 4)
-        Dim ListViewItem5 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Crushed Oreo(3k)", 5)
-        Dim ListViewItem6 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Strawberry Syrup (5K)", 9)
-        Dim ListViewItem7 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Chocochip (3k)", 7)
-        Dim ListViewItem8 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Chocolate Syrup (5K)", 8)
-        Dim ListViewItem9 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("White Chocochip (3K)", 6)
-        Dim ListViewItem10 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Vanilla", 10)
-        Dim ListViewItem11 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Chocolate", 0)
-        Dim ListViewItem12 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Matcha", 11)
+        Dim ListViewGroup1 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Food", System.Windows.Forms.HorizontalAlignment.Center)
+        Dim ListViewGroup2 As System.Windows.Forms.ListViewGroup = New System.Windows.Forms.ListViewGroup("Drink", System.Windows.Forms.HorizontalAlignment.Center)
+        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Pizza (IDR 150K) ", 0)
+        Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Fried Chicken (IDR 15k)", 1)
+        Dim ListViewItem3 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Burger (IDR 50K)", 2)
+        Dim ListViewItem4 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Fried Rice (IDR 35K)", 3)
+        Dim ListViewItem5 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("French Fries (IDR 15K)", 4)
+        Dim ListViewItem6 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Cake (IDR 20K)", 5)
+        Dim ListViewItem7 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Soda(IDR 15K)", 6)
+        Dim ListViewItem8 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Juice (IDR 20K)", 7)
+        Dim ListViewItem9 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem("Mineral Water (ID 5K)", 8)
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.lblmenutitle = New System.Windows.Forms.Label()
@@ -75,11 +71,11 @@ Partial Class IceMenu
         Me.lblmenutitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.lblmenutitle.Font = New System.Drawing.Font("Milkshake", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblmenutitle.ForeColor = System.Drawing.Color.White
-        Me.lblmenutitle.Location = New System.Drawing.Point(69, 6)
+        Me.lblmenutitle.Location = New System.Drawing.Point(117, 6)
         Me.lblmenutitle.Name = "lblmenutitle"
-        Me.lblmenutitle.Size = New System.Drawing.Size(267, 53)
+        Me.lblmenutitle.Size = New System.Drawing.Size(171, 53)
         Me.lblmenutitle.TabIndex = 0
-        Me.lblmenutitle.Text = "Ice Cream Menu"
+        Me.lblmenutitle.Text = "Our Menu"
         '
         'Panel2
         '
@@ -94,51 +90,43 @@ Partial Class IceMenu
         '
         Me.imgMenu.ImageStream = CType(resources.GetObject("imgMenu.ImageStream"), System.Windows.Forms.ImageListStreamer)
         Me.imgMenu.TransparentColor = System.Drawing.Color.Transparent
-        Me.imgMenu.Images.SetKeyName(0, "MenuTest.png")
-        Me.imgMenu.Images.SetKeyName(1, "IceCream Cone.png")
-        Me.imgMenu.Images.SetKeyName(2, "sundae.png")
-        Me.imgMenu.Images.SetKeyName(3, "IceCream Waffle.png")
-        Me.imgMenu.Images.SetKeyName(4, "almond.png")
-        Me.imgMenu.Images.SetKeyName(5, "biscuit.png")
-        Me.imgMenu.Images.SetKeyName(6, "chocolate-chip (1).png")
-        Me.imgMenu.Images.SetKeyName(7, "chocolate-chip.png")
-        Me.imgMenu.Images.SetKeyName(8, "syrup.png")
-        Me.imgMenu.Images.SetKeyName(9, "jam-jar.png")
-        Me.imgMenu.Images.SetKeyName(10, "vanilla.png")
-        Me.imgMenu.Images.SetKeyName(11, "matcha-tea.png")
+        Me.imgMenu.Images.SetKeyName(0, "Pizza.png")
+        Me.imgMenu.Images.SetKeyName(1, "ayem.png")
+        Me.imgMenu.Images.SetKeyName(2, "burgir.png")
+        Me.imgMenu.Images.SetKeyName(3, "Nasgor.png")
+        Me.imgMenu.Images.SetKeyName(4, "Kentank.png")
+        Me.imgMenu.Images.SetKeyName(5, "kue.png")
+        Me.imgMenu.Images.SetKeyName(6, "soda.png")
+        Me.imgMenu.Images.SetKeyName(7, "Jus.png")
+        Me.imgMenu.Images.SetKeyName(8, "mineral water.png")
         '
         'lsMenu
         '
         Me.lsMenu.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.lsMenu.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lsMenu.Font = New System.Drawing.Font("Microsoft YaHei", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        ListViewGroup1.Header = "Ice Cream"
+        ListViewGroup1.Header = "Food"
         ListViewGroup1.HeaderAlignment = System.Windows.Forms.HorizontalAlignment.Center
-        ListViewGroup1.Name = "Ice Cream"
-        ListViewGroup2.Header = "Toppings"
+        ListViewGroup1.Name = "Food"
+        ListViewGroup2.Header = "Drink"
         ListViewGroup2.HeaderAlignment = System.Windows.Forms.HorizontalAlignment.Center
-        ListViewGroup2.Name = "Toppings"
-        ListViewGroup3.Header = "Ice Cream Flavor"
-        ListViewGroup3.HeaderAlignment = System.Windows.Forms.HorizontalAlignment.Center
-        ListViewGroup3.Name = "Flavor"
-        Me.lsMenu.Groups.AddRange(New System.Windows.Forms.ListViewGroup() {ListViewGroup1, ListViewGroup2, ListViewGroup3})
+        ListViewGroup2.Name = "Drink"
+        Me.lsMenu.Groups.AddRange(New System.Windows.Forms.ListViewGroup() {ListViewGroup1, ListViewGroup2})
         Me.lsMenu.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable
+        Me.lsMenu.HideSelection = False
         ListViewItem1.Group = ListViewGroup1
         ListViewItem1.StateImageIndex = 0
         ListViewItem2.Group = ListViewGroup1
         ListViewItem2.StateImageIndex = 0
         ListViewItem3.Group = ListViewGroup1
         ListViewItem3.StateImageIndex = 0
-        ListViewItem4.Group = ListViewGroup2
-        ListViewItem5.Group = ListViewGroup2
-        ListViewItem6.Group = ListViewGroup2
+        ListViewItem4.Group = ListViewGroup1
+        ListViewItem5.Group = ListViewGroup1
+        ListViewItem6.Group = ListViewGroup1
         ListViewItem7.Group = ListViewGroup2
         ListViewItem8.Group = ListViewGroup2
         ListViewItem9.Group = ListViewGroup2
-        ListViewItem10.Group = ListViewGroup3
-        ListViewItem11.Group = ListViewGroup3
-        ListViewItem12.Group = ListViewGroup3
-        Me.lsMenu.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1, ListViewItem2, ListViewItem3, ListViewItem4, ListViewItem5, ListViewItem6, ListViewItem7, ListViewItem8, ListViewItem9, ListViewItem10, ListViewItem11, ListViewItem12})
+        Me.lsMenu.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1, ListViewItem2, ListViewItem3, ListViewItem4, ListViewItem5, ListViewItem6, ListViewItem7, ListViewItem8, ListViewItem9})
         Me.lsMenu.LargeImageList = Me.imgMenu
         Me.lsMenu.Location = New System.Drawing.Point(0, 85)
         Me.lsMenu.Name = "lsMenu"

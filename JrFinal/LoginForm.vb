@@ -46,10 +46,10 @@ Public Class LoginForm
             ElseIf DTRiceJr!EMP_ROLE = "Employee" Then
                 Me.Hide()
                 LoadingForm.Show()
-                MainForm.btnDataAnalayze.Visible = False
-                MainForm.btnAssets.Visible = False
-                MainForm.btnTransData.Visible = False
-                MainForm.btnCusData.Visible = False
+                MainForm.btnTransactionDB.Visible = False
+                MainForm.btnOrderDB.Visible = False
+                MainForm.btnMenuDB.Visible = False
+                MainForm.btnFeedBack.Visible = False
                 MainForm.lblStatsRole.Text = DTRiceJr(7)
                 MainForm.lblUrName.Text = DTRiceJr(1)
             End If

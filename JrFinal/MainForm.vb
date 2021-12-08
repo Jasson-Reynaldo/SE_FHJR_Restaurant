@@ -57,11 +57,11 @@ Public Class MainForm
         switchPanel(IceMenu)
     End Sub
 
-    Private Sub btnOrderStatus_Click(sender As Object, e As EventArgs) Handles btnOrderStatus.Click
+    Private Sub btnOrderStatus_Click(sender As Object, e As EventArgs) Handles btnTransaction.Click
         switchPanel(OrderStatusForm)
     End Sub
 
-    Private Sub btnCusData_Click(sender As Object, e As EventArgs) Handles btnCusData.Click
+    Private Sub btnCusData_Click(sender As Object, e As EventArgs) Handles btnFeedBack.Click
         switchPanel(CustomerDataForm)
     End Sub
 
@@ -69,15 +69,15 @@ Public Class MainForm
         switchPanel(OrderForm)
     End Sub
 
-    Private Sub btnTransData_Click(sender As Object, e As EventArgs) Handles btnTransData.Click
+    Private Sub btnTransData_Click(sender As Object, e As EventArgs) Handles btnMenuDB.Click
         switchPanel(Transactions_Data)
     End Sub
 
-    Private Sub btnAssets_Click(sender As Object, e As EventArgs) Handles btnAssets.Click
+    Private Sub btnAssets_Click(sender As Object, e As EventArgs) Handles btnOrderDB.Click
         switchPanel(Assets)
     End Sub
 
-    Private Sub btnDataAnalayze_Click(sender As Object, e As EventArgs) Handles btnDataAnalayze.Click
+    Private Sub btnDataAnalayze_Click(sender As Object, e As EventArgs) Handles btnTransactionDB.Click
         switchPanel(HomeForm)
         DataAnalyzingForm.Show()
     End Sub
