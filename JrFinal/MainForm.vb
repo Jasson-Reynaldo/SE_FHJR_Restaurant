@@ -66,7 +66,7 @@ Public Class MainForm
     End Sub
 
     Private Sub btnOrder_Click(sender As Object, e As EventArgs) Handles btnOrder.Click
-        switchPanel(OrderForm)
+        switchPanel(OrderFormSS)
     End Sub
 
     Private Sub btnTransData_Click(sender As Object, e As EventArgs) Handles btnMenuDB.Click

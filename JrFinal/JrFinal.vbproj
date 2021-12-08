@@ -109,6 +109,12 @@
     <Compile Include="EmployeeData.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="feedbackForm.Designer.vb">
+      <DependentUpon>feedbackForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="feedbackForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FlavorData.Designer.vb">
       <DependentUpon>FlavorData.vb</DependentUpon>
     </Compile>
@@ -133,6 +139,12 @@
     <Compile Include="IceMenu.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="OrderForm.Designer.vb">
+      <DependentUpon>OrderForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OrderForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="OrderStatusForm.Designer.vb">
       <DependentUpon>OrderStatusForm.vb</DependentUpon>
     </Compile>
@@ -145,10 +157,10 @@
     <Compile Include="DataAnalyzingForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OrderForm.Designer.vb">
-      <DependentUpon>OrderForm.vb</DependentUpon>
+    <Compile Include="OrderFormSS.Designer.vb">
+      <DependentUpon>OrderFormSS.vb</DependentUpon>
     </Compile>
-    <Compile Include="OrderForm.vb">
+    <Compile Include="OrderFormSS.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.vb">
@@ -193,6 +205,12 @@
     <Compile Include="ToppingData.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TransactionForm.Designer.vb">
+      <DependentUpon>TransactionForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Transactions Data.Designer.vb">
       <DependentUpon>Transactions Data.vb</DependentUpon>
     </Compile>
@@ -219,6 +237,9 @@
     <EmbeddedResource Include="EmployeeData.resx">
       <DependentUpon>EmployeeData.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="feedbackForm.resx">
+      <DependentUpon>feedbackForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FlavorData.resx">
       <DependentUpon>FlavorData.vb</DependentUpon>
     </EmbeddedResource>
@@ -231,14 +252,17 @@
     <EmbeddedResource Include="IceMenu.resx">
       <DependentUpon>IceMenu.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OrderForm.resx">
+      <DependentUpon>OrderForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="OrderStatusForm.resx">
       <DependentUpon>OrderStatusForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DataAnalyzingForm.resx">
       <DependentUpon>DataAnalyzingForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OrderForm.resx">
-      <DependentUpon>OrderForm.vb</DependentUpon>
+    <EmbeddedResource Include="OrderFormSS.resx">
+      <DependentUpon>OrderFormSS.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoadingForm.resx">
       <DependentUpon>LoadingForm.vb</DependentUpon>
@@ -257,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ToppingData.resx">
       <DependentUpon>ToppingData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionForm.resx">
+      <DependentUpon>TransactionForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transactions Data.resx">
       <DependentUpon>Transactions Data.vb</DependentUpon>

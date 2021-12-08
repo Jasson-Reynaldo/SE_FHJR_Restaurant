@@ -66,3 +66,4 @@ D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.vbproj.CoreCompile
 D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.exe
 D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.xml
 D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.pdb
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.feedbackForm.resources
