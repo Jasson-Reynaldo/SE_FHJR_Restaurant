@@ -115,6 +115,12 @@
     <Compile Include="EmployeeData.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="feedbackForm.Designer.vb">
+      <DependentUpon>feedbackForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="feedbackForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FlavorData.Designer.vb">
       <DependentUpon>FlavorData.vb</DependentUpon>
     </Compile>
@@ -133,10 +139,22 @@
     <Compile Include="IceCreamData.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="IceMenu.Designer.vb">
-      <DependentUpon>IceMenu.vb</DependentUpon>
+    <Compile Include="MenuDBForm.Designer.vb">
+      <DependentUpon>MenuDBForm.vb</DependentUpon>
     </Compile>
-    <Compile Include="IceMenu.vb">
+    <Compile Include="MenuDBForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RestoMenu.Designer.vb">
+      <DependentUpon>RestoMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RestoMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderForm.Designer.vb">
+      <DependentUpon>OrderForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OrderForm.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="LoginAdminForm.Designer.vb">
@@ -157,10 +175,10 @@
     <Compile Include="DataAnalyzingForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OrderForm.Designer.vb">
-      <DependentUpon>OrderForm.vb</DependentUpon>
+    <Compile Include="OrderFormSS.Designer.vb">
+      <DependentUpon>OrderFormSS.vb</DependentUpon>
     </Compile>
-    <Compile Include="OrderForm.vb">
+    <Compile Include="OrderFormSS.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.vb">
@@ -205,6 +223,12 @@
     <Compile Include="ToppingData.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TransactionForm.Designer.vb">
+      <DependentUpon>TransactionForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Transactions Data.Designer.vb">
       <DependentUpon>Transactions Data.vb</DependentUpon>
     </Compile>
@@ -234,6 +258,9 @@
     <EmbeddedResource Include="EmployeeData.resx">
       <DependentUpon>EmployeeData.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="feedbackForm.resx">
+      <DependentUpon>feedbackForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FlavorData.resx">
       <DependentUpon>FlavorData.vb</DependentUpon>
     </EmbeddedResource>
@@ -243,8 +270,14 @@
     <EmbeddedResource Include="IceCreamData.resx">
       <DependentUpon>IceCreamData.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="IceMenu.resx">
-      <DependentUpon>IceMenu.vb</DependentUpon>
+    <EmbeddedResource Include="MenuDBForm.resx">
+      <DependentUpon>MenuDBForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RestoMenu.resx">
+      <DependentUpon>RestoMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderForm.resx">
+      <DependentUpon>OrderForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginAdminForm.resx">
       <DependentUpon>LoginAdminForm.vb</DependentUpon>
@@ -255,8 +288,8 @@
     <EmbeddedResource Include="DataAnalyzingForm.resx">
       <DependentUpon>DataAnalyzingForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OrderForm.resx">
-      <DependentUpon>OrderForm.vb</DependentUpon>
+    <EmbeddedResource Include="OrderFormSS.resx">
+      <DependentUpon>OrderFormSS.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoadingForm.resx">
       <DependentUpon>LoadingForm.vb</DependentUpon>
@@ -275,6 +308,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ToppingData.resx">
       <DependentUpon>ToppingData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionForm.resx">
+      <DependentUpon>TransactionForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Transactions Data.resx">
       <DependentUpon>Transactions Data.vb</DependentUpon>
