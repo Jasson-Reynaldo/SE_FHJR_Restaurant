@@ -42,12 +42,12 @@ Partial Class MainForm
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.btnFeedbackDB = New System.Windows.Forms.Button()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.pnlMain = New System.Windows.Forms.Panel()
-        Me.btnFeedbackDB = New System.Windows.Forms.Button()
         Me.pnlTop.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
@@ -277,6 +277,20 @@ Partial Class MainForm
         Me.Panel3.Size = New System.Drawing.Size(220, 382)
         Me.Panel3.TabIndex = 1
         '
+        'btnFeedbackDB
+        '
+        Me.btnFeedbackDB.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btnFeedbackDB.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnFeedbackDB.FlatAppearance.BorderSize = 0
+        Me.btnFeedbackDB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnFeedbackDB.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.btnFeedbackDB.Location = New System.Drawing.Point(0, 420)
+        Me.btnFeedbackDB.Name = "btnFeedbackDB"
+        Me.btnFeedbackDB.Size = New System.Drawing.Size(203, 60)
+        Me.btnFeedbackDB.TabIndex = 0
+        Me.btnFeedbackDB.Text = "FeedBack  DB"
+        Me.btnFeedbackDB.UseVisualStyleBackColor = False
+        '
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.Label3)
@@ -299,16 +313,6 @@ Partial Class MainForm
         Me.Label3.TabIndex = 1
         Me.Label3.Text = "Fast Food Restaurant"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(59, 6)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(88, 81)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -320,6 +324,16 @@ Partial Class MainForm
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Delicioso Restaurant"
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(59, 6)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(88, 81)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
+        '
         'pnlMain
         '
         Me.pnlMain.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(51, Byte), Integer))
@@ -328,20 +342,6 @@ Partial Class MainForm
         Me.pnlMain.Name = "pnlMain"
         Me.pnlMain.Size = New System.Drawing.Size(730, 525)
         Me.pnlMain.TabIndex = 11
-        '
-        'btnFeedbackDB
-        '
-        Me.btnFeedbackDB.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(87, Byte), Integer))
-        Me.btnFeedbackDB.Dock = System.Windows.Forms.DockStyle.Top
-        Me.btnFeedbackDB.FlatAppearance.BorderSize = 0
-        Me.btnFeedbackDB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnFeedbackDB.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.btnFeedbackDB.Location = New System.Drawing.Point(0, 420)
-        Me.btnFeedbackDB.Name = "btnFeedbackDB"
-        Me.btnFeedbackDB.Size = New System.Drawing.Size(203, 60)
-        Me.btnFeedbackDB.TabIndex = 0
-        Me.btnFeedbackDB.Text = "FeedBack  DB"
-        Me.btnFeedbackDB.UseVisualStyleBackColor = False
         '
         'MainForm
         '

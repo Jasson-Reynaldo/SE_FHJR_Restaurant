@@ -54,30 +54,30 @@ Public Class MainForm
     End Sub
 
     Private Sub btnMenu_Click(sender As Object, e As EventArgs) Handles btnMenu.Click
-        switchPanel(IceMenu)
+        switchPanel(RestoMenu)
     End Sub
 
-    Private Sub btnOrderStatus_Click(sender As Object, e As EventArgs) Handles btnTransaction.Click
-        switchPanel(OrderStatusForm)
+    Private Sub btnTransaction_Click(sender As Object, e As EventArgs) Handles btnTransaction.Click
+        switchPanel(TransactionForm)
     End Sub
 
-    Private Sub btnCusData_Click(sender As Object, e As EventArgs) Handles btnFeedBack.Click
-        switchPanel(CustomerDataForm)
+    Private Sub btnFeedBack_Click(sender As Object, e As EventArgs) Handles btnFeedBack.Click
+        switchPanel(feedbackForm)
     End Sub
 
     Private Sub btnOrder_Click(sender As Object, e As EventArgs) Handles btnOrder.Click
-        switchPanel(OrderFormSS)
+        switchPanel(OrderForm)
     End Sub
 
-    Private Sub btnTransData_Click(sender As Object, e As EventArgs) Handles btnMenuDB.Click
+    Private Sub btnMenuDB_Click(sender As Object, e As EventArgs) Handles btnMenuDB.Click
         switchPanel(Transactions_Data)
     End Sub
 
-    Private Sub btnAssets_Click(sender As Object, e As EventArgs) Handles btnOrderDB.Click
+    Private Sub btnOrderDB_Click(sender As Object, e As EventArgs) Handles btnOrderDB.Click
         switchPanel(Assets)
     End Sub
 
-    Private Sub btnDataAnalayze_Click(sender As Object, e As EventArgs) Handles btnTransactionDB.Click
+    Private Sub btnTransactionDB_Click(sender As Object, e As EventArgs) Handles btnTransactionDB.Click
         switchPanel(HomeForm)
         DataAnalyzingForm.Show()
     End Sub
@@ -88,5 +88,9 @@ Public Class MainForm
 
     Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
         switchPanel(HomeForm)
+    End Sub
+
+    Private Sub btnFeedbackDB_Click(sender As Object, e As EventArgs) Handles btnFeedbackDB.Click
+
     End Sub
 End Class
