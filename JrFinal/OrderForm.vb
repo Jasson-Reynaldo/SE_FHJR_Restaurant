@@ -1,5 +1,5 @@
 ﻿Public Class OrderForm
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnAddOrder.Click
+    Private Sub btnAddOrder_Click(sender As Object, e As EventArgs) Handles btnAddOrder.Click
         If numUpDown.Value <> 0 Then
             If listMenu.SelectedIndex = 0 Then
                 listOrder.Items.Add(numUpDown.Value & " Pie " & vbTab & vbTab & " Pizza")
