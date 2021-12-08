@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuthenForm.Designer.vb">
+      <DependentUpon>AuthenForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AuthenForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BlankForm.Designer.vb">
       <DependentUpon>BlankForm.vb</DependentUpon>
     </Compile>
@@ -157,6 +163,12 @@
     <Compile Include="OrderForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="LoginAdminForm.Designer.vb">
+      <DependentUpon>LoginAdminForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="LoginAdminForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="OrderStatusForm.Designer.vb">
       <DependentUpon>OrderStatusForm.vb</DependentUpon>
     </Compile>
@@ -231,6 +243,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AuthenForm.resx">
+      <DependentUpon>AuthenForm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BlankForm.resx">
       <DependentUpon>BlankForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -272,6 +287,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="OrderForm.resx">
       <DependentUpon>OrderForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginAdminForm.resx">
+      <DependentUpon>LoginAdminForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="OrderStatusForm.resx">
       <DependentUpon>OrderStatusForm.vb</DependentUpon>
@@ -340,6 +358,18 @@
       <WrapperTool>aximp</WrapperTool>
       <Isolated>False</Isolated>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\SE_BgResto_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\R_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\ExitLogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\ExitBtn.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

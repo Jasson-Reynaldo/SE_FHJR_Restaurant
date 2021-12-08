@@ -23,7 +23,7 @@ Partial Class TransactionForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.ListView1 = New System.Windows.Forms.ListView()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnFinishTrans = New System.Windows.Forms.Button()
         Me.listTransaction = New System.Windows.Forms.ListBox()
         Me.SuspendLayout()
         '
@@ -36,21 +36,24 @@ Partial Class TransactionForm
         Me.ListView1.TabIndex = 0
         Me.ListView1.UseCompatibleStateImageBehavior = False
         '
-        'Button1
+        'btnFinishTrans
         '
-        Me.Button1.Location = New System.Drawing.Point(569, 427)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(88, 33)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnFinishTrans.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!)
+        Me.btnFinishTrans.Location = New System.Drawing.Point(534, 421)
+        Me.btnFinishTrans.Name = "btnFinishTrans"
+        Me.btnFinishTrans.Size = New System.Drawing.Size(123, 50)
+        Me.btnFinishTrans.TabIndex = 2
+        Me.btnFinishTrans.Text = "Finish"
+        Me.btnFinishTrans.UseVisualStyleBackColor = True
         '
         'listTransaction
         '
+        Me.listTransaction.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.0!)
         Me.listTransaction.FormattingEnabled = True
+        Me.listTransaction.ItemHeight = 25
         Me.listTransaction.Location = New System.Drawing.Point(90, 201)
         Me.listTransaction.Name = "listTransaction"
-        Me.listTransaction.Size = New System.Drawing.Size(567, 212)
+        Me.listTransaction.Size = New System.Drawing.Size(567, 204)
         Me.listTransaction.TabIndex = 3
         '
         'TransactionForm
@@ -60,7 +63,7 @@ Partial Class TransactionForm
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(182, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(730, 525)
         Me.Controls.Add(Me.listTransaction)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnFinishTrans)
         Me.Controls.Add(Me.ListView1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "TransactionForm"
@@ -70,6 +73,6 @@ Partial Class TransactionForm
     End Sub
 
     Friend WithEvents ListView1 As ListView
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnFinishTrans As Button
     Friend WithEvents listTransaction As ListBox
 End Class
