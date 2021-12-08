@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class OrderDBForm
+Partial Class TransactionDBForm
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -40,14 +40,15 @@ Partial Class OrderDBForm
         Me.pnlMainData = New System.Windows.Forms.Panel()
         Me.splitCus = New System.Windows.Forms.SplitContainer()
         Me.Panel2 = New System.Windows.Forms.Panel()
-        Me.txtOrderQty = New System.Windows.Forms.TextBox()
+        Me.lblOrderID = New System.Windows.Forms.Label()
+        Me.txtTransTotal = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnConfirmation = New System.Windows.Forms.Button()
         Me.cmbSearchChoice = New System.Windows.Forms.ComboBox()
-        Me.lblMenuID = New System.Windows.Forms.Label()
+        Me.lblTransID = New System.Windows.Forms.Label()
         Me.txtFind = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.lblTotalMenu = New System.Windows.Forms.Label()
+        Me.lblTotalTrans = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.LabelTotal = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -63,7 +64,6 @@ Partial Class OrderDBForm
         Me.CmsAddCus = New System.Windows.Forms.ToolStripMenuItem()
         Me.CmsDelData = New System.Windows.Forms.ToolStripMenuItem()
         Me.CmsEditCus = New System.Windows.Forms.ToolStripMenuItem()
-        Me.lblOrderID = New System.Windows.Forms.Label()
         Me.pnlDataMenu.SuspendLayout()
         Me.MsCustomer.SuspendLayout()
         Me.pnlMainData.SuspendLayout()
@@ -207,14 +207,14 @@ Partial Class OrderDBForm
         'Panel2
         '
         Me.Panel2.Controls.Add(Me.lblOrderID)
-        Me.Panel2.Controls.Add(Me.txtOrderQty)
+        Me.Panel2.Controls.Add(Me.txtTransTotal)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.btnConfirmation)
         Me.Panel2.Controls.Add(Me.cmbSearchChoice)
-        Me.Panel2.Controls.Add(Me.lblMenuID)
+        Me.Panel2.Controls.Add(Me.lblTransID)
         Me.Panel2.Controls.Add(Me.txtFind)
         Me.Panel2.Controls.Add(Me.Label9)
-        Me.Panel2.Controls.Add(Me.lblTotalMenu)
+        Me.Panel2.Controls.Add(Me.lblTotalTrans)
         Me.Panel2.Controls.Add(Me.Label8)
         Me.Panel2.Controls.Add(Me.LabelTotal)
         Me.Panel2.Controls.Add(Me.Label4)
@@ -228,22 +228,31 @@ Partial Class OrderDBForm
         Me.Panel2.Size = New System.Drawing.Size(730, 165)
         Me.Panel2.TabIndex = 4
         '
-        'txtOrderQty
+        'lblOrderID
         '
-        Me.txtOrderQty.Location = New System.Drawing.Point(229, 130)
-        Me.txtOrderQty.Name = "txtOrderQty"
-        Me.txtOrderQty.Size = New System.Drawing.Size(282, 23)
-        Me.txtOrderQty.TabIndex = 8
+        Me.lblOrderID.AutoSize = True
+        Me.lblOrderID.Location = New System.Drawing.Point(229, 106)
+        Me.lblOrderID.Name = "lblOrderID"
+        Me.lblOrderID.Size = New System.Drawing.Size(63, 16)
+        Me.lblOrderID.TabIndex = 9
+        Me.lblOrderID.Text = "Order ID"
+        '
+        'txtTransTotal
+        '
+        Me.txtTransTotal.Location = New System.Drawing.Point(229, 130)
+        Me.txtTransTotal.Name = "txtTransTotal"
+        Me.txtTransTotal.Size = New System.Drawing.Size(282, 23)
+        Me.txtTransTotal.TabIndex = 8
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Raleway", 10.0!)
-        Me.Label1.Location = New System.Drawing.Point(105, 45)
+        Me.Label1.Location = New System.Drawing.Point(72, 45)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(103, 16)
+        Me.Label1.Size = New System.Drawing.Size(136, 16)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Search Order :"
+        Me.Label1.Text = "Search Transaction:"
         '
         'btnConfirmation
         '
@@ -265,14 +274,14 @@ Partial Class OrderDBForm
         Me.cmbSearchChoice.Size = New System.Drawing.Size(121, 23)
         Me.cmbSearchChoice.TabIndex = 3
         '
-        'lblMenuID
+        'lblTransID
         '
-        Me.lblMenuID.AutoSize = True
-        Me.lblMenuID.Location = New System.Drawing.Point(229, 106)
-        Me.lblMenuID.Name = "lblMenuID"
-        Me.lblMenuID.Size = New System.Drawing.Size(61, 16)
-        Me.lblMenuID.TabIndex = 6
-        Me.lblMenuID.Text = "Menu ID"
+        Me.lblTransID.AutoSize = True
+        Me.lblTransID.Location = New System.Drawing.Point(229, 80)
+        Me.lblTransID.Name = "lblTransID"
+        Me.lblTransID.Size = New System.Drawing.Size(100, 16)
+        Me.lblTransID.TabIndex = 6
+        Me.lblTransID.Text = "Transaction ID"
         '
         'txtFind
         '
@@ -290,14 +299,14 @@ Partial Class OrderDBForm
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "Value"
         '
-        'lblTotalMenu
+        'lblTotalTrans
         '
-        Me.lblTotalMenu.AutoSize = True
-        Me.lblTotalMenu.Location = New System.Drawing.Point(96, 3)
-        Me.lblTotalMenu.Name = "lblTotalMenu"
-        Me.lblTotalMenu.Size = New System.Drawing.Size(122, 16)
-        Me.lblTotalMenu.TabIndex = 1
-        Me.lblTotalMenu.Text = "number of orders"
+        Me.lblTotalTrans.AutoSize = True
+        Me.lblTotalTrans.Location = New System.Drawing.Point(135, 3)
+        Me.lblTotalTrans.Name = "lblTotalTrans"
+        Me.lblTotalTrans.Size = New System.Drawing.Size(160, 16)
+        Me.lblTotalTrans.TabIndex = 1
+        Me.lblTotalTrans.Text = "number of transactions"
         '
         'Label8
         '
@@ -313,20 +322,20 @@ Partial Class OrderDBForm
         Me.LabelTotal.AutoSize = True
         Me.LabelTotal.Location = New System.Drawing.Point(3, 3)
         Me.LabelTotal.Name = "LabelTotal"
-        Me.LabelTotal.Size = New System.Drawing.Size(96, 16)
+        Me.LabelTotal.Size = New System.Drawing.Size(133, 16)
         Me.LabelTotal.TabIndex = 0
-        Me.LabelTotal.Text = "Total Orders :"
+        Me.LabelTotal.Text = "Total Transactions :"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Raleway", 10.0!)
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(132, 132)
+        Me.Label4.Location = New System.Drawing.Point(91, 133)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(76, 16)
+        Me.Label4.Size = New System.Drawing.Size(122, 16)
         Me.Label4.TabIndex = 0
-        Me.Label4.Text = "Order Qty:"
+        Me.Label4.Text = "Transaction Total:"
         '
         'Label3
         '
@@ -335,20 +344,20 @@ Partial Class OrderDBForm
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(144, 106)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(64, 16)
+        Me.Label3.Size = New System.Drawing.Size(69, 16)
         Me.Label3.TabIndex = 0
-        Me.Label3.Text = "Menu ID:"
+        Me.Label3.Text = "Order_ID:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Raleway", 10.0!)
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(142, 80)
+        Me.Label2.Location = New System.Drawing.Point(110, 80)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(66, 16)
+        Me.Label2.Size = New System.Drawing.Size(103, 16)
         Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Order ID:"
+        Me.Label2.Text = "Transaction ID:"
         '
         'Panel3
         '
@@ -366,11 +375,11 @@ Partial Class OrderDBForm
         Me.lblmenutitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.lblmenutitle.Font = New System.Drawing.Font("Milkshake", 18.0!, System.Drawing.FontStyle.Bold)
         Me.lblmenutitle.ForeColor = System.Drawing.Color.White
-        Me.lblmenutitle.Location = New System.Drawing.Point(281, 0)
+        Me.lblmenutitle.Location = New System.Drawing.Point(254, 0)
         Me.lblmenutitle.Name = "lblmenutitle"
-        Me.lblmenutitle.Size = New System.Drawing.Size(191, 37)
+        Me.lblmenutitle.Size = New System.Drawing.Size(252, 37)
         Me.lblmenutitle.TabIndex = 1
-        Me.lblmenutitle.Text = "All Orders Data"
+        Me.lblmenutitle.Text = "All Transactions Data"
         '
         'StatsCus
         '
@@ -429,16 +438,7 @@ Partial Class OrderDBForm
         Me.CmsEditCus.Size = New System.Drawing.Size(140, 22)
         Me.CmsEditCus.Text = "Update Data"
         '
-        'lblOrderID
-        '
-        Me.lblOrderID.AutoSize = True
-        Me.lblOrderID.Location = New System.Drawing.Point(229, 80)
-        Me.lblOrderID.Name = "lblOrderID"
-        Me.lblOrderID.Size = New System.Drawing.Size(63, 16)
-        Me.lblOrderID.TabIndex = 9
-        Me.lblOrderID.Text = "Order ID"
-        '
-        'OrderDBForm
+        'TransactionDBForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -449,7 +449,7 @@ Partial Class OrderDBForm
         Me.Controls.Add(Me.pnlMainData)
         Me.Controls.Add(Me.pnlDataMenu)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "OrderDBForm"
+        Me.Name = "TransactionDBForm"
         Me.Text = "Customer Data Form"
         Me.pnlDataMenu.ResumeLayout(False)
         Me.pnlDataMenu.PerformLayout()
@@ -499,7 +499,7 @@ Partial Class OrderDBForm
     Friend WithEvents btnConfirmation As Button
     Friend WithEvents msRefresh As ToolStripMenuItem
     Friend WithEvents LabelTotal As Label
-    Friend WithEvents lblTotalMenu As Label
+    Friend WithEvents lblTotalTrans As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents txtFind As TextBox
     Friend WithEvents Label8 As Label
@@ -511,7 +511,7 @@ Partial Class OrderDBForm
     Friend WithEvents MsIdDesc As ToolStripMenuItem
     Friend WithEvents Panel3 As Panel
     Friend WithEvents lblmenutitle As Label
-    Friend WithEvents txtOrderQty As TextBox
-    Friend WithEvents lblMenuID As Label
+    Friend WithEvents txtTransTotal As TextBox
+    Friend WithEvents lblTransID As Label
     Friend WithEvents lblOrderID As Label
 End Class

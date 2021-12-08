@@ -298,11 +298,11 @@ Partial Class MenuDBForm
         'lblTotalMenu
         '
         Me.lblTotalMenu.AutoSize = True
-        Me.lblTotalMenu.Location = New System.Drawing.Point(79, 3)
+        Me.lblTotalMenu.Location = New System.Drawing.Point(96, 3)
         Me.lblTotalMenu.Name = "lblTotalMenu"
-        Me.lblTotalMenu.Size = New System.Drawing.Size(117, 16)
+        Me.lblTotalMenu.Size = New System.Drawing.Size(124, 16)
         Me.lblTotalMenu.TabIndex = 1
-        Me.lblTotalMenu.Text = "number of menu"
+        Me.lblTotalMenu.Text = "number of menus"
         '
         'Label9
         '
@@ -326,20 +326,20 @@ Partial Class MenuDBForm
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Raleway", 10.0!)
-        Me.Label1.Location = New System.Drawing.Point(97, 45)
+        Me.Label1.Location = New System.Drawing.Point(115, 45)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(129, 16)
+        Me.Label1.Size = New System.Drawing.Size(101, 16)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Search Customer :"
+        Me.Label1.Text = "Search Menu :"
         '
         'LabelTotal
         '
         Me.LabelTotal.AutoSize = True
         Me.LabelTotal.Location = New System.Drawing.Point(3, 3)
         Me.LabelTotal.Name = "LabelTotal"
-        Me.LabelTotal.Size = New System.Drawing.Size(87, 16)
+        Me.LabelTotal.Size = New System.Drawing.Size(94, 16)
         Me.LabelTotal.TabIndex = 0
-        Me.LabelTotal.Text = "Total Menu :"
+        Me.LabelTotal.Text = "Total Menus :"
         '
         'Panel3
         '

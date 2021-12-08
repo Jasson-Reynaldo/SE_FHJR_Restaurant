@@ -29,6 +29,7 @@
                 listOrder.Items.Add(numUpDown.Value & " Glass " & vbTab & vbTab & " Mineral Water")
                 TransactionForm.listTransaction.Items.Add(numUpDown.Value & " Mineral Water" & vbTab & vbTab & vbTab & "IDR 5.000")
             End If
+            numUpDown.Value = 0
         End If
     End Sub
 

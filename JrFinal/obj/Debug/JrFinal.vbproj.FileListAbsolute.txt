@@ -70,3 +70,4 @@ D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.RestoMenu.resource
 D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.OrderFormSS.resources
 D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.TransactionForm.resources
 D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.MenuDBForm.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.OrderDBForm.resources

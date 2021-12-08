@@ -139,6 +139,12 @@
     <Compile Include="MenuDBForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="OrderDBForm.Designer.vb">
+      <DependentUpon>OrderDBForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDBForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="RestoMenu.Designer.vb">
       <DependentUpon>RestoMenu.vb</DependentUpon>
     </Compile>
@@ -257,6 +263,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuDBForm.resx">
       <DependentUpon>MenuDBForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrderDBForm.resx">
+      <DependentUpon>OrderDBForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RestoMenu.resx">
       <DependentUpon>RestoMenu.vb</DependentUpon>

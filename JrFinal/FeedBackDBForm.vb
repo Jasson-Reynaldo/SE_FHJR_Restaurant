@@ -1,12 +1,12 @@
 ﻿Imports System.Data.SqlClient
-Public Class OrderDBForm
+Public Class FeedBackDBForm
     Dim CusGend, sortCategory As String
     Sub totalCus()
         CMDiceJr = New SqlCommand("SELECT COUNT(CUS_ID) AS TOTAL_CUSTOMER FROM Customer", DBicecream)
         DTRiceJr = CMDiceJr.ExecuteReader
         DTRiceJr.Close()
         Dim totalcus As Integer = Convert.ToInt16(CMDiceJr.ExecuteScalar())
-        lblTotalMenu.Text = totalcus.ToString
+        lblTotalTrans.Text = totalcus.ToString
     End Sub
 
     Sub ShowData()
@@ -21,7 +21,7 @@ Public Class OrderDBForm
 
     Sub resetValue()
 
-        txtOrderQty.Clear()
+        txtFeedDetail.Clear()
         cmbSearchChoice.ResetText()
         txtFind.Clear()
     End Sub
@@ -29,20 +29,20 @@ Public Class OrderDBForm
     Sub resetcondition()
         btnConfirmation.Visible = False
 
-        txtOrderQty.Enabled = False
+        txtFeedDetail.Enabled = False
         resetValue()
     End Sub
 
     Sub resetpartial()
         btnConfirmation.Visible = False
 
-        txtOrderQty.Enabled = False
+        txtFeedDetail.Enabled = False
     End Sub
 
     Sub enablecondition()
         btnConfirmation.Visible = True
 
-        txtOrderQty.Enabled = True
+        txtFeedDetail.Enabled = True
     End Sub
 
     Sub autoID()
@@ -60,7 +60,7 @@ Public Class OrderDBForm
             countcode = Microsoft.VisualBasic.Right(DTRiceJr.GetString(0), 7) + 1
             propercode = "C" + Microsoft.VisualBasic.Right("0000000" & countcode, 7)
         End If
-        lblMenuID.Text = propercode
+        lblFeedID.Text = propercode
 
         DTRiceJr.Close()
     End Sub
@@ -68,7 +68,7 @@ Public Class OrderDBForm
     Sub Addingdata()
         CMDiceJr = New SqlCommand("insert into Customer " &
                    " values (
-                           '" & lblMenuID.Text & "',")
+                           '" & lblFeedID.Text & "',")
 
         CMDiceJr.ExecuteNonQuery()
         MsgBox("Succesfull Adding data!")
@@ -79,7 +79,7 @@ Public Class OrderDBForm
 
     Sub Updatingdata()
         CMDiceJr = New SqlCommand("UPDATE Customer set " &
-                    "CUS_ID ='" & lblMenuID.Text & "'," &
+                    "CUS_ID ='" & lblFeedID.Text & "'," &
                     "CUS_NAME ='" & "'", DBicecream)
         CMDiceJr.ExecuteNonQuery()
         MsgBox("Succesfull Editting data!")
@@ -91,13 +91,13 @@ Public Class OrderDBForm
     Sub editcondition()
         enablecondition()
         btnConfirmation.Text = "Confirm Edit"
-        If txtOrderQty.Text Is "" Then
+        If txtFeedDetail.Text Is "" Then
             resetcondition()
         End If
     End Sub
 
     Sub editValidation()
-        CMDiceJr = New SqlCommand("SELECT * FROM Customer WHERE CUS_ID ='" & lblMenuID.Text & "'", DBicecream)
+        CMDiceJr = New SqlCommand("SELECT * FROM Customer WHERE CUS_ID ='" & lblFeedID.Text & "'", DBicecream)
         DTRiceJr = CMDiceJr.ExecuteReader
         If DTRiceJr.Read Then
             editcondition()
@@ -126,7 +126,7 @@ Public Class OrderDBForm
     Private Sub dgCustomer_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgCustomer.CellClick
         Dim cusrow = dgCustomer.CurrentRow.Index
         With dgCustomer
-            lblMenuID.Text = .Item(0, cusrow).Value
+            lblFeedID.Text = .Item(0, cusrow).Value
             .Text = .Item(1, cusrow).Value
         End With
     End Sub
@@ -217,7 +217,7 @@ Public Class OrderDBForm
 
     End Sub
 
-    Private Sub LabelTotal_Click(sender As Object, e As EventArgs) Handles LabelTotal.Click
+    Private Sub lblMenuID_Click(sender As Object, e As EventArgs) Handles lblFeedID.Click
 
     End Sub
 
