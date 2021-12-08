@@ -70,16 +70,15 @@ Public Class MainForm
     End Sub
 
     Private Sub btnMenuDB_Click(sender As Object, e As EventArgs) Handles btnMenuDB.Click
-        switchPanel(Transactions_Data)
+        switchPanel(MenuDBForm)
     End Sub
 
     Private Sub btnOrderDB_Click(sender As Object, e As EventArgs) Handles btnOrderDB.Click
-        switchPanel(Assets)
+        switchPanel(OrderDBForm)
     End Sub
 
     Private Sub btnTransactionDB_Click(sender As Object, e As EventArgs) Handles btnTransactionDB.Click
-        switchPanel(HomeForm)
-        DataAnalyzingForm.Show()
+        switchPanel(TransactionDBForm)
     End Sub
 
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -91,6 +90,6 @@ Public Class MainForm
     End Sub
 
     Private Sub btnFeedbackDB_Click(sender As Object, e As EventArgs) Handles btnFeedbackDB.Click
-
+        switchPanel(FeedBackDBForm)
     End Sub
 End Class

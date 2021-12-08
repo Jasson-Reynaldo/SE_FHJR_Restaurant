@@ -115,6 +115,12 @@
     <Compile Include="EmployeeData.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FeedBackDBForm.Designer.vb">
+      <DependentUpon>FeedBackDBForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FeedBackDBForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="feedbackForm.Designer.vb">
       <DependentUpon>feedbackForm.vb</DependentUpon>
     </Compile>
@@ -229,6 +235,12 @@
     <Compile Include="ToppingData.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="TransactionDBForm.Designer.vb">
+      <DependentUpon>TransactionDBForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionDBForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TransactionForm.Designer.vb">
       <DependentUpon>TransactionForm.vb</DependentUpon>
     </Compile>
@@ -263,6 +275,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EmployeeData.resx">
       <DependentUpon>EmployeeData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeedBackDBForm.resx">
+      <DependentUpon>FeedBackDBForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="feedbackForm.resx">
       <DependentUpon>feedbackForm.vb</DependentUpon>
@@ -317,6 +332,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ToppingData.resx">
       <DependentUpon>ToppingData.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionDBForm.resx">
+      <DependentUpon>TransactionDBForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransactionForm.resx">
       <DependentUpon>TransactionForm.vb</DependentUpon>

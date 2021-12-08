@@ -1,4 +1,25 @@
 ﻿Public Class AuthenForm
+    Dim dragable As Boolean
+    Dim mouseX As Integer
+    Dim mouseY As Integer
+
+    Sub mousemovedown()
+        dragable = True
+        mouseX = Cursor.Position.X - Me.Left
+        mouseY = Cursor.Position.Y - Me.Top
+    End Sub
+
+    Sub mousemoving()
+        If dragable Then
+            Me.Top = Cursor.Position.Y - mouseY
+            Me.Left = Cursor.Position.X - mouseX
+        End If
+    End Sub
+
+    Sub mousemoveup()
+        dragable = False
+    End Sub
+
     Private Sub btnAdmin_Click(sender As Object, e As EventArgs) Handles btnAdmin.Click
         Me.Hide()
         LoginAdminForm.Show()
@@ -29,7 +50,7 @@
         MainForm.btnTransactionDB.Visible = False
         MainForm.btnOrderDB.Visible = False
         MainForm.btnMenuDB.Visible = False
-        MainForm.btnFeedBack.Visible = False
+        MainForm.btnFeedbackDB.Visible = False
     End Sub
 
     Private Sub btnCustomer_MouseEnter(sender As Object, e As EventArgs) Handles btnCustomer.MouseHover
@@ -38,5 +59,17 @@
 
     Private Sub btnCustomer_MouseLeave(sender As Object, e As EventArgs) Handles btnCustomer.MouseLeave
         btnCustomer.BackColor = Color.Black
+    End Sub
+
+    Private Sub AuthenForm_MouseMove(sender As Object, e As MouseEventArgs) Handles MyBase.MouseMove
+        mousemoving()
+    End Sub
+
+    Private Sub AuthenForm_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
+        mousemovedown()
+    End Sub
+
+    Private Sub AuthenForm_MouseUp(sender As Object, e As MouseEventArgs) Handles MyBase.MouseUp
+        mousemoveup()
     End Sub
 End Class

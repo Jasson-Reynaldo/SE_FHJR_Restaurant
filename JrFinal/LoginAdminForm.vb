@@ -1,4 +1,26 @@
 ﻿Public Class LoginAdminForm
+
+    Dim dragable As Boolean
+    Dim mouseX As Integer
+    Dim mouseY As Integer
+
+    Sub mousemovedown()
+        dragable = True
+        mouseX = Cursor.Position.X - Me.Left
+        mouseY = Cursor.Position.Y - Me.Top
+    End Sub
+
+    Sub mousemoving()
+        If dragable Then
+            Me.Top = Cursor.Position.Y - mouseY
+            Me.Left = Cursor.Position.X - mouseX
+        End If
+    End Sub
+
+    Sub mousemoveup()
+        dragable = False
+    End Sub
+
     Private Sub LoginAdminForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         txtPassword.Text = "Password"
     End Sub
@@ -53,5 +75,17 @@
                 txtPassword.PasswordChar = "*"
             End If
         End If
+    End Sub
+
+    Private Sub LoginAdminForm_MouseMove(sender As Object, e As MouseEventArgs) Handles MyBase.MouseMove
+        mousemoving()
+    End Sub
+
+    Private Sub LoginAdminForm_MouseUp(sender As Object, e As MouseEventArgs) Handles MyBase.MouseUp
+        mousemoveup()
+    End Sub
+
+    Private Sub LoginAdminForm_MouseDown(sender As Object, e As MouseEventArgs) Handles MyBase.MouseDown
+        mousemovedown()
     End Sub
 End Class
