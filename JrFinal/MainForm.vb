@@ -44,7 +44,7 @@ Public Class MainForm
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Me.Close()
         LoadingForm.Close()
-        LoginForm.Show()
+        AuthenForm.Show()
     End Sub
     Sub logout()
         Me.Close()

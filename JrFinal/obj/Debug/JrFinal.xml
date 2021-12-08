@@ -22,12 +22,32 @@ JrFinal
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:JrFinal.My.Resources.Resources.ExitBtn">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:JrFinal.My.Resources.Resources.ExitButton">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:JrFinal.My.Resources.Resources.ExitLogin">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:JrFinal.My.Resources.Resources.ExitLogin1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:JrFinal.My.Resources.Resources.R_logo">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:JrFinal.My.Resources.Resources.SE_BgResto_1">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

@@ -66,3 +66,39 @@ D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.vbproj.CoreCompile
 D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.exe
 D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.xml
 D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.pdb
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\bin\Debug\JrFinal.exe.config
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\bin\Debug\JrFinal.exe
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\bin\Debug\JrFinal.pdb
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\bin\Debug\JrFinal.xml
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\bin\Debug\Interop.AcroPDFLib.dll
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\bin\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.vbprojAssemblyReference.cache
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\obj\Debug\Interop.AcroPDFLib.dll
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\obj\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.vbproj.ResolveComReference.cache
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.AuthenForm.resources
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.BlankForm.resources
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.CustomerDataForm.resources
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.Assets.resources
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.CVHolderForm.resources
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.DummyForm.resources
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.EmployeeData.resources
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.FlavorData.resources
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.HomeForm.resources
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.IceCreamData.resources
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.IceMenu.resources
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.OrderStatusForm.resources
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.DataAnalyzingForm.resources
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.OrderForm.resources
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.LoadingForm.resources
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.LoginForm.resources
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.MainForm.resources
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.Resources.resources
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.ToppingData.resources
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.Transactions_Data.resources
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.vbproj.GenerateResource.cache
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.vbproj.CoreCompileInputs.cache
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.exe
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.xml
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.pdb
+C:\Users\FX505GD\Documents\GitHub\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.LoginAdminForm.resources
