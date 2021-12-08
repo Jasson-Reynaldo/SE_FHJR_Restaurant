@@ -23,8 +23,8 @@ Partial Class TransactionForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.ListView1 = New System.Windows.Forms.ListView()
-        Me.ListView2 = New System.Windows.Forms.ListView()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.listTransaction = New System.Windows.Forms.ListBox()
         Me.SuspendLayout()
         '
         'ListView1
@@ -36,15 +36,6 @@ Partial Class TransactionForm
         Me.ListView1.TabIndex = 0
         Me.ListView1.UseCompatibleStateImageBehavior = False
         '
-        'ListView2
-        '
-        Me.ListView2.HideSelection = False
-        Me.ListView2.Location = New System.Drawing.Point(90, 197)
-        Me.ListView2.Name = "ListView2"
-        Me.ListView2.Size = New System.Drawing.Size(567, 206)
-        Me.ListView2.TabIndex = 1
-        Me.ListView2.UseCompatibleStateImageBehavior = False
-        '
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(569, 427)
@@ -54,14 +45,22 @@ Partial Class TransactionForm
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'listTransaction
+        '
+        Me.listTransaction.FormattingEnabled = True
+        Me.listTransaction.Location = New System.Drawing.Point(90, 201)
+        Me.listTransaction.Name = "listTransaction"
+        Me.listTransaction.Size = New System.Drawing.Size(567, 212)
+        Me.listTransaction.TabIndex = 3
+        '
         'TransactionForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(182, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(730, 525)
+        Me.Controls.Add(Me.listTransaction)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.ListView2)
         Me.Controls.Add(Me.ListView1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "TransactionForm"
@@ -71,6 +70,6 @@ Partial Class TransactionForm
     End Sub
 
     Friend WithEvents ListView1 As ListView
-    Friend WithEvents ListView2 As ListView
     Friend WithEvents Button1 As Button
+    Friend WithEvents listTransaction As ListBox
 End Class
