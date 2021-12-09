@@ -23,7 +23,7 @@ Partial Class OrderForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblOrderID = New System.Windows.Forms.Label()
         Me.listMenu = New System.Windows.Forms.ListBox()
         Me.numUpDown = New System.Windows.Forms.NumericUpDown()
         Me.btnResetOrder = New System.Windows.Forms.Button()
@@ -43,15 +43,15 @@ Partial Class OrderForm
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Order ID:"
         '
-        'Label2
+        'lblOrderID
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Bold)
-        Me.Label2.Location = New System.Drawing.Point(138, 56)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(53, 16)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "OD****"
+        Me.lblOrderID.AutoSize = True
+        Me.lblOrderID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Bold)
+        Me.lblOrderID.Location = New System.Drawing.Point(138, 56)
+        Me.lblOrderID.Name = "lblOrderID"
+        Me.lblOrderID.Size = New System.Drawing.Size(53, 16)
+        Me.lblOrderID.TabIndex = 1
+        Me.lblOrderID.Text = "OD****"
         '
         'listMenu
         '
@@ -125,7 +125,7 @@ Partial Class OrderForm
         Me.Controls.Add(Me.btnResetOrder)
         Me.Controls.Add(Me.numUpDown)
         Me.Controls.Add(Me.listMenu)
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.lblOrderID)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "OrderForm"
@@ -137,7 +137,7 @@ Partial Class OrderForm
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lblOrderID As Label
     Friend WithEvents listMenu As ListBox
     Friend WithEvents numUpDown As NumericUpDown
     Friend WithEvents btnResetOrder As Button

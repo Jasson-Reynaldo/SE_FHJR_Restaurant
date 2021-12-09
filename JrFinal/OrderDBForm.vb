@@ -1,26 +1,26 @@
 ﻿Imports System.Data.SqlClient
 Public Class OrderDBForm
     Dim CusGend, sortCategory As String
-    Sub totalCus()
-        CMDiceJr = New SqlCommand("SELECT COUNT(CUS_ID) AS TOTAL_CUSTOMER FROM Customer", DBicecream)
-        DTRiceJr = CMDiceJr.ExecuteReader
-        DTRiceJr.Close()
-        Dim totalcus As Integer = Convert.ToInt16(CMDiceJr.ExecuteScalar())
-        lblTotalMenu.Text = totalcus.ToString
+    Sub totalOrder()
+        CMDresto = New SqlCommand("SELECT COUNT(Order_ID) AS TOTAL_Orders FROM Orders", DBresto)
+        DTRresto = CMDresto.ExecuteReader
+        DTRresto.Close()
+        Dim totalOrder As Integer = Convert.ToInt16(CMDresto.ExecuteScalar())
+        lblTotalMenu.Text = totalOrder.ToString
     End Sub
 
     Sub ShowData()
-        AdptCustomer = New SqlDataAdapter("SELECT * from Customer", DBicecream)
-        TblCustomer.Clear()
-        AdptCustomer.Fill(TblCustomer)
-        dgCustomer.DataSource = TblCustomer
+        AdptOrders = New SqlDataAdapter("SELECT * from Orders", DBresto)
+        TblOrders.Clear()
+        AdptOrders.Fill(TblOrders)
+        dgOrder.DataSource = TblOrders
         resetcondition()
         resetValue()
-        totalCus()
+        totalOrder()
     End Sub
 
     Sub resetValue()
-
+        txtMenuID.Clear()
         txtOrderQty.Clear()
         cmbSearchChoice.ResetText()
         txtFind.Clear()
@@ -28,20 +28,20 @@ Public Class OrderDBForm
 
     Sub resetcondition()
         btnConfirmation.Visible = False
-
+        txtMenuID.Enabled = False
         txtOrderQty.Enabled = False
         resetValue()
     End Sub
 
     Sub resetpartial()
         btnConfirmation.Visible = False
-
+        txtMenuID.Enabled = False
         txtOrderQty.Enabled = False
     End Sub
 
     Sub enablecondition()
         btnConfirmation.Visible = True
-
+        txtMenuID.Enabled = True
         txtOrderQty.Enabled = True
     End Sub
 
@@ -51,26 +51,27 @@ Public Class OrderDBForm
         btnConfirmation.Text = "Confirm Input"
         Dim propercode As String
         Dim countcode As Long
-        CMDiceJr = New SqlCommand("SELECT * FROM Customer WHERE CUS_ID IN (SELECT MAX(CUS_ID) FROM Customer)", DBicecream)
-        DTRiceJr = CMDiceJr.ExecuteReader
-        DTRiceJr.Read()
-        If Not DTRiceJr.HasRows Then
-            propercode = "C" + "0000001"
+        CMDresto = New SqlCommand("SELECT * FROM Orders WHERE Order_ID IN (SELECT MAX(Order_ID) FROM Orders)", RestoDB)
+        DTRresto = CMDresto.ExecuteReader
+        DTRresto.Read()
+        If Not DTRresto.HasRows Then
+            propercode = "OD" + "001"
         Else
-            countcode = Microsoft.VisualBasic.Right(DTRiceJr.GetString(0), 7) + 1
-            propercode = "C" + Microsoft.VisualBasic.Right("0000000" & countcode, 7)
+            countcode = Microsoft.VisualBasic.Right(DTRresto.GetString(0), 2) + 1
+            propercode = "OD" + Microsoft.VisualBasic.Right("00" & countcode, 2)
         End If
-        lblMenuID.Text = propercode
+        lblOrderID.Text = propercode
 
-        DTRiceJr.Close()
+        DTRresto.Close()
     End Sub
 
     Sub Addingdata()
-        CMDiceJr = New SqlCommand("insert into Customer " &
+        CMDresto = New SqlCommand("insert into Orders " &
                    " values (
-                           '" & lblMenuID.Text & "',")
-
-        CMDiceJr.ExecuteNonQuery()
+                           '" & lblOrderID.Text & "'," &
+                           "'" & txtMenuID.Text & "'," &
+                           "'" & txtOrderQty.Text & "',", DBresto)
+        CMDresto.ExecuteNonQuery()
         MsgBox("Succesfull Adding data!")
         lblStats.Text = "New Data Added!"
         ShowData()
@@ -78,10 +79,12 @@ Public Class OrderDBForm
     End Sub
 
     Sub Updatingdata()
-        CMDiceJr = New SqlCommand("UPDATE Customer set " &
-                    "CUS_ID ='" & lblMenuID.Text & "'," &
-                    "CUS_NAME ='" & "'", DBicecream)
-        CMDiceJr.ExecuteNonQuery()
+        CMDresto = New SqlCommand("UPDATE Orders set " &
+                    "Order_ID ='" & lblOrderID.Text & "'," &
+                    "Menu_ID ='" & txtMenuID.Text & "'," &
+                    "Order_Qty ='" & txtOrderQty.Text & "'," & "' where " &
+                    "Order_ID ='" & lblOrderID.Text & "'", DBresto)
+        CMDresto.ExecuteNonQuery()
         MsgBox("Succesfull Editting data!")
         lblStats.Text = "Data Updated!"
         ShowData()
@@ -97,35 +100,35 @@ Public Class OrderDBForm
     End Sub
 
     Sub editValidation()
-        CMDiceJr = New SqlCommand("SELECT * FROM Customer WHERE CUS_ID ='" & lblMenuID.Text & "'", DBicecream)
-        DTRiceJr = CMDiceJr.ExecuteReader
-        If DTRiceJr.Read Then
+        CMDresto = New SqlCommand("SELECT * FROM Orders WHERE CUS_ID ='" & lblMenuID.Text & "'", DBresto)
+        DTRresto = CMDresto.ExecuteReader
+        If DTRresto.Read Then
             editcondition()
         Else
             MsgBox("Please Select    Any data", MsgBoxStyle.Information, "Help")
             resetcondition()
         End If
-        DTRiceJr.Close()
+        DTRresto.Close()
     End Sub
     Sub Deletingdata()
-        CMDiceJr = New SqlCommand(" DELETE from Customer where CUS_ID ='" & dgCustomer.SelectedCells(0).Value & "'", DBicecream)
-        CMDiceJr.ExecuteNonQuery()
+        CMDresto = New SqlCommand(" DELETE from Orders where Order_ID ='" & dgOrder.SelectedCells(0).Value & "'", DBresto)
+        CMDresto.ExecuteNonQuery()
         ShowData()
         MsgBox("Succesfull Deleting data!")
         lblStats.Text = "successfully Deleting Data!"
         resetcondition()
     End Sub
 
-    Private Sub CustomerDataForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub OrderDBForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DB_Connect()
         ShowData()
         resetcondition()
         lblStats.Text = "Data Loaded!"
     End Sub
 
-    Private Sub dgCustomer_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgCustomer.CellClick
-        Dim cusrow = dgCustomer.CurrentRow.Index
-        With dgCustomer
+    Private Sub dgOrder_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgOrder.CellClick
+        Dim cusrow = dgOrder.CurrentRow.Index
+        With dgOrder
             lblMenuID.Text = .Item(0, cusrow).Value
             .Text = .Item(1, cusrow).Value
         End With
@@ -163,7 +166,7 @@ Public Class OrderDBForm
         End If
     End Sub
 
-    Private Sub dgCustomer_MouseClick(sender As Object, e As MouseEventArgs) Handles dgCustomer.MouseClick
+    Private Sub dgOrder_MouseClick(sender As Object, e As MouseEventArgs) Handles dgOrder.MouseClick
         resetpartial()
     End Sub
 
@@ -173,10 +176,10 @@ Public Class OrderDBForm
     End Sub
 
     Private Sub txtFind_TextChanged(sender As Object, e As EventArgs) Handles txtFind.TextChanged
-        AdptCustomer = New SqlDataAdapter("SELECT * FROM Customer WHERE " & cmbSearchChoice.Text & " like '%" & txtFind.Text & "%'", DBicecream)
-        TblCustomer.Clear()
-        AdptCustomer.Fill(TblCustomer)
-        dgCustomer.DataSource = TblCustomer
+        AdptOrders = New SqlDataAdapter("SELECT * FROM Orders WHERE " & cmbSearchChoice.Text & " like '%" & txtFind.Text & "%'", DBresto)
+        TblOrders.Clear()
+        AdptOrders.Fill(TblOrders)
+        dgOrder.DataSource = TblOrders
     End Sub
 
     Private Sub CmsRefresh_Click(sender As Object, e As EventArgs) Handles CmsRefresh.Click
@@ -185,31 +188,31 @@ Public Class OrderDBForm
     End Sub
 
     Sub SortingDataASC()
-        AdptCustomer = New SqlDataAdapter("SELECT * FROM Customer ORDER BY " & sortCategory & " ASC", DBicecream)
-        TblCustomer.Clear()
-        AdptCustomer.Fill(TblCustomer)
-        dgCustomer.DataSource = TblCustomer
+        AdptOrders = New SqlDataAdapter("SELECT * FROM Orders ORDER BY " & sortCategory & " ASC", DBresto)
+        TblOrders.Clear()
+        AdptOrders.Fill(TblOrders)
+        dgOrder.DataSource = TblOrders
     End Sub
 
     Sub SortingDataDESC()
-        AdptCustomer = New SqlDataAdapter("SELECT * FROM Customer ORDER BY " & sortCategory & " DESC", DBicecream)
-        TblCustomer.Clear()
-        AdptCustomer.Fill(TblCustomer)
-        dgCustomer.DataSource = TblCustomer
+        AdptOrders = New SqlDataAdapter("SELECT * FROM Orders ORDER BY " & sortCategory & " DESC", DBresto)
+        TblOrders.Clear()
+        AdptOrders.Fill(TblOrders)
+        dgOrder.DataSource = TblOrders
     End Sub
 
     Private Sub MsIdAsc_Click(sender As Object, e As EventArgs) Handles MsIdAsc.Click
-        sortCategory = "CUS_ID"
+        sortCategory = "Order_ID"
         SortingDataASC()
     End Sub
 
     Private Sub MsIdDesc_Click(sender As Object, e As EventArgs) Handles MsIdDesc.Click
-        sortCategory = "CUS_ID"
+        sortCategory = "Order_ID"
         SortingDataDESC()
     End Sub
 
     Private Sub MsNameAsc_Click(sender As Object, e As EventArgs) Handles MsNameAsc.Click
-        sortCategory = "CUS_NAME"
+        sortCategory = "Order_Qty"
         SortingDataASC()
     End Sub
 
@@ -222,7 +225,7 @@ Public Class OrderDBForm
     End Sub
 
     Private Sub MsNameDesc_Click(sender As Object, e As EventArgs) Handles MsNameDesc.Click
-        sortCategory = "CUS_NAME"
+        sortCategory = "Order_Qty"
         SortingDataDESC()
     End Sub
 End Class
