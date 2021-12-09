@@ -1,22 +1,22 @@
 ﻿Imports System.Data.SqlClient
 Public Class FeedBackDBForm
-    Dim CusGend, sortCategory As String
-    Sub totalCus()
-        CMDiceJr = New SqlCommand("SELECT COUNT(CUS_ID) AS TOTAL_CUSTOMER FROM Customer", DBicecream)
-        DTRiceJr = CMDiceJr.ExecuteReader
-        DTRiceJr.Close()
-        Dim totalcus As Integer = Convert.ToInt16(CMDiceJr.ExecuteScalar())
-        lblTotalTrans.Text = totalcus.ToString
+    Dim sortCategory As String
+    Sub totalFeed()
+        CMDresto = New SqlCommand("SELECT COUNT(Feed_ID) AS TOTAL_FEEDBACK FROM Feedback", DBresto)
+        DTRresto = CMDresto.ExecuteReader
+        DTRresto.Close()
+        Dim totalfeed As Integer = Convert.ToInt16(CMDresto.ExecuteScalar())
+        lblTotalFeedback.Text = totalfeed.ToString
     End Sub
 
     Sub ShowData()
-        AdptCustomer = New SqlDataAdapter("SELECT * from Customer", DBicecream)
-        TblCustomer.Clear()
-        AdptCustomer.Fill(TblCustomer)
-        dgCustomer.DataSource = TblCustomer
+        AdptFeedback = New SqlDataAdapter("SELECT * from Customer", DBresto)
+        TblFeedback.Clear()
+        AdptFeedback.Fill(TblFeedback)
+        dgFeedback.DataSource = TblFeedback
         resetcondition()
         resetValue()
-        totalCus()
+        totalFeed()
     End Sub
 
     Sub resetValue()
@@ -51,26 +51,26 @@ Public Class FeedBackDBForm
         btnConfirmation.Text = "Confirm Input"
         Dim propercode As String
         Dim countcode As Long
-        CMDiceJr = New SqlCommand("SELECT * FROM Customer WHERE CUS_ID IN (SELECT MAX(CUS_ID) FROM Customer)", DBicecream)
-        DTRiceJr = CMDiceJr.ExecuteReader
-        DTRiceJr.Read()
-        If Not DTRiceJr.HasRows Then
-            propercode = "C" + "0000001"
+        CMDresto = New SqlCommand("SELECT * FROM Feedback WHERE CUS_ID IN (SELECT MAX(Feed_ID) FROM Feedback)", DBresto)
+        DTRresto = CMDresto.ExecuteReader
+        DTRresto.Read()
+        If Not DTRresto.HasRows Then
+            propercode = "F" + "0001"
         Else
-            countcode = Microsoft.VisualBasic.Right(DTRiceJr.GetString(0), 7) + 1
-            propercode = "C" + Microsoft.VisualBasic.Right("0000000" & countcode, 7)
+            countcode = Microsoft.VisualBasic.Right(DTRresto.GetString(0), 7) + 1
+            propercode = "F" + Microsoft.VisualBasic.Right("000" & countcode, 7)
         End If
         lblFeedID.Text = propercode
 
-        DTRiceJr.Close()
+        DTRresto.Close()
     End Sub
 
     Sub Addingdata()
-        CMDiceJr = New SqlCommand("insert into Customer " &
+        CMDresto = New SqlCommand("insert into Customer " &
                    " values (
-                           '" & lblFeedID.Text & "',")
+                           '" & lblFeedID.Text & "',", DBresto)
 
-        CMDiceJr.ExecuteNonQuery()
+        CMDresto.ExecuteNonQuery()
         MsgBox("Succesfull Adding data!")
         lblStats.Text = "New Data Added!"
         ShowData()
@@ -78,10 +78,10 @@ Public Class FeedBackDBForm
     End Sub
 
     Sub Updatingdata()
-        CMDiceJr = New SqlCommand("UPDATE Customer set " &
-                    "CUS_ID ='" & lblFeedID.Text & "'," &
-                    "CUS_NAME ='" & "'", DBicecream)
-        CMDiceJr.ExecuteNonQuery()
+        CMDresto = New SqlCommand("UPDATE Customer set " &
+                    "Feed_ID ='" & lblFeedID.Text & "'," &
+                    "Trans_ID ='" & lblTransactionID.Text & "'", DBresto)
+        CMDresto.ExecuteNonQuery()
         MsgBox("Succesfull Editting data!")
         lblStats.Text = "Data Updated!"
         ShowData()
@@ -97,45 +97,45 @@ Public Class FeedBackDBForm
     End Sub
 
     Sub editValidation()
-        CMDiceJr = New SqlCommand("SELECT * FROM Customer WHERE CUS_ID ='" & lblFeedID.Text & "'", DBicecream)
-        DTRiceJr = CMDiceJr.ExecuteReader
-        If DTRiceJr.Read Then
+        CMDresto = New SqlCommand("SELECT * FROM Feedback WHERE Feed_ID ='" & lblFeedID.Text & "'", DBresto)
+        DTRresto = CMDresto.ExecuteReader
+        If DTRresto.Read Then
             editcondition()
         Else
             MsgBox("Please Select    Any data", MsgBoxStyle.Information, "Help")
             resetcondition()
         End If
-        DTRiceJr.Close()
+        DTRresto.Close()
     End Sub
     Sub Deletingdata()
-        CMDiceJr = New SqlCommand(" DELETE from Customer where CUS_ID ='" & dgCustomer.SelectedCells(0).Value & "'", DBicecream)
-        CMDiceJr.ExecuteNonQuery()
+        CMDresto = New SqlCommand(" DELETE from Feedback where Feed_ID ='" & dgFeedback.SelectedCells(0).Value & "'", DBresto)
+        CMDresto.ExecuteNonQuery()
         ShowData()
         MsgBox("Succesfull Deleting data!")
         lblStats.Text = "successfully Deleting Data!"
         resetcondition()
     End Sub
 
-    Private Sub CustomerDataForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub FeedbackDBForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DB_Connect()
         ShowData()
         resetcondition()
         lblStats.Text = "Data Loaded!"
     End Sub
 
-    Private Sub dgCustomer_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgCustomer.CellClick
-        Dim cusrow = dgCustomer.CurrentRow.Index
-        With dgCustomer
+    Private Sub dgFeedback_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgFeedback.CellClick
+        Dim cusrow = dgFeedback.CurrentRow.Index
+        With dgFeedback
             lblFeedID.Text = .Item(0, cusrow).Value
             .Text = .Item(1, cusrow).Value
         End With
     End Sub
 
-    Private Sub MsEditCus_Click(sender As Object, e As EventArgs) Handles MsEditCus.Click
+    Private Sub MsEditFeed_Click(sender As Object, e As EventArgs) Handles MsEditFeed.Click
         editValidation()
     End Sub
 
-    Private Sub CmsEditCus_Click(sender As Object, e As EventArgs) Handles CmsEditCus.Click
+    Private Sub CmsEditFeed_Click(sender As Object, e As EventArgs) Handles CmsEditFeed.Click
         editValidation()
     End Sub
 
@@ -143,15 +143,15 @@ Public Class FeedBackDBForm
         Deletingdata()
     End Sub
 
-    Private Sub MsDeleteCus_Click(sender As Object, e As EventArgs) Handles MsDeleteCus.Click
+    Private Sub MsDeleteFeed_Click(sender As Object, e As EventArgs) Handles MsDeleteFeed.Click
         Deletingdata()
     End Sub
 
-    Private Sub MsInsertCus_Click(sender As Object, e As EventArgs) Handles MsInsertCus.Click
+    Private Sub MsInsertFeed_Click(sender As Object, e As EventArgs) Handles MsInsertFeed.Click
         autoID()
     End Sub
 
-    Private Sub CmsAddCus_Click(sender As Object, e As EventArgs) Handles CmsAddCus.Click
+    Private Sub CmsAddFeed_Click(sender As Object, e As EventArgs) Handles CmsAddFeed.Click
         autoID()
     End Sub
 
@@ -163,7 +163,7 @@ Public Class FeedBackDBForm
         End If
     End Sub
 
-    Private Sub dgCustomer_MouseClick(sender As Object, e As MouseEventArgs) Handles dgCustomer.MouseClick
+    Private Sub dgFeedback_MouseClick(sender As Object, e As MouseEventArgs) Handles dgFeedback.MouseClick
         resetpartial()
     End Sub
 
@@ -173,10 +173,10 @@ Public Class FeedBackDBForm
     End Sub
 
     Private Sub txtFind_TextChanged(sender As Object, e As EventArgs) Handles txtFind.TextChanged
-        AdptCustomer = New SqlDataAdapter("SELECT * FROM Customer WHERE " & cmbSearchChoice.Text & " like '%" & txtFind.Text & "%'", DBicecream)
-        TblCustomer.Clear()
-        AdptCustomer.Fill(TblCustomer)
-        dgCustomer.DataSource = TblCustomer
+        AdptFeedback = New SqlDataAdapter("SELECT * FROM Feedback WHERE " & cmbSearchChoice.Text & " like '%" & txtFind.Text & "%'", DBresto)
+        TblFeedback.Clear()
+        AdptFeedback.Fill(TblFeedback)
+        dgFeedback.DataSource = TblFeedback
     End Sub
 
     Private Sub CmsRefresh_Click(sender As Object, e As EventArgs) Handles CmsRefresh.Click
@@ -185,31 +185,31 @@ Public Class FeedBackDBForm
     End Sub
 
     Sub SortingDataASC()
-        AdptCustomer = New SqlDataAdapter("SELECT * FROM Customer ORDER BY " & sortCategory & " ASC", DBicecream)
-        TblCustomer.Clear()
-        AdptCustomer.Fill(TblCustomer)
-        dgCustomer.DataSource = TblCustomer
+        AdptFeedback = New SqlDataAdapter("SELECT * FROM Feedback ORDER BY " & sortCategory & " ASC", DBresto)
+        TblFeedback.Clear()
+        AdptFeedback.Fill(TblFeedback)
+        dgFeedback.DataSource = TblFeedback
     End Sub
 
     Sub SortingDataDESC()
-        AdptCustomer = New SqlDataAdapter("SELECT * FROM Customer ORDER BY " & sortCategory & " DESC", DBicecream)
-        TblCustomer.Clear()
-        AdptCustomer.Fill(TblCustomer)
-        dgCustomer.DataSource = TblCustomer
+        AdptFeedback = New SqlDataAdapter("SELECT * FROM Customer ORDER BY " & sortCategory & " DESC", DBresto)
+        TblFeedback.Clear()
+        AdptFeedback.Fill(TblFeedback)
+        dgFeedback.DataSource = TblFeedback
     End Sub
 
     Private Sub MsIdAsc_Click(sender As Object, e As EventArgs) Handles MsIdAsc.Click
-        sortCategory = "CUS_ID"
+        sortCategory = "Feed_ID"
         SortingDataASC()
     End Sub
 
     Private Sub MsIdDesc_Click(sender As Object, e As EventArgs) Handles MsIdDesc.Click
-        sortCategory = "CUS_ID"
+        sortCategory = "Feed_ID"
         SortingDataDESC()
     End Sub
 
     Private Sub MsNameAsc_Click(sender As Object, e As EventArgs) Handles MsNameAsc.Click
-        sortCategory = "CUS_NAME"
+        sortCategory = "Trans_ID"
         SortingDataASC()
     End Sub
 
@@ -222,7 +222,7 @@ Public Class FeedBackDBForm
     End Sub
 
     Private Sub MsNameDesc_Click(sender As Object, e As EventArgs) Handles MsNameDesc.Click
-        sortCategory = "CUS_NAME"
+        sortCategory = "Trans_ID"
         SortingDataDESC()
     End Sub
 End Class
