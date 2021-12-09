@@ -39,7 +39,7 @@ Partial Class OrderForm
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Bold)
         Me.Label1.Location = New System.Drawing.Point(62, 56)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(69, 16)
+        Me.Label1.Size = New System.Drawing.Size(70, 16)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Order ID:"
         '
@@ -49,7 +49,7 @@ Partial Class OrderForm
         Me.lblOrderID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Bold)
         Me.lblOrderID.Location = New System.Drawing.Point(138, 56)
         Me.lblOrderID.Name = "lblOrderID"
-        Me.lblOrderID.Size = New System.Drawing.Size(53, 16)
+        Me.lblOrderID.Size = New System.Drawing.Size(54, 16)
         Me.lblOrderID.TabIndex = 1
         Me.lblOrderID.Text = "OD****"
         '
@@ -74,33 +74,42 @@ Partial Class OrderForm
         '
         'btnResetOrder
         '
+        Me.btnResetOrder.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(63, Byte), Integer))
+        Me.btnResetOrder.FlatAppearance.BorderSize = 0
+        Me.btnResetOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnResetOrder.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
         Me.btnResetOrder.Location = New System.Drawing.Point(65, 331)
         Me.btnResetOrder.Name = "btnResetOrder"
         Me.btnResetOrder.Size = New System.Drawing.Size(250, 60)
         Me.btnResetOrder.TabIndex = 6
         Me.btnResetOrder.Text = "Reset Order"
-        Me.btnResetOrder.UseVisualStyleBackColor = True
+        Me.btnResetOrder.UseVisualStyleBackColor = False
         '
         'btnAddOrder
         '
+        Me.btnAddOrder.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(63, Byte), Integer))
+        Me.btnAddOrder.FlatAppearance.BorderSize = 0
+        Me.btnAddOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnAddOrder.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
         Me.btnAddOrder.Location = New System.Drawing.Point(374, 331)
         Me.btnAddOrder.Name = "btnAddOrder"
         Me.btnAddOrder.Size = New System.Drawing.Size(250, 60)
         Me.btnAddOrder.TabIndex = 7
         Me.btnAddOrder.Text = "Add Order"
-        Me.btnAddOrder.UseVisualStyleBackColor = True
+        Me.btnAddOrder.UseVisualStyleBackColor = False
         '
         'btnClaimOrder
         '
+        Me.btnClaimOrder.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(63, Byte), Integer))
+        Me.btnClaimOrder.FlatAppearance.BorderSize = 0
+        Me.btnClaimOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnClaimOrder.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!)
         Me.btnClaimOrder.Location = New System.Drawing.Point(216, 417)
         Me.btnClaimOrder.Name = "btnClaimOrder"
         Me.btnClaimOrder.Size = New System.Drawing.Size(250, 60)
         Me.btnClaimOrder.TabIndex = 8
         Me.btnClaimOrder.Text = "Claim Order"
-        Me.btnClaimOrder.UseVisualStyleBackColor = True
+        Me.btnClaimOrder.UseVisualStyleBackColor = False
         '
         'listOrder
         '
@@ -117,7 +126,7 @@ Partial Class OrderForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(203, Byte), Integer), CType(CType(119, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(730, 525)
         Me.Controls.Add(Me.listOrder)
         Me.Controls.Add(Me.btnClaimOrder)
