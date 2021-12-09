@@ -40,6 +40,7 @@ Partial Class OrderDBForm
         Me.pnlMainData = New System.Windows.Forms.Panel()
         Me.splitCus = New System.Windows.Forms.SplitContainer()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.txtMenuID = New System.Windows.Forms.TextBox()
         Me.lblOrderID = New System.Windows.Forms.Label()
         Me.txtOrderQty = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -63,7 +64,6 @@ Partial Class OrderDBForm
         Me.CmsAddCus = New System.Windows.Forms.ToolStripMenuItem()
         Me.CmsDelData = New System.Windows.Forms.ToolStripMenuItem()
         Me.CmsEditCus = New System.Windows.Forms.ToolStripMenuItem()
-        Me.txtMenuID = New System.Windows.Forms.TextBox()
         Me.pnlDataMenu.SuspendLayout()
         Me.MsCustomer.SuspendLayout()
         Me.pnlMainData.SuspendLayout()
@@ -107,25 +107,25 @@ Partial Class OrderDBForm
         'msRefresh
         '
         Me.msRefresh.Name = "msRefresh"
-        Me.msRefresh.Size = New System.Drawing.Size(180, 22)
+        Me.msRefresh.Size = New System.Drawing.Size(140, 22)
         Me.msRefresh.Text = "Refresh Data"
         '
         'MsInsertCus
         '
         Me.MsInsertCus.Name = "MsInsertCus"
-        Me.MsInsertCus.Size = New System.Drawing.Size(180, 22)
+        Me.MsInsertCus.Size = New System.Drawing.Size(140, 22)
         Me.MsInsertCus.Text = "Insert Data"
         '
         'MsEditCus
         '
         Me.MsEditCus.Name = "MsEditCus"
-        Me.MsEditCus.Size = New System.Drawing.Size(180, 22)
+        Me.MsEditCus.Size = New System.Drawing.Size(140, 22)
         Me.MsEditCus.Text = "Update Data"
         '
         'MsDeleteCus
         '
         Me.MsDeleteCus.Name = "MsDeleteCus"
-        Me.MsDeleteCus.Size = New System.Drawing.Size(180, 22)
+        Me.MsDeleteCus.Size = New System.Drawing.Size(140, 22)
         Me.MsDeleteCus.Text = "Delete Data"
         '
         'ToolsToolStripMenuItem
@@ -139,38 +139,38 @@ Partial Class OrderDBForm
         '
         Me.MsName.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MsNameAsc, Me.MsNameDesc})
         Me.MsName.Name = "MsName"
-        Me.MsName.Size = New System.Drawing.Size(172, 22)
+        Me.MsName.Size = New System.Drawing.Size(180, 22)
         Me.MsName.Text = "Sort data by Name"
         '
         'MsNameAsc
         '
         Me.MsNameAsc.Name = "MsNameAsc"
-        Me.MsNameAsc.Size = New System.Drawing.Size(136, 22)
+        Me.MsNameAsc.Size = New System.Drawing.Size(180, 22)
         Me.MsNameAsc.Text = "Ascending"
         '
         'MsNameDesc
         '
         Me.MsNameDesc.Name = "MsNameDesc"
-        Me.MsNameDesc.Size = New System.Drawing.Size(136, 22)
+        Me.MsNameDesc.Size = New System.Drawing.Size(180, 22)
         Me.MsNameDesc.Text = "Descending"
         '
         'SortByAgeToolStripMenuItem
         '
         Me.SortByAgeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MsIdAsc, Me.MsIdDesc})
         Me.SortByAgeToolStripMenuItem.Name = "SortByAgeToolStripMenuItem"
-        Me.SortByAgeToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.SortByAgeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SortByAgeToolStripMenuItem.Text = "Sort by ID"
         '
         'MsIdAsc
         '
         Me.MsIdAsc.Name = "MsIdAsc"
-        Me.MsIdAsc.Size = New System.Drawing.Size(136, 22)
+        Me.MsIdAsc.Size = New System.Drawing.Size(180, 22)
         Me.MsIdAsc.Text = "Ascending"
         '
         'MsIdDesc
         '
         Me.MsIdDesc.Name = "MsIdDesc"
-        Me.MsIdDesc.Size = New System.Drawing.Size(136, 22)
+        Me.MsIdDesc.Size = New System.Drawing.Size(180, 22)
         Me.MsIdDesc.Text = "Descending"
         '
         'pnlMainData
@@ -228,6 +228,13 @@ Partial Class OrderDBForm
         Me.Panel2.Size = New System.Drawing.Size(730, 165)
         Me.Panel2.TabIndex = 4
         '
+        'txtMenuID
+        '
+        Me.txtMenuID.Location = New System.Drawing.Point(229, 100)
+        Me.txtMenuID.Name = "txtMenuID"
+        Me.txtMenuID.Size = New System.Drawing.Size(282, 23)
+        Me.txtMenuID.TabIndex = 10
+        '
         'lblOrderID
         '
         Me.lblOrderID.AutoSize = True
@@ -268,7 +275,7 @@ Partial Class OrderDBForm
         '
         Me.cmbSearchChoice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbSearchChoice.FormattingEnabled = True
-        Me.cmbSearchChoice.Items.AddRange(New Object() {"CUS_ID", "CUS_NAME", "CUS_EMAIL", "CUS_GENDER", "CUS_PHONE"})
+        Me.cmbSearchChoice.Items.AddRange(New Object() {"Order_ID", "Menu_ID", "Order_Qty"})
         Me.cmbSearchChoice.Location = New System.Drawing.Point(232, 42)
         Me.cmbSearchChoice.Name = "cmbSearchChoice"
         Me.cmbSearchChoice.Size = New System.Drawing.Size(121, 24)
@@ -428,13 +435,6 @@ Partial Class OrderDBForm
         Me.CmsEditCus.Name = "CmsEditCus"
         Me.CmsEditCus.Size = New System.Drawing.Size(140, 22)
         Me.CmsEditCus.Text = "Update Data"
-        '
-        'txtMenuID
-        '
-        Me.txtMenuID.Location = New System.Drawing.Point(229, 100)
-        Me.txtMenuID.Name = "txtMenuID"
-        Me.txtMenuID.Size = New System.Drawing.Size(282, 23)
-        Me.txtMenuID.TabIndex = 10
         '
         'OrderDBForm
         '
