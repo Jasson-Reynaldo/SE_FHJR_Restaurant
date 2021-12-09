@@ -100,7 +100,7 @@ Public Class OrderDBForm
     End Sub
 
     Sub editValidation()
-        CMDresto = New SqlCommand("SELECT * FROM Orders WHERE CUS_ID ='" & lblMenuID.Text & "'", DBresto)
+        CMDresto = New SqlCommand("SELECT * FROM Orders WHERE CUS_ID ='" & lblOrderID.Text & "'", DBresto)
         DTRresto = CMDresto.ExecuteReader
         If DTRresto.Read Then
             editcondition()
@@ -129,7 +129,7 @@ Public Class OrderDBForm
     Private Sub dgOrder_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgOrder.CellClick
         Dim cusrow = dgOrder.CurrentRow.Index
         With dgOrder
-            lblMenuID.Text = .Item(0, cusrow).Value
+            lblOrderID.Text = .Item(0, cusrow).Value
             .Text = .Item(1, cusrow).Value
         End With
     End Sub

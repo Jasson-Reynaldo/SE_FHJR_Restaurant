@@ -1,22 +1,22 @@
 ﻿Imports System.Data.SqlClient
 Public Class TransactionDBForm
-    Dim CusGend, sortCategory As String
-    Sub totalCus()
-        CMDiceJr = New SqlCommand("SELECT COUNT(CUS_ID) AS TOTAL_CUSTOMER FROM Customer", DBicecream)
-        DTRiceJr = CMDiceJr.ExecuteReader
-        DTRiceJr.Close()
-        Dim totalcus As Integer = Convert.ToInt16(CMDiceJr.ExecuteScalar())
-        lblTotalTrans.Text = totalcus.ToString
+    Dim sortCategory As String
+    Sub totalTrans()
+        CMDresto = New SqlCommand("SELECT COUNT(Trans_ID) AS TOTAL_TRANSACTION FROM Transaction", DBresto)
+        DTRresto = CMDresto.ExecuteReader
+        DTRresto.Close()
+        Dim totaltrans As Integer = Convert.ToInt16(CMDresto.ExecuteScalar())
+        lblTotalTrans.Text = totaltrans.ToString
     End Sub
 
     Sub ShowData()
-        AdptCustomer = New SqlDataAdapter("SELECT * from Customer", DBicecream)
-        TblCustomer.Clear()
-        AdptCustomer.Fill(TblCustomer)
-        dgCustomer.DataSource = TblCustomer
+        AdptTransactions = New SqlDataAdapter("SELECT * from Transaction", DBresto)
+        TblTransactions.Clear()
+        AdptTransactions.Fill(TblTransactions)
+        dgTransactions.DataSource = TblTransactions
         resetcondition()
         resetValue()
-        totalCus()
+        totalTrans()
     End Sub
 
     Sub resetValue()
@@ -51,26 +51,26 @@ Public Class TransactionDBForm
         btnConfirmation.Text = "Confirm Input"
         Dim propercode As String
         Dim countcode As Long
-        CMDiceJr = New SqlCommand("SELECT * FROM Customer WHERE CUS_ID IN (SELECT MAX(CUS_ID) FROM Customer)", DBicecream)
-        DTRiceJr = CMDiceJr.ExecuteReader
-        DTRiceJr.Read()
-        If Not DTRiceJr.HasRows Then
-            propercode = "C" + "0000001"
+        CMDresto = New SqlCommand("SELECT * FROM Transaction WHERE Trans_ID IN (SELECT MAX(Trans_ID) FROM Transaction)", DBresto)
+        DTRresto = CMDresto.ExecuteReader
+        DTRresto.Read()
+        If Not DTRresto.HasRows Then
+            propercode = "T" + "0001"
         Else
-            countcode = Microsoft.VisualBasic.Right(DTRiceJr.GetString(0), 7) + 1
-            propercode = "C" + Microsoft.VisualBasic.Right("0000000" & countcode, 7)
+            countcode = Microsoft.VisualBasic.Right(DTRresto.GetString(0), 7) + 1
+            propercode = "T" + Microsoft.VisualBasic.Right("000" & countcode, 7)
         End If
         lblTransID.Text = propercode
 
-        DTRiceJr.Close()
+        DTRresto.Close()
     End Sub
 
     Sub Addingdata()
-        CMDiceJr = New SqlCommand("insert into Customer " &
+        CMDresto = New SqlCommand("insert into Transaction " &
                    " values (
-                           '" & lblTransID.Text & "',")
+                           '" & lblTransID.Text & "',", DBresto)
 
-        CMDiceJr.ExecuteNonQuery()
+        CMDresto.ExecuteNonQuery()
         MsgBox("Succesfull Adding data!")
         lblStats.Text = "New Data Added!"
         ShowData()
@@ -78,10 +78,10 @@ Public Class TransactionDBForm
     End Sub
 
     Sub Updatingdata()
-        CMDiceJr = New SqlCommand("UPDATE Customer set " &
-                    "CUS_ID ='" & lblTransID.Text & "'," &
-                    "CUS_NAME ='" & "'", DBicecream)
-        CMDiceJr.ExecuteNonQuery()
+        CMDresto = New SqlCommand("UPDATE Transaction set " &
+                    "Trans_ID ='" & lblTransID.Text & "'," &
+                    "Order_ID ='" & lblOrderID.Text & "'", DBresto)
+        CMDresto.ExecuteNonQuery()
         MsgBox("Succesfull Editting data!")
         lblStats.Text = "Data Updated!"
         ShowData()
@@ -97,45 +97,45 @@ Public Class TransactionDBForm
     End Sub
 
     Sub editValidation()
-        CMDiceJr = New SqlCommand("SELECT * FROM Customer WHERE CUS_ID ='" & lblTransID.Text & "'", DBicecream)
-        DTRiceJr = CMDiceJr.ExecuteReader
-        If DTRiceJr.Read Then
+        CMDresto = New SqlCommand("SELECT * FROM Transaction WHERE Trans_ID ='" & lblTransID.Text & "'", DBresto)
+        DTRresto = CMDresto.ExecuteReader
+        If DTRresto.Read Then
             editcondition()
         Else
             MsgBox("Please Select    Any data", MsgBoxStyle.Information, "Help")
             resetcondition()
         End If
-        DTRiceJr.Close()
+        DTRresto.Close()
     End Sub
     Sub Deletingdata()
-        CMDiceJr = New SqlCommand(" DELETE from Customer where CUS_ID ='" & dgCustomer.SelectedCells(0).Value & "'", DBicecream)
-        CMDiceJr.ExecuteNonQuery()
+        CMDresto = New SqlCommand(" DELETE from Transaction where Trans_ID ='" & dgTransactions.SelectedCells(0).Value & "'", DBresto)
+        CMDresto.ExecuteNonQuery()
         ShowData()
         MsgBox("Succesfull Deleting data!")
         lblStats.Text = "successfully Deleting Data!"
         resetcondition()
     End Sub
 
-    Private Sub CustomerDataForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub TransactionDBForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         DB_Connect()
         ShowData()
         resetcondition()
         lblStats.Text = "Data Loaded!"
     End Sub
 
-    Private Sub dgCustomer_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgCustomer.CellClick
-        Dim cusrow = dgCustomer.CurrentRow.Index
-        With dgCustomer
+    Private Sub dgTransactions_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgTransactions.CellClick
+        Dim cusrow = dgTransactions.CurrentRow.Index
+        With dgTransactions
             lblTransID.Text = .Item(0, cusrow).Value
             .Text = .Item(1, cusrow).Value
         End With
     End Sub
 
-    Private Sub MsEditCus_Click(sender As Object, e As EventArgs) Handles MsEditCus.Click
+    Private Sub MsEditTrans_Click(sender As Object, e As EventArgs) Handles MsEditTrans.Click
         editValidation()
     End Sub
 
-    Private Sub CmsEditCus_Click(sender As Object, e As EventArgs) Handles CmsEditCus.Click
+    Private Sub CmsEditTrans_Click(sender As Object, e As EventArgs) Handles CmsEditTrans.Click
         editValidation()
     End Sub
 
@@ -143,15 +143,15 @@ Public Class TransactionDBForm
         Deletingdata()
     End Sub
 
-    Private Sub MsDeleteCus_Click(sender As Object, e As EventArgs) Handles MsDeleteCus.Click
+    Private Sub MsDeleteTrans_Click(sender As Object, e As EventArgs) Handles MsDeleteTrans.Click
         Deletingdata()
     End Sub
 
-    Private Sub MsInsertCus_Click(sender As Object, e As EventArgs) Handles MsInsertCus.Click
+    Private Sub MsInsertTrans_Click(sender As Object, e As EventArgs) Handles MsInsertTrans.Click
         autoID()
     End Sub
 
-    Private Sub CmsAddCus_Click(sender As Object, e As EventArgs) Handles CmsAddCus.Click
+    Private Sub CmsAddTrans_Click(sender As Object, e As EventArgs) Handles CmsAddTrans.Click
         autoID()
     End Sub
 
@@ -163,7 +163,7 @@ Public Class TransactionDBForm
         End If
     End Sub
 
-    Private Sub dgCustomer_MouseClick(sender As Object, e As MouseEventArgs) Handles dgCustomer.MouseClick
+    Private Sub dgTransactions_MouseClick(sender As Object, e As MouseEventArgs) Handles dgTransactions.MouseClick
         resetpartial()
     End Sub
 
@@ -173,10 +173,10 @@ Public Class TransactionDBForm
     End Sub
 
     Private Sub txtFind_TextChanged(sender As Object, e As EventArgs) Handles txtFind.TextChanged
-        AdptCustomer = New SqlDataAdapter("SELECT * FROM Customer WHERE " & cmbSearchChoice.Text & " like '%" & txtFind.Text & "%'", DBicecream)
-        TblCustomer.Clear()
-        AdptCustomer.Fill(TblCustomer)
-        dgCustomer.DataSource = TblCustomer
+        AdptTransactions = New SqlDataAdapter("SELECT * FROM Transaction WHERE " & cmbSearchChoice.Text & " like '%" & txtFind.Text & "%'", DBresto)
+        TblTransactions.Clear()
+        AdptTransactions.Fill(TblTransactions)
+        dgTransactions.DataSource = TblTransactions
     End Sub
 
     Private Sub CmsRefresh_Click(sender As Object, e As EventArgs) Handles CmsRefresh.Click
@@ -185,31 +185,31 @@ Public Class TransactionDBForm
     End Sub
 
     Sub SortingDataASC()
-        AdptCustomer = New SqlDataAdapter("SELECT * FROM Customer ORDER BY " & sortCategory & " ASC", DBicecream)
-        TblCustomer.Clear()
-        AdptCustomer.Fill(TblCustomer)
-        dgCustomer.DataSource = TblCustomer
+        AdptTransactions = New SqlDataAdapter("SELECT * FROM Transaction ORDER BY " & sortCategory & " ASC", DBresto)
+        TblTransactions.Clear()
+        AdptTransactions.Fill(TblTransactions)
+        dgTransactions.DataSource = TblTransactions
     End Sub
 
     Sub SortingDataDESC()
-        AdptCustomer = New SqlDataAdapter("SELECT * FROM Customer ORDER BY " & sortCategory & " DESC", DBicecream)
-        TblCustomer.Clear()
-        AdptCustomer.Fill(TblCustomer)
-        dgCustomer.DataSource = TblCustomer
+        AdptTransactions = New SqlDataAdapter("SELECT * FROM Transaction ORDER BY " & sortCategory & " DESC", DBresto)
+        TblTransactions.Clear()
+        AdptTransactions.Fill(TblTransactions)
+        dgTransactions.DataSource = TblTransactions
     End Sub
 
     Private Sub MsIdAsc_Click(sender As Object, e As EventArgs) Handles MsIdAsc.Click
-        sortCategory = "CUS_ID"
+        sortCategory = "Trans_ID"
         SortingDataASC()
     End Sub
 
     Private Sub MsIdDesc_Click(sender As Object, e As EventArgs) Handles MsIdDesc.Click
-        sortCategory = "CUS_ID"
+        sortCategory = "Trans_ID"
         SortingDataDESC()
     End Sub
 
     Private Sub MsNameAsc_Click(sender As Object, e As EventArgs) Handles MsNameAsc.Click
-        sortCategory = "CUS_NAME"
+        sortCategory = "Order_ID"
         SortingDataASC()
     End Sub
 
@@ -222,7 +222,7 @@ Public Class TransactionDBForm
     End Sub
 
     Private Sub MsNameDesc_Click(sender As Object, e As EventArgs) Handles MsNameDesc.Click
-        sortCategory = "CUS_NAME"
+        sortCategory = "Order_ID"
         SortingDataDESC()
     End Sub
 End Class
