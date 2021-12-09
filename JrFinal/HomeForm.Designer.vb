@@ -48,30 +48,30 @@ Partial Class HomeForm
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Milkshake", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(228, Byte), Integer), CType(CType(182, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(236, 205)
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(36, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(92, 205)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(292, 96)
+        Me.Label2.Size = New System.Drawing.Size(590, 96)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Frost JR"
+        Me.Label2.Text = "Delicioso Restaurant"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("A little sunshine", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label3.Location = New System.Drawing.Point(314, 301)
+        Me.Label3.ForeColor = System.Drawing.Color.Black
+        Me.Label3.Location = New System.Drawing.Point(293, 289)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(125, 23)
+        Me.Label3.Size = New System.Drawing.Size(165, 23)
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "Ice Cream Shop"
+        Me.Label3.Text = "Fast Food Restaurant"
         '
         'lblTime
         '
         Me.lblTime.AutoSize = True
         Me.lblTime.Font = New System.Drawing.Font("A little sunshine", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblTime.ForeColor = System.Drawing.Color.White
-        Me.lblTime.Location = New System.Drawing.Point(279, 400)
+        Me.lblTime.ForeColor = System.Drawing.Color.Black
+        Me.lblTime.Location = New System.Drawing.Point(268, 402)
         Me.lblTime.Name = "lblTime"
         Me.lblTime.Size = New System.Drawing.Size(96, 53)
         Me.lblTime.TabIndex = 3
@@ -85,8 +85,8 @@ Partial Class HomeForm
         '
         Me.lblDate.AutoSize = True
         Me.lblDate.Font = New System.Drawing.Font("A little sunshine", 36.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDate.ForeColor = System.Drawing.Color.White
-        Me.lblDate.Location = New System.Drawing.Point(170, 349)
+        Me.lblDate.ForeColor = System.Drawing.Color.Black
+        Me.lblDate.Location = New System.Drawing.Point(152, 349)
         Me.lblDate.Name = "lblDate"
         Me.lblDate.Size = New System.Drawing.Size(97, 53)
         Me.lblDate.TabIndex = 3
@@ -97,18 +97,18 @@ Partial Class HomeForm
         '
         Me.lblQuotes.AutoSize = True
         Me.lblQuotes.Font = New System.Drawing.Font("A little sunshine", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblQuotes.ForeColor = System.Drawing.Color.White
-        Me.lblQuotes.Location = New System.Drawing.Point(223, 489)
+        Me.lblQuotes.ForeColor = System.Drawing.Color.Black
+        Me.lblQuotes.Location = New System.Drawing.Point(258, 478)
         Me.lblQuotes.Name = "lblQuotes"
-        Me.lblQuotes.Size = New System.Drawing.Size(334, 27)
+        Me.lblQuotes.Size = New System.Drawing.Size(222, 27)
         Me.lblQuotes.TabIndex = 4
-        Me.lblQuotes.Text = "#There's always room for ice creams.  "
+        Me.lblQuotes.Text = "#Good Food, Good Mood."
         '
         'HomeForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(730, 525)
         Me.Controls.Add(Me.lblQuotes)
         Me.Controls.Add(Me.lblDate)

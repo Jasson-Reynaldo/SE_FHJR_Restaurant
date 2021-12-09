@@ -46,10 +46,10 @@ Partial Class LoginAdminForm
         Me.btnExit.ForeColor = System.Drawing.Color.LightGray
         Me.btnExit.ImageIndex = 0
         Me.btnExit.ImageList = Me.imgExit
-        Me.btnExit.Location = New System.Drawing.Point(759, 3)
-        Me.btnExit.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnExit.Location = New System.Drawing.Point(770, 0)
+        Me.btnExit.Margin = New System.Windows.Forms.Padding(2)
         Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(45, 49)
+        Me.btnExit.Size = New System.Drawing.Size(40, 38)
         Me.btnExit.TabIndex = 9
         Me.btnExit.UseVisualStyleBackColor = False
         '
@@ -64,21 +64,21 @@ Partial Class LoginAdminForm
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Raleway", 20.0!, System.Drawing.FontStyle.Bold)
         Me.Label1.Location = New System.Drawing.Point(308, 79)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(205, 31)
+        Me.Label1.Size = New System.Drawing.Size(192, 31)
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "LOGIN ADMIN"
         '
         'PictureBox1
         '
-        Me.PictureBox1.BackColor = System.Drawing.Color.Black
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.PictureBox1.Image = Global.JrFinal.My.Resources.Resources.R_logo
         Me.PictureBox1.Location = New System.Drawing.Point(104, 19)
-        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(90, 98)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -88,25 +88,25 @@ Partial Class LoginAdminForm
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(55, 118)
+        Me.Label2.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.Location = New System.Drawing.Point(62, 119)
         Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(194, 24)
+        Me.Label2.Size = New System.Drawing.Size(182, 19)
         Me.Label2.TabIndex = 12
         Me.Label2.Text = "Delliciosso Restaurant"
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.Black
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(63, Byte), Integer))
         Me.Panel1.Controls.Add(Me.chkShowPass)
         Me.Panel1.Controls.Add(Me.btnLogin)
         Me.Panel1.Controls.Add(Me.txtPassword)
         Me.Panel1.Controls.Add(Me.Label2)
         Me.Panel1.Controls.Add(Me.PictureBox1)
         Me.Panel1.Location = New System.Drawing.Point(248, 130)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(300, 292)
         Me.Panel1.TabIndex = 13
@@ -114,22 +114,22 @@ Partial Class LoginAdminForm
         'chkShowPass
         '
         Me.chkShowPass.AutoSize = True
-        Me.chkShowPass.Font = New System.Drawing.Font("Calibri", 9.75!)
-        Me.chkShowPass.ForeColor = System.Drawing.Color.White
+        Me.chkShowPass.Font = New System.Drawing.Font("Raleway", 8.0!, System.Drawing.FontStyle.Bold)
+        Me.chkShowPass.ForeColor = System.Drawing.Color.Black
         Me.chkShowPass.Location = New System.Drawing.Point(45, 198)
         Me.chkShowPass.Name = "chkShowPass"
-        Me.chkShowPass.Size = New System.Drawing.Size(109, 19)
+        Me.chkShowPass.Size = New System.Drawing.Size(106, 17)
         Me.chkShowPass.TabIndex = 15
         Me.chkShowPass.Text = "ShowPassword"
         Me.chkShowPass.UseVisualStyleBackColor = True
         '
         'btnLogin
         '
-        Me.btnLogin.BackColor = System.Drawing.Color.Yellow
+        Me.btnLogin.BackColor = System.Drawing.Color.FromArgb(CType(CType(254, Byte), Integer), CType(CType(183, Byte), Integer), CType(CType(2, Byte), Integer))
         Me.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnLogin.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnLogin.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnLogin.Location = New System.Drawing.Point(42, 232)
-        Me.btnLogin.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnLogin.Margin = New System.Windows.Forms.Padding(2)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(211, 30)
         Me.btnLogin.TabIndex = 14
@@ -140,7 +140,7 @@ Partial Class LoginAdminForm
         '
         Me.txtPassword.ForeColor = System.Drawing.Color.Black
         Me.txtPassword.Location = New System.Drawing.Point(42, 175)
-        Me.txtPassword.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.txtPassword.Margin = New System.Windows.Forms.Padding(2)
         Me.txtPassword.Name = "txtPassword"
         Me.txtPassword.Size = New System.Drawing.Size(212, 20)
         Me.txtPassword.TabIndex = 13
@@ -149,14 +149,15 @@ Partial Class LoginAdminForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackgroundImage = Global.JrFinal.My.Resources.Resources.SE_BgResto_1
+        Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(810, 496)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnExit)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ImeMode = System.Windows.Forms.ImeMode.NoControl
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "LoginAdminForm"
         Me.Text = "LoginAdminForm"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
