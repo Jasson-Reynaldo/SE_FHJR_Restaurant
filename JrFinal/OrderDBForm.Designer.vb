@@ -40,11 +40,12 @@ Partial Class OrderDBForm
         Me.pnlMainData = New System.Windows.Forms.Panel()
         Me.splitCus = New System.Windows.Forms.SplitContainer()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.txtMenuID = New System.Windows.Forms.TextBox()
+        Me.lblOrderID = New System.Windows.Forms.Label()
         Me.txtOrderQty = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.btnConfirmation = New System.Windows.Forms.Button()
         Me.cmbSearchChoice = New System.Windows.Forms.ComboBox()
-        Me.lblMenuID = New System.Windows.Forms.Label()
         Me.txtFind = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.lblTotalMenu = New System.Windows.Forms.Label()
@@ -57,13 +58,12 @@ Partial Class OrderDBForm
         Me.lblmenutitle = New System.Windows.Forms.Label()
         Me.StatsCus = New System.Windows.Forms.StatusStrip()
         Me.lblStats = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.dgCustomer = New System.Windows.Forms.DataGridView()
+        Me.dgOrder = New System.Windows.Forms.DataGridView()
         Me.cmsCustomer = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.CmsRefresh = New System.Windows.Forms.ToolStripMenuItem()
         Me.CmsAddCus = New System.Windows.Forms.ToolStripMenuItem()
         Me.CmsDelData = New System.Windows.Forms.ToolStripMenuItem()
         Me.CmsEditCus = New System.Windows.Forms.ToolStripMenuItem()
-        Me.lblOrderID = New System.Windows.Forms.Label()
         Me.pnlDataMenu.SuspendLayout()
         Me.MsCustomer.SuspendLayout()
         Me.pnlMainData.SuspendLayout()
@@ -74,7 +74,7 @@ Partial Class OrderDBForm
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.StatsCus.SuspendLayout()
-        CType(Me.dgCustomer, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgOrder, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.cmsCustomer.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -139,38 +139,38 @@ Partial Class OrderDBForm
         '
         Me.MsName.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MsNameAsc, Me.MsNameDesc})
         Me.MsName.Name = "MsName"
-        Me.MsName.Size = New System.Drawing.Size(172, 22)
+        Me.MsName.Size = New System.Drawing.Size(180, 22)
         Me.MsName.Text = "Sort data by Name"
         '
         'MsNameAsc
         '
         Me.MsNameAsc.Name = "MsNameAsc"
-        Me.MsNameAsc.Size = New System.Drawing.Size(136, 22)
+        Me.MsNameAsc.Size = New System.Drawing.Size(180, 22)
         Me.MsNameAsc.Text = "Ascending"
         '
         'MsNameDesc
         '
         Me.MsNameDesc.Name = "MsNameDesc"
-        Me.MsNameDesc.Size = New System.Drawing.Size(136, 22)
+        Me.MsNameDesc.Size = New System.Drawing.Size(180, 22)
         Me.MsNameDesc.Text = "Descending"
         '
         'SortByAgeToolStripMenuItem
         '
         Me.SortByAgeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MsIdAsc, Me.MsIdDesc})
         Me.SortByAgeToolStripMenuItem.Name = "SortByAgeToolStripMenuItem"
-        Me.SortByAgeToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
+        Me.SortByAgeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.SortByAgeToolStripMenuItem.Text = "Sort by ID"
         '
         'MsIdAsc
         '
         Me.MsIdAsc.Name = "MsIdAsc"
-        Me.MsIdAsc.Size = New System.Drawing.Size(136, 22)
+        Me.MsIdAsc.Size = New System.Drawing.Size(180, 22)
         Me.MsIdAsc.Text = "Ascending"
         '
         'MsIdDesc
         '
         Me.MsIdDesc.Name = "MsIdDesc"
-        Me.MsIdDesc.Size = New System.Drawing.Size(136, 22)
+        Me.MsIdDesc.Size = New System.Drawing.Size(180, 22)
         Me.MsIdDesc.Text = "Descending"
         '
         'pnlMainData
@@ -199,19 +199,19 @@ Partial Class OrderDBForm
         Me.splitCus.Panel2.AutoScroll = True
         Me.splitCus.Panel2.Controls.Add(Me.Panel3)
         Me.splitCus.Panel2.Controls.Add(Me.StatsCus)
-        Me.splitCus.Panel2.Controls.Add(Me.dgCustomer)
+        Me.splitCus.Panel2.Controls.Add(Me.dgOrder)
         Me.splitCus.Size = New System.Drawing.Size(730, 497)
         Me.splitCus.SplitterDistance = 165
         Me.splitCus.TabIndex = 0
         '
         'Panel2
         '
+        Me.Panel2.Controls.Add(Me.txtMenuID)
         Me.Panel2.Controls.Add(Me.lblOrderID)
         Me.Panel2.Controls.Add(Me.txtOrderQty)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.btnConfirmation)
         Me.Panel2.Controls.Add(Me.cmbSearchChoice)
-        Me.Panel2.Controls.Add(Me.lblMenuID)
         Me.Panel2.Controls.Add(Me.txtFind)
         Me.Panel2.Controls.Add(Me.Label9)
         Me.Panel2.Controls.Add(Me.lblTotalMenu)
@@ -221,12 +221,28 @@ Partial Class OrderDBForm
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Panel2.Font = New System.Drawing.Font("Raleway", 10.0!)
+        Me.Panel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.Panel2.ForeColor = System.Drawing.Color.White
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(730, 165)
         Me.Panel2.TabIndex = 4
+        '
+        'txtMenuID
+        '
+        Me.txtMenuID.Location = New System.Drawing.Point(229, 100)
+        Me.txtMenuID.Name = "txtMenuID"
+        Me.txtMenuID.Size = New System.Drawing.Size(282, 23)
+        Me.txtMenuID.TabIndex = 10
+        '
+        'lblOrderID
+        '
+        Me.lblOrderID.AutoSize = True
+        Me.lblOrderID.Location = New System.Drawing.Point(229, 80)
+        Me.lblOrderID.Name = "lblOrderID"
+        Me.lblOrderID.Size = New System.Drawing.Size(62, 17)
+        Me.lblOrderID.TabIndex = 9
+        Me.lblOrderID.Text = "Order ID"
         '
         'txtOrderQty
         '
@@ -238,10 +254,10 @@ Partial Class OrderDBForm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Raleway", 10.0!)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.Label1.Location = New System.Drawing.Point(105, 45)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(103, 16)
+        Me.Label1.Size = New System.Drawing.Size(102, 17)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Search Order :"
         '
@@ -259,20 +275,11 @@ Partial Class OrderDBForm
         '
         Me.cmbSearchChoice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbSearchChoice.FormattingEnabled = True
-        Me.cmbSearchChoice.Items.AddRange(New Object() {"CUS_ID", "CUS_NAME", "CUS_EMAIL", "CUS_GENDER", "CUS_PHONE"})
+        Me.cmbSearchChoice.Items.AddRange(New Object() {"Order_ID", "Menu_ID", "Order_Qty"})
         Me.cmbSearchChoice.Location = New System.Drawing.Point(232, 42)
         Me.cmbSearchChoice.Name = "cmbSearchChoice"
-        Me.cmbSearchChoice.Size = New System.Drawing.Size(121, 23)
+        Me.cmbSearchChoice.Size = New System.Drawing.Size(121, 24)
         Me.cmbSearchChoice.TabIndex = 3
-        '
-        'lblMenuID
-        '
-        Me.lblMenuID.AutoSize = True
-        Me.lblMenuID.Location = New System.Drawing.Point(229, 106)
-        Me.lblMenuID.Name = "lblMenuID"
-        Me.lblMenuID.Size = New System.Drawing.Size(61, 16)
-        Me.lblMenuID.TabIndex = 6
-        Me.lblMenuID.Text = "Menu ID"
         '
         'txtFind
         '
@@ -286,7 +293,7 @@ Partial Class OrderDBForm
         Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(417, 23)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(45, 16)
+        Me.Label9.Size = New System.Drawing.Size(44, 17)
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "Value"
         '
@@ -295,7 +302,7 @@ Partial Class OrderDBForm
         Me.lblTotalMenu.AutoSize = True
         Me.lblTotalMenu.Location = New System.Drawing.Point(96, 3)
         Me.lblTotalMenu.Name = "lblTotalMenu"
-        Me.lblTotalMenu.Size = New System.Drawing.Size(122, 16)
+        Me.lblTotalMenu.Size = New System.Drawing.Size(117, 17)
         Me.lblTotalMenu.TabIndex = 1
         Me.lblTotalMenu.Text = "number of orders"
         '
@@ -304,7 +311,7 @@ Partial Class OrderDBForm
         Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(258, 23)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(76, 16)
+        Me.Label8.Size = New System.Drawing.Size(75, 17)
         Me.Label8.TabIndex = 0
         Me.Label8.Text = " Based On"
         '
@@ -313,40 +320,40 @@ Partial Class OrderDBForm
         Me.LabelTotal.AutoSize = True
         Me.LabelTotal.Location = New System.Drawing.Point(3, 3)
         Me.LabelTotal.Name = "LabelTotal"
-        Me.LabelTotal.Size = New System.Drawing.Size(96, 16)
+        Me.LabelTotal.Size = New System.Drawing.Size(96, 17)
         Me.LabelTotal.TabIndex = 0
         Me.LabelTotal.Text = "Total Orders :"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Raleway", 10.0!)
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.Label4.ForeColor = System.Drawing.Color.White
         Me.Label4.Location = New System.Drawing.Point(132, 132)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(76, 16)
+        Me.Label4.Size = New System.Drawing.Size(75, 17)
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "Order Qty:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Raleway", 10.0!)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(144, 106)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(64, 16)
+        Me.Label3.Size = New System.Drawing.Size(64, 17)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Menu ID:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Raleway", 10.0!)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.Label2.ForeColor = System.Drawing.Color.White
         Me.Label2.Location = New System.Drawing.Point(142, 80)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(66, 16)
+        Me.Label2.Size = New System.Drawing.Size(66, 17)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Order ID:"
         '
@@ -364,11 +371,11 @@ Partial Class OrderDBForm
         '
         Me.lblmenutitle.AutoSize = True
         Me.lblmenutitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.lblmenutitle.Font = New System.Drawing.Font("Milkshake", 18.0!, System.Drawing.FontStyle.Bold)
+        Me.lblmenutitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold)
         Me.lblmenutitle.ForeColor = System.Drawing.Color.White
         Me.lblmenutitle.Location = New System.Drawing.Point(281, 0)
         Me.lblmenutitle.Name = "lblmenutitle"
-        Me.lblmenutitle.Size = New System.Drawing.Size(191, 37)
+        Me.lblmenutitle.Size = New System.Drawing.Size(191, 29)
         Me.lblmenutitle.TabIndex = 1
         Me.lblmenutitle.Text = "All Orders Data"
         '
@@ -388,16 +395,16 @@ Partial Class OrderDBForm
         Me.lblStats.Size = New System.Drawing.Size(45, 17)
         Me.lblStats.Text = "Status: "
         '
-        'dgCustomer
+        'dgOrder
         '
-        Me.dgCustomer.AllowUserToAddRows = False
-        Me.dgCustomer.AllowUserToDeleteRows = False
-        Me.dgCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgCustomer.Location = New System.Drawing.Point(37, 70)
-        Me.dgCustomer.Name = "dgCustomer"
-        Me.dgCustomer.ReadOnly = True
-        Me.dgCustomer.Size = New System.Drawing.Size(653, 233)
-        Me.dgCustomer.TabIndex = 0
+        Me.dgOrder.AllowUserToAddRows = False
+        Me.dgOrder.AllowUserToDeleteRows = False
+        Me.dgOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgOrder.Location = New System.Drawing.Point(37, 70)
+        Me.dgOrder.Name = "dgOrder"
+        Me.dgOrder.ReadOnly = True
+        Me.dgOrder.Size = New System.Drawing.Size(653, 233)
+        Me.dgOrder.TabIndex = 0
         '
         'cmsCustomer
         '
@@ -429,15 +436,6 @@ Partial Class OrderDBForm
         Me.CmsEditCus.Size = New System.Drawing.Size(140, 22)
         Me.CmsEditCus.Text = "Update Data"
         '
-        'lblOrderID
-        '
-        Me.lblOrderID.AutoSize = True
-        Me.lblOrderID.Location = New System.Drawing.Point(229, 80)
-        Me.lblOrderID.Name = "lblOrderID"
-        Me.lblOrderID.Size = New System.Drawing.Size(63, 16)
-        Me.lblOrderID.TabIndex = 9
-        Me.lblOrderID.Text = "Order ID"
-        '
         'OrderDBForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -467,7 +465,7 @@ Partial Class OrderDBForm
         Me.Panel3.PerformLayout()
         Me.StatsCus.ResumeLayout(False)
         Me.StatsCus.PerformLayout()
-        CType(Me.dgCustomer, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgOrder, System.ComponentModel.ISupportInitialize).EndInit()
         Me.cmsCustomer.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -484,7 +482,7 @@ Partial Class OrderDBForm
     Friend WithEvents MsName As ToolStripMenuItem
     Friend WithEvents SortByAgeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents splitCus As SplitContainer
-    Friend WithEvents dgCustomer As DataGridView
+    Friend WithEvents dgOrder As DataGridView
     Friend WithEvents cmsCustomer As ContextMenuStrip
     Friend WithEvents CmsRefresh As ToolStripMenuItem
     Friend WithEvents CmsAddCus As ToolStripMenuItem
@@ -512,6 +510,6 @@ Partial Class OrderDBForm
     Friend WithEvents Panel3 As Panel
     Friend WithEvents lblmenutitle As Label
     Friend WithEvents txtOrderQty As TextBox
-    Friend WithEvents lblMenuID As Label
     Friend WithEvents lblOrderID As Label
+    Friend WithEvents txtMenuID As TextBox
 End Class
