@@ -39,7 +39,7 @@ Partial Class OrderForm
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Bold)
         Me.Label1.Location = New System.Drawing.Point(62, 56)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(69, 16)
+        Me.Label1.Size = New System.Drawing.Size(70, 16)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Order ID:"
         '
@@ -49,7 +49,7 @@ Partial Class OrderForm
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Bold)
         Me.Label2.Location = New System.Drawing.Point(138, 56)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(53, 16)
+        Me.Label2.Size = New System.Drawing.Size(54, 16)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "OD****"
         '
@@ -117,7 +117,7 @@ Partial Class OrderForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(203, Byte), Integer), CType(CType(119, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(730, 525)
         Me.Controls.Add(Me.listOrder)
         Me.Controls.Add(Me.btnClaimOrder)

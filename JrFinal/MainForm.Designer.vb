@@ -37,7 +37,6 @@ Partial Class MainForm
         Me.pnlTop = New System.Windows.Forms.Panel()
         Me.lblUrName = New System.Windows.Forms.Label()
         Me.lblStatsRole = New System.Windows.Forms.Label()
-        Me.btnHome = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
@@ -46,13 +45,13 @@ Partial Class MainForm
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.pbHomeLogo = New System.Windows.Forms.PictureBox()
         Me.pnlMain = New System.Windows.Forms.Panel()
         Me.pnlTop.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pbHomeLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'imgBtn
@@ -79,7 +78,7 @@ Partial Class MainForm
         '
         'btnTransactionDB
         '
-        Me.btnTransactionDB.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btnTransactionDB.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(63, Byte), Integer))
         Me.btnTransactionDB.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnTransactionDB.FlatAppearance.BorderSize = 0
         Me.btnTransactionDB.FlatStyle = System.Windows.Forms.FlatStyle.Popup
@@ -94,7 +93,7 @@ Partial Class MainForm
         '
         'btnOrderDB
         '
-        Me.btnOrderDB.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btnOrderDB.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(63, Byte), Integer))
         Me.btnOrderDB.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnOrderDB.FlatAppearance.BorderSize = 0
         Me.btnOrderDB.FlatStyle = System.Windows.Forms.FlatStyle.Popup
@@ -109,7 +108,7 @@ Partial Class MainForm
         '
         'btnMenuDB
         '
-        Me.btnMenuDB.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btnMenuDB.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(63, Byte), Integer))
         Me.btnMenuDB.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnMenuDB.FlatAppearance.BorderSize = 0
         Me.btnMenuDB.FlatStyle = System.Windows.Forms.FlatStyle.Popup
@@ -124,8 +123,9 @@ Partial Class MainForm
         '
         'btnFeedBack
         '
-        Me.btnFeedBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btnFeedBack.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(63, Byte), Integer))
         Me.btnFeedBack.Dock = System.Windows.Forms.DockStyle.Top
+        Me.btnFeedBack.FlatAppearance.BorderSize = 0
         Me.btnFeedBack.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btnFeedBack.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold)
         Me.btnFeedBack.Location = New System.Drawing.Point(0, 180)
@@ -138,7 +138,7 @@ Partial Class MainForm
         '
         'btnTransaction
         '
-        Me.btnTransaction.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btnTransaction.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(63, Byte), Integer))
         Me.btnTransaction.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnTransaction.FlatAppearance.BorderSize = 0
         Me.btnTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Popup
@@ -153,7 +153,7 @@ Partial Class MainForm
         '
         'btnOrder
         '
-        Me.btnOrder.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btnOrder.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(63, Byte), Integer))
         Me.btnOrder.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnOrder.FlatAppearance.BorderSize = 0
         Me.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Popup
@@ -168,7 +168,7 @@ Partial Class MainForm
         '
         'btnMenu
         '
-        Me.btnMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btnMenu.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(63, Byte), Integer))
         Me.btnMenu.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnMenu.FlatAppearance.BorderSize = 0
         Me.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Popup
@@ -183,9 +183,9 @@ Partial Class MainForm
         '
         'pnlTop
         '
+        Me.pnlTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(212, Byte), Integer), CType(CType(78, Byte), Integer))
         Me.pnlTop.Controls.Add(Me.lblUrName)
         Me.pnlTop.Controls.Add(Me.lblStatsRole)
-        Me.pnlTop.Controls.Add(Me.btnHome)
         Me.pnlTop.Controls.Add(Me.btnExit)
         Me.pnlTop.Controls.Add(Me.Label4)
         Me.pnlTop.Controls.Add(Me.Label1)
@@ -199,8 +199,8 @@ Partial Class MainForm
         '
         Me.lblUrName.AutoSize = True
         Me.lblUrName.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.lblUrName.ForeColor = System.Drawing.Color.White
-        Me.lblUrName.Location = New System.Drawing.Point(140, 9)
+        Me.lblUrName.ForeColor = System.Drawing.Color.Black
+        Me.lblUrName.Location = New System.Drawing.Point(106, 7)
         Me.lblUrName.Name = "lblUrName"
         Me.lblUrName.Size = New System.Drawing.Size(45, 19)
         Me.lblUrName.TabIndex = 2
@@ -210,30 +210,19 @@ Partial Class MainForm
         '
         Me.lblStatsRole.AutoSize = True
         Me.lblStatsRole.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.lblStatsRole.ForeColor = System.Drawing.Color.White
-        Me.lblStatsRole.Location = New System.Drawing.Point(346, 7)
+        Me.lblStatsRole.ForeColor = System.Drawing.Color.Black
+        Me.lblStatsRole.Location = New System.Drawing.Point(334, 7)
         Me.lblStatsRole.Name = "lblStatsRole"
         Me.lblStatsRole.Size = New System.Drawing.Size(45, 19)
         Me.lblStatsRole.TabIndex = 2
         Me.lblStatsRole.Text = "Role"
         '
-        'btnHome
-        '
-        Me.btnHome.FlatAppearance.BorderSize = 0
-        Me.btnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnHome.ImageIndex = 1
-        Me.btnHome.ImageList = Me.imgBtn
-        Me.btnHome.Location = New System.Drawing.Point(0, 0)
-        Me.btnHome.Name = "btnHome"
-        Me.btnHome.Size = New System.Drawing.Size(35, 35)
-        Me.btnHome.TabIndex = 0
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(298, 7)
+        Me.Label4.ForeColor = System.Drawing.Color.Black
+        Me.Label4.Location = New System.Drawing.Point(275, 7)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(53, 19)
         Me.Label4.TabIndex = 0
@@ -243,8 +232,8 @@ Partial Class MainForm
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(55, 9)
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(12, 7)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(88, 19)
         Me.Label1.TabIndex = 0
@@ -279,7 +268,7 @@ Partial Class MainForm
         '
         'btnFeedbackDB
         '
-        Me.btnFeedbackDB.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(200, Byte), Integer), CType(CType(87, Byte), Integer))
+        Me.btnFeedbackDB.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(63, Byte), Integer))
         Me.btnFeedbackDB.Dock = System.Windows.Forms.DockStyle.Top
         Me.btnFeedbackDB.FlatAppearance.BorderSize = 0
         Me.btnFeedbackDB.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -293,9 +282,10 @@ Partial Class MainForm
         '
         'Panel2
         '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Label3)
         Me.Panel2.Controls.Add(Me.Label2)
-        Me.Panel2.Controls.Add(Me.PictureBox1)
+        Me.Panel2.Controls.Add(Me.pbHomeLogo)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
@@ -306,8 +296,8 @@ Partial Class MainForm
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("A little sunshine", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.ForeColor = System.Drawing.SystemColors.Control
-        Me.Label3.Location = New System.Drawing.Point(46, 107)
+        Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.Label3.Location = New System.Drawing.Point(56, 107)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(112, 15)
         Me.Label3.TabIndex = 1
@@ -317,26 +307,26 @@ Partial Class MainForm
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Milkshake", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(228, Byte), Integer), CType(CType(182, Byte), Integer), CType(CType(26, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(3, 74)
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(36, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(9, 74)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(208, 33)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Delicioso Restaurant"
         '
-        'PictureBox1
+        'pbHomeLogo
         '
-        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(59, 6)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(88, 81)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox1.TabIndex = 0
-        Me.PictureBox1.TabStop = False
+        Me.pbHomeLogo.Image = CType(resources.GetObject("pbHomeLogo.Image"), System.Drawing.Image)
+        Me.pbHomeLogo.Location = New System.Drawing.Point(63, 6)
+        Me.pbHomeLogo.Name = "pbHomeLogo"
+        Me.pbHomeLogo.Size = New System.Drawing.Size(88, 81)
+        Me.pbHomeLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.pbHomeLogo.TabIndex = 0
+        Me.pbHomeLogo.TabStop = False
         '
         'pnlMain
         '
-        Me.pnlMain.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(51, Byte), Integer))
+        Me.pnlMain.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(238, Byte), Integer), CType(CType(153, Byte), Integer))
         Me.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlMain.Location = New System.Drawing.Point(220, 35)
         Me.pnlMain.Name = "pnlMain"
@@ -362,7 +352,7 @@ Partial Class MainForm
         Me.Panel3.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pbHomeLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -383,9 +373,8 @@ Partial Class MainForm
     Friend WithEvents btnOrderDB As Button
     Friend WithEvents btnMenuDB As Button
     Friend WithEvents Label2 As Label
-    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents pbHomeLogo As PictureBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents btnHome As Button
     Friend WithEvents lblUrName As Label
     Friend WithEvents lblStatsRole As Label
     Friend WithEvents Label4 As Label
