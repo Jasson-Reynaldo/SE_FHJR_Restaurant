@@ -51,7 +51,7 @@ Public Class OrderDBForm
         btnConfirmation.Text = "Confirm Input"
         Dim propercode As String
         Dim countcode As Long
-        CMDresto = New SqlCommand("SELECT * FROM Orders WHERE Order_ID IN (SELECT MAX(Order_ID) FROM Orders)", RestoDB)
+        CMDresto = New SqlCommand("SELECT * FROM Orders WHERE Order_ID IN (SELECT MAX(Order_ID) FROM Orders)", DBresto)
         DTRresto = CMDresto.ExecuteReader
         DTRresto.Read()
         If Not DTRresto.HasRows Then
