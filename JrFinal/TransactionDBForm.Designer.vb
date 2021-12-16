@@ -84,9 +84,8 @@ Partial Class TransactionDBForm
         Me.pnlDataMenu.Controls.Add(Me.MsTransaction)
         Me.pnlDataMenu.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlDataMenu.Location = New System.Drawing.Point(0, 0)
-        Me.pnlDataMenu.Margin = New System.Windows.Forms.Padding(4)
         Me.pnlDataMenu.Name = "pnlDataMenu"
-        Me.pnlDataMenu.Size = New System.Drawing.Size(973, 34)
+        Me.pnlDataMenu.Size = New System.Drawing.Size(730, 28)
         Me.pnlDataMenu.TabIndex = 0
         '
         'MsTransaction
@@ -95,7 +94,8 @@ Partial Class TransactionDBForm
         Me.MsTransaction.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DataToolStripMenuItem, Me.ToolsToolStripMenuItem})
         Me.MsTransaction.Location = New System.Drawing.Point(0, 0)
         Me.MsTransaction.Name = "MsTransaction"
-        Me.MsTransaction.Size = New System.Drawing.Size(973, 28)
+        Me.MsTransaction.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
+        Me.MsTransaction.Size = New System.Drawing.Size(730, 24)
         Me.MsTransaction.TabIndex = 0
         Me.MsTransaction.Text = "MenuStrip1"
         '
@@ -103,76 +103,76 @@ Partial Class TransactionDBForm
         '
         Me.DataToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.msRefresh, Me.MsInsertTrans, Me.MsEditTrans, Me.MsDeleteTrans})
         Me.DataToolStripMenuItem.Name = "DataToolStripMenuItem"
-        Me.DataToolStripMenuItem.Size = New System.Drawing.Size(58, 24)
+        Me.DataToolStripMenuItem.Size = New System.Drawing.Size(46, 20)
         Me.DataToolStripMenuItem.Text = "Tools"
         '
         'msRefresh
         '
         Me.msRefresh.Name = "msRefresh"
-        Me.msRefresh.Size = New System.Drawing.Size(177, 26)
+        Me.msRefresh.Size = New System.Drawing.Size(140, 22)
         Me.msRefresh.Text = "Refresh Data"
         '
         'MsInsertTrans
         '
         Me.MsInsertTrans.Name = "MsInsertTrans"
-        Me.MsInsertTrans.Size = New System.Drawing.Size(177, 26)
+        Me.MsInsertTrans.Size = New System.Drawing.Size(140, 22)
         Me.MsInsertTrans.Text = "Insert Data"
         '
         'MsEditTrans
         '
         Me.MsEditTrans.Name = "MsEditTrans"
-        Me.MsEditTrans.Size = New System.Drawing.Size(177, 26)
+        Me.MsEditTrans.Size = New System.Drawing.Size(140, 22)
         Me.MsEditTrans.Text = "Update Data"
         '
         'MsDeleteTrans
         '
         Me.MsDeleteTrans.Name = "MsDeleteTrans"
-        Me.MsDeleteTrans.Size = New System.Drawing.Size(177, 26)
+        Me.MsDeleteTrans.Size = New System.Drawing.Size(140, 22)
         Me.MsDeleteTrans.Text = "Delete Data"
         '
         'ToolsToolStripMenuItem
         '
         Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MsName, Me.SortByAgeToolStripMenuItem})
         Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
-        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(61, 24)
+        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(49, 20)
         Me.ToolsToolStripMenuItem.Text = "Views"
         '
         'MsName
         '
         Me.MsName.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MsNameAsc, Me.MsNameDesc})
         Me.MsName.Name = "MsName"
-        Me.MsName.Size = New System.Drawing.Size(217, 26)
+        Me.MsName.Size = New System.Drawing.Size(172, 22)
         Me.MsName.Text = "Sort data by Name"
         '
         'MsNameAsc
         '
         Me.MsNameAsc.Name = "MsNameAsc"
-        Me.MsNameAsc.Size = New System.Drawing.Size(170, 26)
+        Me.MsNameAsc.Size = New System.Drawing.Size(136, 22)
         Me.MsNameAsc.Text = "Ascending"
         '
         'MsNameDesc
         '
         Me.MsNameDesc.Name = "MsNameDesc"
-        Me.MsNameDesc.Size = New System.Drawing.Size(170, 26)
+        Me.MsNameDesc.Size = New System.Drawing.Size(136, 22)
         Me.MsNameDesc.Text = "Descending"
         '
         'SortByAgeToolStripMenuItem
         '
         Me.SortByAgeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MsIdAsc, Me.MsIdDesc})
         Me.SortByAgeToolStripMenuItem.Name = "SortByAgeToolStripMenuItem"
-        Me.SortByAgeToolStripMenuItem.Size = New System.Drawing.Size(217, 26)
+        Me.SortByAgeToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.SortByAgeToolStripMenuItem.Text = "Sort by ID"
         '
         'MsIdAsc
         '
         Me.MsIdAsc.Name = "MsIdAsc"
-        Me.MsIdAsc.Size = New System.Drawing.Size(170, 26)
+        Me.MsIdAsc.Size = New System.Drawing.Size(136, 22)
         Me.MsIdAsc.Text = "Ascending"
         '
         'MsIdDesc
         '
         Me.MsIdDesc.Name = "MsIdDesc"
-        Me.MsIdDesc.Size = New System.Drawing.Size(170, 26)
+        Me.MsIdDesc.Size = New System.Drawing.Size(136, 22)
         Me.MsIdDesc.Text = "Descending"
         '
         'pnlMainData
@@ -180,17 +180,15 @@ Partial Class TransactionDBForm
         Me.pnlMainData.AutoScroll = True
         Me.pnlMainData.Controls.Add(Me.splitCus)
         Me.pnlMainData.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pnlMainData.Location = New System.Drawing.Point(0, 34)
-        Me.pnlMainData.Margin = New System.Windows.Forms.Padding(4)
+        Me.pnlMainData.Location = New System.Drawing.Point(0, 28)
         Me.pnlMainData.Name = "pnlMainData"
-        Me.pnlMainData.Size = New System.Drawing.Size(973, 612)
+        Me.pnlMainData.Size = New System.Drawing.Size(730, 497)
         Me.pnlMainData.TabIndex = 1
         '
         'splitCus
         '
         Me.splitCus.Dock = System.Windows.Forms.DockStyle.Fill
         Me.splitCus.Location = New System.Drawing.Point(0, 0)
-        Me.splitCus.Margin = New System.Windows.Forms.Padding(4)
         Me.splitCus.Name = "splitCus"
         Me.splitCus.Orientation = System.Windows.Forms.Orientation.Horizontal
         '
@@ -201,16 +199,17 @@ Partial Class TransactionDBForm
         'splitCus.Panel2
         '
         Me.splitCus.Panel2.AutoScroll = True
+        Me.splitCus.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(182, Byte), Integer))
         Me.splitCus.Panel2.Controls.Add(Me.Panel3)
         Me.splitCus.Panel2.Controls.Add(Me.StatsTransaction)
         Me.splitCus.Panel2.Controls.Add(Me.dgTransactions)
-        Me.splitCus.Size = New System.Drawing.Size(973, 612)
-        Me.splitCus.SplitterDistance = 203
-        Me.splitCus.SplitterWidth = 5
+        Me.splitCus.Size = New System.Drawing.Size(730, 497)
+        Me.splitCus.SplitterDistance = 164
         Me.splitCus.TabIndex = 0
         '
         'Panel2
         '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(182, Byte), Integer))
         Me.Panel2.Controls.Add(Me.lblOrderID)
         Me.Panel2.Controls.Add(Me.txtTransTotal)
         Me.Panel2.Controls.Add(Me.Label1)
@@ -229,47 +228,44 @@ Partial Class TransactionDBForm
         Me.Panel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
         Me.Panel2.ForeColor = System.Drawing.Color.White
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(973, 203)
+        Me.Panel2.Size = New System.Drawing.Size(730, 164)
         Me.Panel2.TabIndex = 4
         '
         'lblOrderID
         '
         Me.lblOrderID.AutoSize = True
-        Me.lblOrderID.Location = New System.Drawing.Point(305, 130)
-        Me.lblOrderID.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblOrderID.ForeColor = System.Drawing.Color.Black
+        Me.lblOrderID.Location = New System.Drawing.Point(229, 106)
         Me.lblOrderID.Name = "lblOrderID"
-        Me.lblOrderID.Size = New System.Drawing.Size(74, 20)
+        Me.lblOrderID.Size = New System.Drawing.Size(62, 17)
         Me.lblOrderID.TabIndex = 9
         Me.lblOrderID.Text = "Order ID"
         '
         'txtTransTotal
         '
-        Me.txtTransTotal.Location = New System.Drawing.Point(305, 160)
-        Me.txtTransTotal.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtTransTotal.Location = New System.Drawing.Point(229, 130)
         Me.txtTransTotal.Name = "txtTransTotal"
-        Me.txtTransTotal.Size = New System.Drawing.Size(375, 26)
+        Me.txtTransTotal.Size = New System.Drawing.Size(282, 23)
         Me.txtTransTotal.TabIndex = 8
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Label1.Location = New System.Drawing.Point(96, 55)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(72, 45)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(160, 20)
+        Me.Label1.Size = New System.Drawing.Size(136, 17)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Search Transaction:"
         '
         'btnConfirmation
         '
         Me.btnConfirmation.ForeColor = System.Drawing.Color.Black
-        Me.btnConfirmation.Location = New System.Drawing.Point(780, 98)
-        Me.btnConfirmation.Margin = New System.Windows.Forms.Padding(4)
+        Me.btnConfirmation.Location = New System.Drawing.Point(585, 80)
         Me.btnConfirmation.Name = "btnConfirmation"
-        Me.btnConfirmation.Size = New System.Drawing.Size(100, 92)
+        Me.btnConfirmation.Size = New System.Drawing.Size(75, 75)
         Me.btnConfirmation.TabIndex = 7
         Me.btnConfirmation.Text = "Confirm Input"
         Me.btnConfirmation.UseVisualStyleBackColor = True
@@ -279,67 +275,65 @@ Partial Class TransactionDBForm
         Me.cmbSearchChoice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbSearchChoice.FormattingEnabled = True
         Me.cmbSearchChoice.Items.AddRange(New Object() {"Trans_ID", "Order_ID", "Trans_Total"})
-        Me.cmbSearchChoice.Location = New System.Drawing.Point(309, 52)
-        Me.cmbSearchChoice.Margin = New System.Windows.Forms.Padding(4)
+        Me.cmbSearchChoice.Location = New System.Drawing.Point(232, 42)
         Me.cmbSearchChoice.Name = "cmbSearchChoice"
-        Me.cmbSearchChoice.Size = New System.Drawing.Size(160, 28)
+        Me.cmbSearchChoice.Size = New System.Drawing.Size(121, 24)
         Me.cmbSearchChoice.TabIndex = 3
         '
         'lblTransID
         '
         Me.lblTransID.AutoSize = True
-        Me.lblTransID.Location = New System.Drawing.Point(305, 98)
-        Me.lblTransID.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblTransID.ForeColor = System.Drawing.Color.Black
+        Me.lblTransID.Location = New System.Drawing.Point(229, 80)
         Me.lblTransID.Name = "lblTransID"
-        Me.lblTransID.Size = New System.Drawing.Size(119, 20)
+        Me.lblTransID.Size = New System.Drawing.Size(100, 17)
         Me.lblTransID.TabIndex = 6
         Me.lblTransID.Text = "Transaction ID"
         '
         'txtFind
         '
-        Me.txtFind.Location = New System.Drawing.Point(492, 53)
-        Me.txtFind.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtFind.Location = New System.Drawing.Point(369, 43)
         Me.txtFind.Name = "txtFind"
-        Me.txtFind.Size = New System.Drawing.Size(192, 26)
+        Me.txtFind.Size = New System.Drawing.Size(145, 23)
         Me.txtFind.TabIndex = 2
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(556, 28)
-        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label9.ForeColor = System.Drawing.Color.Black
+        Me.Label9.Location = New System.Drawing.Point(417, 23)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(51, 20)
+        Me.Label9.Size = New System.Drawing.Size(44, 17)
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "Value"
         '
         'lblTotalTrans
         '
         Me.lblTotalTrans.AutoSize = True
-        Me.lblTotalTrans.Location = New System.Drawing.Point(180, 4)
-        Me.lblTotalTrans.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblTotalTrans.ForeColor = System.Drawing.Color.Black
+        Me.lblTotalTrans.Location = New System.Drawing.Point(135, 3)
         Me.lblTotalTrans.Name = "lblTotalTrans"
-        Me.lblTotalTrans.Size = New System.Drawing.Size(181, 20)
+        Me.lblTotalTrans.Size = New System.Drawing.Size(153, 17)
         Me.lblTotalTrans.TabIndex = 1
         Me.lblTotalTrans.Text = "number of transactions"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(344, 28)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.ForeColor = System.Drawing.Color.Black
+        Me.Label8.Location = New System.Drawing.Point(258, 23)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(89, 20)
+        Me.Label8.Size = New System.Drawing.Size(75, 17)
         Me.Label8.TabIndex = 0
         Me.Label8.Text = " Based On"
         '
         'LabelTotal
         '
         Me.LabelTotal.AutoSize = True
-        Me.LabelTotal.Location = New System.Drawing.Point(4, 4)
-        Me.LabelTotal.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.LabelTotal.ForeColor = System.Drawing.Color.Black
+        Me.LabelTotal.Location = New System.Drawing.Point(3, 3)
         Me.LabelTotal.Name = "LabelTotal"
-        Me.LabelTotal.Size = New System.Drawing.Size(158, 20)
+        Me.LabelTotal.Size = New System.Drawing.Size(134, 17)
         Me.LabelTotal.TabIndex = 0
         Me.LabelTotal.Text = "Total Transactions :"
         '
@@ -347,11 +341,10 @@ Partial Class TransactionDBForm
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(121, 164)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.ForeColor = System.Drawing.Color.Black
+        Me.Label4.Location = New System.Drawing.Point(91, 133)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(144, 20)
+        Me.Label4.Size = New System.Drawing.Size(123, 17)
         Me.Label4.TabIndex = 0
         Me.Label4.Text = "Transaction Total:"
         '
@@ -359,11 +352,10 @@ Partial Class TransactionDBForm
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(192, 130)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.ForeColor = System.Drawing.Color.Black
+        Me.Label3.Location = New System.Drawing.Point(144, 106)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(83, 20)
+        Me.Label3.Size = New System.Drawing.Size(70, 17)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Order_ID:"
         '
@@ -371,35 +363,33 @@ Partial Class TransactionDBForm
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(147, 98)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.Location = New System.Drawing.Point(110, 80)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(124, 20)
+        Me.Label2.Size = New System.Drawing.Size(104, 17)
         Me.Label2.TabIndex = 0
         Me.Label2.Text = "Transaction ID:"
         '
         'Panel3
         '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(228, Byte), Integer), CType(CType(182, Byte), Integer), CType(CType(26, Byte), Integer))
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(63, Byte), Integer))
         Me.Panel3.Controls.Add(Me.lblmenutitle)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
-        Me.Panel3.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(973, 44)
+        Me.Panel3.Size = New System.Drawing.Size(730, 36)
         Me.Panel3.TabIndex = 8
         '
         'lblmenutitle
         '
         Me.lblmenutitle.AutoSize = True
+        Me.lblmenutitle.BackColor = System.Drawing.Color.Transparent
         Me.lblmenutitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.lblmenutitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.lblmenutitle.ForeColor = System.Drawing.Color.White
-        Me.lblmenutitle.Location = New System.Drawing.Point(339, 0)
-        Me.lblmenutitle.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.lblmenutitle.Font = New System.Drawing.Font("Milkshake", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblmenutitle.ForeColor = System.Drawing.Color.Black
+        Me.lblmenutitle.Location = New System.Drawing.Point(251, 2)
         Me.lblmenutitle.Name = "lblmenutitle"
-        Me.lblmenutitle.Size = New System.Drawing.Size(319, 36)
+        Me.lblmenutitle.Size = New System.Drawing.Size(252, 37)
         Me.lblmenutitle.TabIndex = 1
         Me.lblmenutitle.Text = "All Transactions Data"
         '
@@ -407,10 +397,9 @@ Partial Class TransactionDBForm
         '
         Me.StatsTransaction.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.StatsTransaction.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.lblStats})
-        Me.StatsTransaction.Location = New System.Drawing.Point(0, 378)
+        Me.StatsTransaction.Location = New System.Drawing.Point(0, 307)
         Me.StatsTransaction.Name = "StatsTransaction"
-        Me.StatsTransaction.Padding = New System.Windows.Forms.Padding(1, 0, 19, 0)
-        Me.StatsTransaction.Size = New System.Drawing.Size(973, 26)
+        Me.StatsTransaction.Size = New System.Drawing.Size(730, 22)
         Me.StatsTransaction.TabIndex = 1
         Me.StatsTransaction.Text = "StatusStrip1"
         '
@@ -418,7 +407,7 @@ Partial Class TransactionDBForm
         '
         Me.lblStats.BackColor = System.Drawing.SystemColors.ButtonFace
         Me.lblStats.Name = "lblStats"
-        Me.lblStats.Size = New System.Drawing.Size(56, 20)
+        Me.lblStats.Size = New System.Drawing.Size(45, 17)
         Me.lblStats.Text = "Status: "
         '
         'dgTransactions
@@ -426,12 +415,11 @@ Partial Class TransactionDBForm
         Me.dgTransactions.AllowUserToAddRows = False
         Me.dgTransactions.AllowUserToDeleteRows = False
         Me.dgTransactions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgTransactions.Location = New System.Drawing.Point(49, 86)
-        Me.dgTransactions.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgTransactions.Location = New System.Drawing.Point(37, 70)
         Me.dgTransactions.Name = "dgTransactions"
         Me.dgTransactions.ReadOnly = True
         Me.dgTransactions.RowHeadersWidth = 51
-        Me.dgTransactions.Size = New System.Drawing.Size(871, 287)
+        Me.dgTransactions.Size = New System.Drawing.Size(653, 233)
         Me.dgTransactions.TabIndex = 0
         '
         'cmsTransaction
@@ -439,44 +427,43 @@ Partial Class TransactionDBForm
         Me.cmsTransaction.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.cmsTransaction.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CmsRefresh, Me.CmsAddTrans, Me.CmsDelData, Me.CmsEditTrans})
         Me.cmsTransaction.Name = "ContextMenuStrip1"
-        Me.cmsTransaction.Size = New System.Drawing.Size(164, 100)
+        Me.cmsTransaction.Size = New System.Drawing.Size(141, 92)
         '
         'CmsRefresh
         '
         Me.CmsRefresh.Name = "CmsRefresh"
-        Me.CmsRefresh.Size = New System.Drawing.Size(163, 24)
+        Me.CmsRefresh.Size = New System.Drawing.Size(140, 22)
         Me.CmsRefresh.Text = "Refresh Data"
         '
         'CmsAddTrans
         '
         Me.CmsAddTrans.Name = "CmsAddTrans"
-        Me.CmsAddTrans.Size = New System.Drawing.Size(163, 24)
+        Me.CmsAddTrans.Size = New System.Drawing.Size(140, 22)
         Me.CmsAddTrans.Text = "Insert Data"
         '
         'CmsDelData
         '
         Me.CmsDelData.Name = "CmsDelData"
-        Me.CmsDelData.Size = New System.Drawing.Size(163, 24)
+        Me.CmsDelData.Size = New System.Drawing.Size(140, 22)
         Me.CmsDelData.Text = "Delete Data"
         '
         'CmsEditTrans
         '
         Me.CmsEditTrans.Name = "CmsEditTrans"
-        Me.CmsEditTrans.Size = New System.Drawing.Size(163, 24)
+        Me.CmsEditTrans.Size = New System.Drawing.Size(140, 22)
         Me.CmsEditTrans.Text = "Update Data"
         '
         'TransactionDBForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(51, Byte), Integer), CType(CType(53, Byte), Integer), CType(CType(51, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(973, 646)
+        Me.ClientSize = New System.Drawing.Size(730, 525)
         Me.ContextMenuStrip = Me.cmsTransaction
         Me.Controls.Add(Me.pnlMainData)
         Me.Controls.Add(Me.pnlDataMenu)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "TransactionDBForm"
         Me.Text = "Customer Data Form"
         Me.pnlDataMenu.ResumeLayout(False)

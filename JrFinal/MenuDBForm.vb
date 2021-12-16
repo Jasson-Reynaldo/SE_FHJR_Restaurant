@@ -1,22 +1,22 @@
 ﻿Imports System.Data.SqlClient
 Public Class MenuDBForm
     Dim CusGend, sortCategory As String
-    Sub totalCus()
-        CMDiceJr = New SqlCommand("SELECT COUNT(CUS_ID) AS TOTAL_CUSTOMER FROM Customer", DBicecream)
-        DTRiceJr = CMDiceJr.ExecuteReader
-        DTRiceJr.Close()
-        Dim totalcus As Integer = Convert.ToInt16(CMDiceJr.ExecuteScalar())
-        lblTotalMenu.Text = totalcus.ToString
+    Sub totalMenu()
+        CMDresto = New SqlCommand("SELECT COUNT(Menu_ID) AS TOTAL_MENU FROM Menu", DBresto)
+        DTRresto = CMDresto.ExecuteReader
+        DTRresto.Close()
+        Dim totalmenu As Integer = Convert.ToInt16(CMDresto.ExecuteScalar())
+        lblTotalMenu.Text = totalmenu.ToString
     End Sub
 
     Sub ShowData()
-        AdptCustomer = New SqlDataAdapter("SELECT * from Customer", DBicecream)
-        TblCustomer.Clear()
-        AdptCustomer.Fill(TblCustomer)
-        dgCustomer.DataSource = TblCustomer
+        AdptMenu = New SqlDataAdapter("SELECT * from Menu", DBresto)
+        TblMenu.Clear()
+        AdptMenu.Fill(TblMenu)
+        dgMenu.DataSource = TblMenu
         resetcondition()
         resetValue()
-        totalCus()
+        totalMenu()
     End Sub
 
     Sub resetValue()
@@ -51,26 +51,27 @@ Public Class MenuDBForm
         btnConfirmation.Text = "Confirm Input"
         Dim propercode As String
         Dim countcode As Long
-        CMDiceJr = New SqlCommand("SELECT * FROM Customer WHERE CUS_ID IN (SELECT MAX(CUS_ID) FROM Customer)", DBicecream)
-        DTRiceJr = CMDiceJr.ExecuteReader
-        DTRiceJr.Read()
-        If Not DTRiceJr.HasRows Then
-            propercode = "C" + "0000001"
+        CMDresto = New SqlCommand("SELECT * FROM Menu WHERE Menu_ID IN (SELECT MAX(Menu_ID) FROM Menu)", DBresto)
+        DTRresto = CMDresto.ExecuteReader
+        DTRresto.Read()
+        If Not DTRresto.HasRows Then
+            propercode = "M" + "0001"
         Else
-            countcode = Microsoft.VisualBasic.Right(DTRiceJr.GetString(0), 7) + 1
-            propercode = "C" + Microsoft.VisualBasic.Right("0000000" & countcode, 7)
+            countcode = Microsoft.VisualBasic.Right(DTRresto.GetString(0), 3) + 1
+            propercode = "M" + Microsoft.VisualBasic.Right("000" & countcode, 3)
         End If
         lblMenuID.Text = propercode
         txtMenuName.Focus()
-        DTRiceJr.Close()
+        DTRresto.Close()
     End Sub
 
     Sub Addingdata()
-        CMDiceJr = New SqlCommand("insert into Customer " &
+        CMDresto = New SqlCommand("insert into Menu " &
                    " values (
                            '" & lblMenuID.Text & "'," &
-                   "'" & txtMenuName.Text & "')", DBicecream)
-        CMDiceJr.ExecuteNonQuery()
+                   "'" & txtMenuName.Text & "'," &
+                   "'" & txtMenuPrice.Text & "')", DBresto)
+        CMDresto.ExecuteNonQuery()
         MsgBox("Succesfull Adding data!")
         lblStats.Text = "New Data Added!"
         ShowData()
@@ -78,10 +79,12 @@ Public Class MenuDBForm
     End Sub
 
     Sub Updatingdata()
-        CMDiceJr = New SqlCommand("UPDATE Customer set " &
-                    "CUS_ID ='" & lblMenuID.Text & "'," &
-                    "CUS_NAME ='" & txtMenuName.Text & "'", DBicecream)
-        CMDiceJr.ExecuteNonQuery()
+        CMDresto = New SqlCommand("UPDATE Menu set " &
+                    "Menu_ID ='" & lblMenuID.Text & "'," &
+                    "Menu_NAME ='" & txtMenuName.Text & "'" &
+                    "Menu_PRICE = '" & txtMenuPrice.Text & "," & "' Where " &
+                    "Menu_ID = '" & lblMenuID.Text & "'", DBresto)
+        CMDresto.ExecuteNonQuery()
         MsgBox("Succesfull Editting data!")
         lblStats.Text = "Data Updated!"
         ShowData()
@@ -97,19 +100,19 @@ Public Class MenuDBForm
     End Sub
 
     Sub editValidation()
-        CMDiceJr = New SqlCommand("SELECT * FROM Customer WHERE CUS_ID ='" & lblMenuID.Text & "'", DBicecream)
-        DTRiceJr = CMDiceJr.ExecuteReader
-        If DTRiceJr.Read Then
+        CMDresto = New SqlCommand("SELECT * FROM Menu WHERE Menu_ID ='" & lblMenuID.Text & "'", DBresto)
+        DTRresto = CMDresto.ExecuteReader
+        If DTRresto.Read Then
             editcondition()
         Else
             MsgBox("Please Select    Any data", MsgBoxStyle.Information, "Help")
             resetcondition()
         End If
-        DTRiceJr.Close()
+        DTRresto.Close()
     End Sub
     Sub Deletingdata()
-        CMDiceJr = New SqlCommand(" DELETE from Customer where CUS_ID ='" & dgCustomer.SelectedCells(0).Value & "'", DBicecream)
-        CMDiceJr.ExecuteNonQuery()
+        CMDresto = New SqlCommand(" DELETE from Menu where Menu_ID ='" & dgMenu.SelectedCells(0).Value & "'", DBresto)
+        CMDresto.ExecuteNonQuery()
         ShowData()
         MsgBox("Succesfull Deleting data!")
         lblStats.Text = "successfully Deleting Data!"
@@ -123,9 +126,9 @@ Public Class MenuDBForm
         lblStats.Text = "Data Loaded!"
     End Sub
 
-    Private Sub dgCustomer_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgCustomer.CellClick
-        Dim cusrow = dgCustomer.CurrentRow.Index
-        With dgCustomer
+    Private Sub dgCustomer_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgMenu.CellClick
+        Dim cusrow = dgMenu.CurrentRow.Index
+        With dgMenu
             lblMenuID.Text = .Item(0, cusrow).Value
             txtMenuName.Text = .Item(1, cusrow).Value
         End With
@@ -163,7 +166,7 @@ Public Class MenuDBForm
         End If
     End Sub
 
-    Private Sub dgCustomer_MouseClick(sender As Object, e As MouseEventArgs) Handles dgCustomer.MouseClick
+    Private Sub dgCustomer_MouseClick(sender As Object, e As MouseEventArgs) Handles dgMenu.MouseClick
         resetpartial()
     End Sub
 
@@ -173,10 +176,10 @@ Public Class MenuDBForm
     End Sub
 
     Private Sub txtFind_TextChanged(sender As Object, e As EventArgs) Handles txtFind.TextChanged
-        AdptCustomer = New SqlDataAdapter("SELECT * FROM Customer WHERE " & cmbSearchChoice.Text & " like '%" & txtFind.Text & "%'", DBicecream)
-        TblCustomer.Clear()
-        AdptCustomer.Fill(TblCustomer)
-        dgCustomer.DataSource = TblCustomer
+        AdptMenu = New SqlDataAdapter("SELECT * FROM Menu WHERE " & cmbSearchChoice.Text & " like '%" & txtFind.Text & "%'", DBresto)
+        TblMenu.Clear()
+        AdptMenu.Fill(TblMenu)
+        dgMenu.DataSource = TblMenu
     End Sub
 
     Private Sub CmsRefresh_Click(sender As Object, e As EventArgs) Handles CmsRefresh.Click
@@ -185,31 +188,31 @@ Public Class MenuDBForm
     End Sub
 
     Sub SortingDataASC()
-        AdptCustomer = New SqlDataAdapter("SELECT * FROM Customer ORDER BY " & sortCategory & " ASC", DBicecream)
-        TblCustomer.Clear()
-        AdptCustomer.Fill(TblCustomer)
-        dgCustomer.DataSource = TblCustomer
+        AdptMenu = New SqlDataAdapter("SELECT * FROM Menu ORDER BY " & sortCategory & " ASC", DBresto)
+        TblMenu.Clear()
+        AdptMenu.Fill(TblMenu)
+        dgMenu.DataSource = TblMenu
     End Sub
 
     Sub SortingDataDESC()
-        AdptCustomer = New SqlDataAdapter("SELECT * FROM Customer ORDER BY " & sortCategory & " DESC", DBicecream)
-        TblCustomer.Clear()
-        AdptCustomer.Fill(TblCustomer)
-        dgCustomer.DataSource = TblCustomer
+        AdptMenu = New SqlDataAdapter("SELECT * FROM Menu ORDER BY " & sortCategory & " DESC", DBresto)
+        TblMenu.Clear()
+        AdptMenu.Fill(TblMenu)
+        dgMenu.DataSource = TblMenu
     End Sub
 
     Private Sub MsIdAsc_Click(sender As Object, e As EventArgs) Handles MsIdAsc.Click
-        sortCategory = "CUS_ID"
+        sortCategory = "Menu_ID"
         SortingDataASC()
     End Sub
 
     Private Sub MsIdDesc_Click(sender As Object, e As EventArgs) Handles MsIdDesc.Click
-        sortCategory = "CUS_ID"
+        sortCategory = "Menu_ID"
         SortingDataDESC()
     End Sub
 
     Private Sub MsNameAsc_Click(sender As Object, e As EventArgs) Handles MsNameAsc.Click
-        sortCategory = "CUS_NAME"
+        sortCategory = "Menu_NAME"
         SortingDataASC()
     End Sub
 
@@ -217,8 +220,28 @@ Public Class MenuDBForm
 
     End Sub
 
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+
+    End Sub
+
+    Private Sub cmbSearchChoice_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbSearchChoice.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub lblMenuID_Click(sender As Object, e As EventArgs) Handles lblMenuID.Click
+
+    End Sub
+
+    Private Sub txtMenuName_TextChanged(sender As Object, e As EventArgs) Handles txtMenuName.TextChanged
+
+    End Sub
+
+    Private Sub lblTotalMenu_Click(sender As Object, e As EventArgs) Handles lblTotalMenu.Click
+
+    End Sub
+
     Private Sub MsNameDesc_Click(sender As Object, e As EventArgs) Handles MsNameDesc.Click
-        sortCategory = "CUS_NAME"
+        sortCategory = "Menu_NAME"
         SortingDataDESC()
     End Sub
 End Class

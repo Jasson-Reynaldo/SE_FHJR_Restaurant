@@ -23,6 +23,7 @@
     Private Sub btnAdmin_Click(sender As Object, e As EventArgs) Handles btnAdmin.Click
         Me.Hide()
         LoginAdminForm.Show()
+        MainForm.lblUrName.Text = "Admin"
     End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
@@ -47,6 +48,8 @@
     Private Sub btnCustomer_Click(sender As Object, e As EventArgs) Handles btnCustomer.Click
         Me.Hide()
         MainForm.Show()
+        MainForm.btnTransaction.Enabled = False
+        MainForm.btnFeedBack.Enabled = False
         MainForm.btnTransactionDB.Visible = False
         MainForm.btnOrderDB.Visible = False
         MainForm.btnMenuDB.Visible = False

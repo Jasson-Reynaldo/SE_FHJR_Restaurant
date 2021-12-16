@@ -38,7 +38,7 @@ Partial Class AuthenForm
         Me.btnCustomer.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(63, Byte), Integer))
         Me.btnCustomer.FlatAppearance.BorderSize = 0
         Me.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCustomer.Font = New System.Drawing.Font("Niramit SemiBold", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCustomer.Font = New System.Drawing.Font("Poppins SemiBold", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCustomer.ForeColor = System.Drawing.SystemColors.MenuText
         Me.btnCustomer.Location = New System.Drawing.Point(416, 264)
         Me.btnCustomer.Margin = New System.Windows.Forms.Padding(2)
@@ -53,7 +53,7 @@ Partial Class AuthenForm
         Me.btnAdmin.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(63, Byte), Integer))
         Me.btnAdmin.FlatAppearance.BorderSize = 0
         Me.btnAdmin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnAdmin.Font = New System.Drawing.Font("Niramit SemiBold", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAdmin.Font = New System.Drawing.Font("Poppins SemiBold", 27.75!, System.Drawing.FontStyle.Bold)
         Me.btnAdmin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
         Me.btnAdmin.Location = New System.Drawing.Point(94, 264)
         Me.btnAdmin.Margin = New System.Windows.Forms.Padding(2)
@@ -79,13 +79,14 @@ Partial Class AuthenForm
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(272, 169)
+        Me.Label1.Font = New System.Drawing.Font("Milkshake", 27.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(36, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(221, 151)
         Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(286, 31)
+        Me.Label1.Size = New System.Drawing.Size(352, 55)
         Me.Label1.TabIndex = 6
-        Me.Label1.Text = "Delliciosso Restaurant"
+        Me.Label1.Text = "Delicioso Restaurant"
         '
         'imgExit
         '

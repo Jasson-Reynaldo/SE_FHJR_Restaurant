@@ -2,7 +2,7 @@
 Public Class TransactionDBForm
     Dim sortCategory As String
     Sub totalTrans()
-        CMDresto = New SqlCommand("SELECT COUNT(Trans_ID) AS TOTAL_TRANSACTION FROM Transaction", DBresto)
+        CMDresto = New SqlCommand("SELECT COUNT(Trans_ID) AS TOTAL_TRANSACTION FROM Transactions", DBresto)
         DTRresto = CMDresto.ExecuteReader
         DTRresto.Close()
         Dim totaltrans As Integer = Convert.ToInt16(CMDresto.ExecuteScalar())
@@ -10,7 +10,7 @@ Public Class TransactionDBForm
     End Sub
 
     Sub ShowData()
-        AdptTransactions = New SqlDataAdapter("SELECT * from Transaction", DBresto)
+        AdptTransactions = New SqlDataAdapter("SELECT * from Transactions", DBresto)
         TblTransactions.Clear()
         AdptTransactions.Fill(TblTransactions)
         dgTransactions.DataSource = TblTransactions
@@ -49,24 +49,36 @@ Public Class TransactionDBForm
         enablecondition()
         resetValue()
         btnConfirmation.Text = "Confirm Input"
-        Dim propercode As String
-        Dim countcode As Long
-        CMDresto = New SqlCommand("SELECT * FROM Transaction WHERE Trans_ID IN (SELECT MAX(Trans_ID) FROM Transaction)", DBresto)
+        Dim propercode, propercode1 As String
+        Dim countcode, countcode1 As Long
+        CMDresto = New SqlCommand("SELECT * FROM Transactions WHERE Trans_ID IN (SELECT MAX(Trans_ID) FROM Transactions)", DBresto)
         DTRresto = CMDresto.ExecuteReader
         DTRresto.Read()
         If Not DTRresto.HasRows Then
             propercode = "T" + "0001"
         Else
-            countcode = Microsoft.VisualBasic.Right(DTRresto.GetString(0), 7) + 1
-            propercode = "T" + Microsoft.VisualBasic.Right("000" & countcode, 7)
+            countcode = Microsoft.VisualBasic.Right(DTRresto.GetString(0), 4) + 1
+            propercode = "T" + Microsoft.VisualBasic.Right("000" & countcode, 4)
         End If
         lblTransID.Text = propercode
+
+        CMDresto = New SqlCommand("SELECT * FROM Order WHERE Order_ID IN (SELECT MAX(Order_ID) FROM Order)", DBresto)
+        DTRresto = CMDresto.ExecuteReader
+        DTRresto.Read()
+        If Not DTRresto.HasRows Then
+            propercode1 = "OD" + "001"
+        Else
+            countcode1 = Microsoft.VisualBasic.Right(DTRresto.GetString(0), 3) + 1
+            propercode1 = "OD" + Microsoft.VisualBasic.Right("00" & countcode1, 3)
+        End If
+        lblOrderID.Text = propercode1
+
 
         DTRresto.Close()
     End Sub
 
     Sub Addingdata()
-        CMDresto = New SqlCommand("insert into Transaction " &
+        CMDresto = New SqlCommand("insert into Transactions " &
                    " values (
                            '" & lblTransID.Text & "',", DBresto)
 
@@ -78,7 +90,7 @@ Public Class TransactionDBForm
     End Sub
 
     Sub Updatingdata()
-        CMDresto = New SqlCommand("UPDATE Transaction set " &
+        CMDresto = New SqlCommand("UPDATE Transactions set " &
                     "Trans_ID ='" & lblTransID.Text & "'," &
                     "Order_ID ='" & lblOrderID.Text & "'", DBresto)
         CMDresto.ExecuteNonQuery()
@@ -97,7 +109,7 @@ Public Class TransactionDBForm
     End Sub
 
     Sub editValidation()
-        CMDresto = New SqlCommand("SELECT * FROM Transaction WHERE Trans_ID ='" & lblTransID.Text & "'", DBresto)
+        CMDresto = New SqlCommand("SELECT * FROM Transactions WHERE Trans_ID ='" & lblTransID.Text & "'", DBresto)
         DTRresto = CMDresto.ExecuteReader
         If DTRresto.Read Then
             editcondition()
@@ -108,7 +120,7 @@ Public Class TransactionDBForm
         DTRresto.Close()
     End Sub
     Sub Deletingdata()
-        CMDresto = New SqlCommand(" DELETE from Transaction where Trans_ID ='" & dgTransactions.SelectedCells(0).Value & "'", DBresto)
+        CMDresto = New SqlCommand(" DELETE from Transactions where Trans_ID ='" & dgTransactions.SelectedCells(0).Value & "'", DBresto)
         CMDresto.ExecuteNonQuery()
         ShowData()
         MsgBox("Succesfull Deleting data!")
@@ -127,6 +139,8 @@ Public Class TransactionDBForm
         Dim cusrow = dgTransactions.CurrentRow.Index
         With dgTransactions
             lblTransID.Text = .Item(0, cusrow).Value
+            .Text = .Item(1, cusrow).Value
+            lblOrderID.Text = .Item(1, cusrow).Value
             .Text = .Item(1, cusrow).Value
         End With
     End Sub
@@ -173,7 +187,7 @@ Public Class TransactionDBForm
     End Sub
 
     Private Sub txtFind_TextChanged(sender As Object, e As EventArgs) Handles txtFind.TextChanged
-        AdptTransactions = New SqlDataAdapter("SELECT * FROM Transaction WHERE " & cmbSearchChoice.Text & " like '%" & txtFind.Text & "%'", DBresto)
+        AdptTransactions = New SqlDataAdapter("SELECT * FROM Transactions WHERE " & cmbSearchChoice.Text & " like '%" & txtFind.Text & "%'", DBresto)
         TblTransactions.Clear()
         AdptTransactions.Fill(TblTransactions)
         dgTransactions.DataSource = TblTransactions
@@ -185,14 +199,14 @@ Public Class TransactionDBForm
     End Sub
 
     Sub SortingDataASC()
-        AdptTransactions = New SqlDataAdapter("SELECT * FROM Transaction ORDER BY " & sortCategory & " ASC", DBresto)
+        AdptTransactions = New SqlDataAdapter("SELECT * FROM Transactions ORDER BY " & sortCategory & " ASC", DBresto)
         TblTransactions.Clear()
         AdptTransactions.Fill(TblTransactions)
         dgTransactions.DataSource = TblTransactions
     End Sub
 
     Sub SortingDataDESC()
-        AdptTransactions = New SqlDataAdapter("SELECT * FROM Transaction ORDER BY " & sortCategory & " DESC", DBresto)
+        AdptTransactions = New SqlDataAdapter("SELECT * FROM Transactions ORDER BY " & sortCategory & " DESC", DBresto)
         TblTransactions.Clear()
         AdptTransactions.Fill(TblTransactions)
         dgTransactions.DataSource = TblTransactions

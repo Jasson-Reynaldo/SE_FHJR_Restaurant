@@ -36,8 +36,6 @@ Partial Class MainForm
         Me.btnMenu = New System.Windows.Forms.Button()
         Me.pnlTop = New System.Windows.Forms.Panel()
         Me.lblUrName = New System.Windows.Forms.Label()
-        Me.lblStatsRole = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
@@ -61,13 +59,14 @@ Partial Class MainForm
         Me.imgBtn.Images.SetKeyName(0, "ExitButton.png")
         Me.imgBtn.Images.SetKeyName(1, "HomeButton.png")
         Me.imgBtn.Images.SetKeyName(2, "ExitButton.png")
+        Me.imgBtn.Images.SetKeyName(3, "back.png")
         '
         'btnExit
         '
         Me.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
         Me.btnExit.FlatAppearance.BorderSize = 0
         Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnExit.ImageIndex = 0
+        Me.btnExit.ImageIndex = 3
         Me.btnExit.ImageList = Me.imgBtn
         Me.btnExit.Location = New System.Drawing.Point(912, 0)
         Me.btnExit.Name = "btnExit"
@@ -185,9 +184,7 @@ Partial Class MainForm
         '
         Me.pnlTop.BackColor = System.Drawing.Color.FromArgb(CType(CType(252, Byte), Integer), CType(CType(212, Byte), Integer), CType(CType(78, Byte), Integer))
         Me.pnlTop.Controls.Add(Me.lblUrName)
-        Me.pnlTop.Controls.Add(Me.lblStatsRole)
         Me.pnlTop.Controls.Add(Me.btnExit)
-        Me.pnlTop.Controls.Add(Me.Label4)
         Me.pnlTop.Controls.Add(Me.Label1)
         Me.pnlTop.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlTop.Location = New System.Drawing.Point(0, 0)
@@ -206,28 +203,6 @@ Partial Class MainForm
         Me.lblUrName.TabIndex = 2
         Me.lblUrName.Text = "User"
         '
-        'lblStatsRole
-        '
-        Me.lblStatsRole.AutoSize = True
-        Me.lblStatsRole.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.lblStatsRole.ForeColor = System.Drawing.Color.Black
-        Me.lblStatsRole.Location = New System.Drawing.Point(334, 7)
-        Me.lblStatsRole.Name = "lblStatsRole"
-        Me.lblStatsRole.Size = New System.Drawing.Size(45, 19)
-        Me.lblStatsRole.TabIndex = 2
-        Me.lblStatsRole.Text = "Role"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Raleway", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(275, 7)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(53, 19)
-        Me.Label4.TabIndex = 0
-        Me.Label4.Text = "Role :"
-        '
         'Label1
         '
         Me.Label1.AutoSize = True
@@ -241,6 +216,7 @@ Partial Class MainForm
         '
         'Panel1
         '
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(229, Byte), Integer), CType(CType(102, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Left
@@ -376,7 +352,5 @@ Partial Class MainForm
     Friend WithEvents pbHomeLogo As PictureBox
     Friend WithEvents Label3 As Label
     Friend WithEvents lblUrName As Label
-    Friend WithEvents lblStatsRole As Label
-    Friend WithEvents Label4 As Label
     Friend WithEvents btnFeedbackDB As Button
 End Class

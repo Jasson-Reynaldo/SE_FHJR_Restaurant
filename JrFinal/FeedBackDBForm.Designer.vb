@@ -27,9 +27,9 @@ Partial Class FeedBackDBForm
         Me.MsCustomer = New System.Windows.Forms.MenuStrip()
         Me.DataToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.msRefresh = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MsInsertCus = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MsEditCus = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MsDeleteCus = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MsInsertFeed = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MsEditFeed = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MsDeleteFeed = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MsName = New System.Windows.Forms.ToolStripMenuItem()
         Me.MsNameAsc = New System.Windows.Forms.ToolStripMenuItem()
@@ -48,7 +48,7 @@ Partial Class FeedBackDBForm
         Me.lblFeedID = New System.Windows.Forms.Label()
         Me.txtFind = New System.Windows.Forms.TextBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.lblTotalTrans = New System.Windows.Forms.Label()
+        Me.lblTotalFeedback = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.LabelTotal = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -58,12 +58,12 @@ Partial Class FeedBackDBForm
         Me.lblmenutitle = New System.Windows.Forms.Label()
         Me.StatsCus = New System.Windows.Forms.StatusStrip()
         Me.lblStats = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.dgCustomer = New System.Windows.Forms.DataGridView()
+        Me.dgFeedback = New System.Windows.Forms.DataGridView()
         Me.cmsCustomer = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.CmsRefresh = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CmsAddCus = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CmsAddFeed = New System.Windows.Forms.ToolStripMenuItem()
         Me.CmsDelData = New System.Windows.Forms.ToolStripMenuItem()
-        Me.CmsEditCus = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CmsEditFeed = New System.Windows.Forms.ToolStripMenuItem()
         Me.pnlDataMenu.SuspendLayout()
         Me.MsCustomer.SuspendLayout()
         Me.pnlMainData.SuspendLayout()
@@ -74,7 +74,7 @@ Partial Class FeedBackDBForm
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.StatsCus.SuspendLayout()
-        CType(Me.dgCustomer, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgFeedback, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.cmsCustomer.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -99,7 +99,7 @@ Partial Class FeedBackDBForm
         '
         'DataToolStripMenuItem
         '
-        Me.DataToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.msRefresh, Me.MsInsertCus, Me.MsEditCus, Me.MsDeleteCus})
+        Me.DataToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.msRefresh, Me.MsInsertFeed, Me.MsEditFeed, Me.MsDeleteFeed})
         Me.DataToolStripMenuItem.Name = "DataToolStripMenuItem"
         Me.DataToolStripMenuItem.Size = New System.Drawing.Size(46, 20)
         Me.DataToolStripMenuItem.Text = "Tools"
@@ -107,26 +107,26 @@ Partial Class FeedBackDBForm
         'msRefresh
         '
         Me.msRefresh.Name = "msRefresh"
-        Me.msRefresh.Size = New System.Drawing.Size(140, 22)
+        Me.msRefresh.Size = New System.Drawing.Size(180, 22)
         Me.msRefresh.Text = "Refresh Data"
         '
-        'MsInsertCus
+        'MsInsertFeed
         '
-        Me.MsInsertCus.Name = "MsInsertCus"
-        Me.MsInsertCus.Size = New System.Drawing.Size(140, 22)
-        Me.MsInsertCus.Text = "Insert Data"
+        Me.MsInsertFeed.Name = "MsInsertFeed"
+        Me.MsInsertFeed.Size = New System.Drawing.Size(180, 22)
+        Me.MsInsertFeed.Text = "Insert Data"
         '
-        'MsEditCus
+        'MsEditFeed
         '
-        Me.MsEditCus.Name = "MsEditCus"
-        Me.MsEditCus.Size = New System.Drawing.Size(140, 22)
-        Me.MsEditCus.Text = "Update Data"
+        Me.MsEditFeed.Name = "MsEditFeed"
+        Me.MsEditFeed.Size = New System.Drawing.Size(180, 22)
+        Me.MsEditFeed.Text = "Update Data"
         '
-        'MsDeleteCus
+        'MsDeleteFeed
         '
-        Me.MsDeleteCus.Name = "MsDeleteCus"
-        Me.MsDeleteCus.Size = New System.Drawing.Size(140, 22)
-        Me.MsDeleteCus.Text = "Delete Data"
+        Me.MsDeleteFeed.Name = "MsDeleteFeed"
+        Me.MsDeleteFeed.Size = New System.Drawing.Size(180, 22)
+        Me.MsDeleteFeed.Text = "Delete Data"
         '
         'ToolsToolStripMenuItem
         '
@@ -197,15 +197,17 @@ Partial Class FeedBackDBForm
         'splitCus.Panel2
         '
         Me.splitCus.Panel2.AutoScroll = True
+        Me.splitCus.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(182, Byte), Integer))
         Me.splitCus.Panel2.Controls.Add(Me.Panel3)
         Me.splitCus.Panel2.Controls.Add(Me.StatsCus)
-        Me.splitCus.Panel2.Controls.Add(Me.dgCustomer)
+        Me.splitCus.Panel2.Controls.Add(Me.dgFeedback)
         Me.splitCus.Size = New System.Drawing.Size(730, 497)
         Me.splitCus.SplitterDistance = 165
         Me.splitCus.TabIndex = 0
         '
         'Panel2
         '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(182, Byte), Integer))
         Me.Panel2.Controls.Add(Me.lblTransactionID)
         Me.Panel2.Controls.Add(Me.txtFeedDetail)
         Me.Panel2.Controls.Add(Me.Label1)
@@ -214,7 +216,7 @@ Partial Class FeedBackDBForm
         Me.Panel2.Controls.Add(Me.lblFeedID)
         Me.Panel2.Controls.Add(Me.txtFind)
         Me.Panel2.Controls.Add(Me.Label9)
-        Me.Panel2.Controls.Add(Me.lblTotalTrans)
+        Me.Panel2.Controls.Add(Me.lblTotalFeedback)
         Me.Panel2.Controls.Add(Me.Label8)
         Me.Panel2.Controls.Add(Me.LabelTotal)
         Me.Panel2.Controls.Add(Me.Label4)
@@ -222,7 +224,7 @@ Partial Class FeedBackDBForm
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Font = New System.Drawing.Font("Raleway", 10.0!)
-        Me.Panel2.ForeColor = System.Drawing.Color.White
+        Me.Panel2.ForeColor = System.Drawing.Color.Black
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(730, 165)
@@ -231,6 +233,7 @@ Partial Class FeedBackDBForm
         'lblTransactionID
         '
         Me.lblTransactionID.AutoSize = True
+        Me.lblTransactionID.ForeColor = System.Drawing.Color.Black
         Me.lblTransactionID.Location = New System.Drawing.Point(229, 106)
         Me.lblTransactionID.Name = "lblTransactionID"
         Me.lblTransactionID.Size = New System.Drawing.Size(100, 16)
@@ -248,6 +251,7 @@ Partial Class FeedBackDBForm
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Raleway", 10.0!)
+        Me.Label1.ForeColor = System.Drawing.Color.Black
         Me.Label1.Location = New System.Drawing.Point(87, 45)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(126, 16)
@@ -277,6 +281,7 @@ Partial Class FeedBackDBForm
         'lblFeedID
         '
         Me.lblFeedID.AutoSize = True
+        Me.lblFeedID.ForeColor = System.Drawing.Color.Black
         Me.lblFeedID.Location = New System.Drawing.Point(229, 80)
         Me.lblFeedID.Name = "lblFeedID"
         Me.lblFeedID.Size = New System.Drawing.Size(90, 16)
@@ -293,24 +298,27 @@ Partial Class FeedBackDBForm
         'Label9
         '
         Me.Label9.AutoSize = True
+        Me.Label9.ForeColor = System.Drawing.Color.Black
         Me.Label9.Location = New System.Drawing.Point(417, 23)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(45, 16)
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "Value"
         '
-        'lblTotalTrans
+        'lblTotalFeedback
         '
-        Me.lblTotalTrans.AutoSize = True
-        Me.lblTotalTrans.Location = New System.Drawing.Point(135, 3)
-        Me.lblTotalTrans.Name = "lblTotalTrans"
-        Me.lblTotalTrans.Size = New System.Drawing.Size(152, 16)
-        Me.lblTotalTrans.TabIndex = 1
-        Me.lblTotalTrans.Text = "number of Feedbacks"
+        Me.lblTotalFeedback.AutoSize = True
+        Me.lblTotalFeedback.ForeColor = System.Drawing.Color.Black
+        Me.lblTotalFeedback.Location = New System.Drawing.Point(135, 3)
+        Me.lblTotalFeedback.Name = "lblTotalFeedback"
+        Me.lblTotalFeedback.Size = New System.Drawing.Size(152, 16)
+        Me.lblTotalFeedback.TabIndex = 1
+        Me.lblTotalFeedback.Text = "number of Feedbacks"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
+        Me.Label8.ForeColor = System.Drawing.Color.Black
         Me.Label8.Location = New System.Drawing.Point(258, 23)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(76, 16)
@@ -320,6 +328,7 @@ Partial Class FeedBackDBForm
         'LabelTotal
         '
         Me.LabelTotal.AutoSize = True
+        Me.LabelTotal.ForeColor = System.Drawing.Color.Black
         Me.LabelTotal.Location = New System.Drawing.Point(3, 3)
         Me.LabelTotal.Name = "LabelTotal"
         Me.LabelTotal.Size = New System.Drawing.Size(123, 16)
@@ -330,7 +339,7 @@ Partial Class FeedBackDBForm
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Raleway", 10.0!)
-        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.ForeColor = System.Drawing.Color.Black
         Me.Label4.Location = New System.Drawing.Point(95, 133)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(118, 16)
@@ -341,7 +350,7 @@ Partial Class FeedBackDBForm
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Raleway", 10.0!)
-        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.ForeColor = System.Drawing.Color.Black
         Me.Label3.Location = New System.Drawing.Point(107, 106)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(106, 16)
@@ -352,7 +361,7 @@ Partial Class FeedBackDBForm
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Raleway", 10.0!)
-        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.ForeColor = System.Drawing.Color.Black
         Me.Label2.Location = New System.Drawing.Point(120, 80)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(93, 16)
@@ -361,7 +370,7 @@ Partial Class FeedBackDBForm
         '
         'Panel3
         '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(228, Byte), Integer), CType(CType(182, Byte), Integer), CType(CType(26, Byte), Integer))
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(63, Byte), Integer))
         Me.Panel3.Controls.Add(Me.lblmenutitle)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
@@ -372,9 +381,10 @@ Partial Class FeedBackDBForm
         'lblmenutitle
         '
         Me.lblmenutitle.AutoSize = True
+        Me.lblmenutitle.BackColor = System.Drawing.Color.Transparent
         Me.lblmenutitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.lblmenutitle.Font = New System.Drawing.Font("Milkshake", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.lblmenutitle.ForeColor = System.Drawing.Color.White
+        Me.lblmenutitle.ForeColor = System.Drawing.Color.Black
         Me.lblmenutitle.Location = New System.Drawing.Point(254, -1)
         Me.lblmenutitle.Name = "lblmenutitle"
         Me.lblmenutitle.Size = New System.Drawing.Size(238, 37)
@@ -397,20 +407,20 @@ Partial Class FeedBackDBForm
         Me.lblStats.Size = New System.Drawing.Size(45, 17)
         Me.lblStats.Text = "Status: "
         '
-        'dgCustomer
+        'dgFeedback
         '
-        Me.dgCustomer.AllowUserToAddRows = False
-        Me.dgCustomer.AllowUserToDeleteRows = False
-        Me.dgCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgCustomer.Location = New System.Drawing.Point(37, 70)
-        Me.dgCustomer.Name = "dgCustomer"
-        Me.dgCustomer.ReadOnly = True
-        Me.dgCustomer.Size = New System.Drawing.Size(653, 233)
-        Me.dgCustomer.TabIndex = 0
+        Me.dgFeedback.AllowUserToAddRows = False
+        Me.dgFeedback.AllowUserToDeleteRows = False
+        Me.dgFeedback.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgFeedback.Location = New System.Drawing.Point(37, 70)
+        Me.dgFeedback.Name = "dgFeedback"
+        Me.dgFeedback.ReadOnly = True
+        Me.dgFeedback.Size = New System.Drawing.Size(653, 233)
+        Me.dgFeedback.TabIndex = 0
         '
         'cmsCustomer
         '
-        Me.cmsCustomer.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CmsRefresh, Me.CmsAddCus, Me.CmsDelData, Me.CmsEditCus})
+        Me.cmsCustomer.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CmsRefresh, Me.CmsAddFeed, Me.CmsDelData, Me.CmsEditFeed})
         Me.cmsCustomer.Name = "ContextMenuStrip1"
         Me.cmsCustomer.Size = New System.Drawing.Size(141, 92)
         '
@@ -420,11 +430,11 @@ Partial Class FeedBackDBForm
         Me.CmsRefresh.Size = New System.Drawing.Size(140, 22)
         Me.CmsRefresh.Text = "Refresh Data"
         '
-        'CmsAddCus
+        'CmsAddFeed
         '
-        Me.CmsAddCus.Name = "CmsAddCus"
-        Me.CmsAddCus.Size = New System.Drawing.Size(140, 22)
-        Me.CmsAddCus.Text = "Insert Data"
+        Me.CmsAddFeed.Name = "CmsAddFeed"
+        Me.CmsAddFeed.Size = New System.Drawing.Size(140, 22)
+        Me.CmsAddFeed.Text = "Insert Data"
         '
         'CmsDelData
         '
@@ -432,11 +442,11 @@ Partial Class FeedBackDBForm
         Me.CmsDelData.Size = New System.Drawing.Size(140, 22)
         Me.CmsDelData.Text = "Delete Data"
         '
-        'CmsEditCus
+        'CmsEditFeed
         '
-        Me.CmsEditCus.Name = "CmsEditCus"
-        Me.CmsEditCus.Size = New System.Drawing.Size(140, 22)
-        Me.CmsEditCus.Text = "Update Data"
+        Me.CmsEditFeed.Name = "CmsEditFeed"
+        Me.CmsEditFeed.Size = New System.Drawing.Size(140, 22)
+        Me.CmsEditFeed.Text = "Update Data"
         '
         'FeedBackDBForm
         '
@@ -467,7 +477,7 @@ Partial Class FeedBackDBForm
         Me.Panel3.PerformLayout()
         Me.StatsCus.ResumeLayout(False)
         Me.StatsCus.PerformLayout()
-        CType(Me.dgCustomer, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgFeedback, System.ComponentModel.ISupportInitialize).EndInit()
         Me.cmsCustomer.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -477,19 +487,19 @@ Partial Class FeedBackDBForm
     Friend WithEvents pnlMainData As Panel
     Friend WithEvents MsCustomer As MenuStrip
     Friend WithEvents DataToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents MsInsertCus As ToolStripMenuItem
-    Friend WithEvents MsEditCus As ToolStripMenuItem
+    Friend WithEvents MsInsertFeed As ToolStripMenuItem
+    Friend WithEvents MsEditFeed As ToolStripMenuItem
     Friend WithEvents ToolsToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents MsDeleteCus As ToolStripMenuItem
+    Friend WithEvents MsDeleteFeed As ToolStripMenuItem
     Friend WithEvents MsName As ToolStripMenuItem
     Friend WithEvents SortByAgeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents splitCus As SplitContainer
-    Friend WithEvents dgCustomer As DataGridView
+    Friend WithEvents dgFeedback As DataGridView
     Friend WithEvents cmsCustomer As ContextMenuStrip
     Friend WithEvents CmsRefresh As ToolStripMenuItem
-    Friend WithEvents CmsAddCus As ToolStripMenuItem
+    Friend WithEvents CmsAddFeed As ToolStripMenuItem
     Friend WithEvents CmsDelData As ToolStripMenuItem
-    Friend WithEvents CmsEditCus As ToolStripMenuItem
+    Friend WithEvents CmsEditFeed As ToolStripMenuItem
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Label2 As Label
     Friend WithEvents Label4 As Label
@@ -499,7 +509,7 @@ Partial Class FeedBackDBForm
     Friend WithEvents btnConfirmation As Button
     Friend WithEvents msRefresh As ToolStripMenuItem
     Friend WithEvents LabelTotal As Label
-    Friend WithEvents lblTotalTrans As Label
+    Friend WithEvents lblTotalFeedback As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents txtFind As TextBox
     Friend WithEvents Label8 As Label

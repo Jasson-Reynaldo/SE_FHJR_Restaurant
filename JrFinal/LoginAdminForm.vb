@@ -37,6 +37,8 @@
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Me.Close()
+        AuthenForm.Show()
+        MainForm.lblUrName.Text = "Admin"
     End Sub
 
     Private Sub txtPassword_GotFocus(sender As Object, e As EventArgs) Handles txtPassword.GotFocus
@@ -58,11 +60,11 @@
     End Sub
 
     Private Sub btnLogin_MouseEnter(sender As Object, e As EventArgs) Handles btnLogin.MouseEnter
-        btnLogin.BackColor = Color.Orange
+        btnLogin.BackColor = Color.FromArgb(255, 171, 47)
     End Sub
 
     Private Sub btnLogin_MouseLeave(sender As Object, e As EventArgs) Handles btnLogin.MouseLeave
-        btnLogin.BackColor = Color.Yellow
+        btnLogin.BackColor = Color.FromArgb(255, 210, 63)
     End Sub
 
     Private Sub chkShowPass_CheckedChanged(sender As Object, e As EventArgs) Handles chkShowPass.CheckedChanged

@@ -51,14 +51,14 @@ Public Class OrderDBForm
         btnConfirmation.Text = "Confirm Input"
         Dim propercode As String
         Dim countcode As Long
-        CMDresto = New SqlCommand("SELECT * FROM Orders WHERE Order_ID IN (SELECT MAX(Order_ID) FROM Orders)", RestoDB)
+        CMDresto = New SqlCommand("SELECT * FROM Orders WHERE Order_ID IN (SELECT MAX(Order_ID) FROM Orders)", DBresto)
         DTRresto = CMDresto.ExecuteReader
         DTRresto.Read()
         If Not DTRresto.HasRows Then
             propercode = "OD" + "001"
         Else
-            countcode = Microsoft.VisualBasic.Right(DTRresto.GetString(0), 2) + 1
-            propercode = "OD" + Microsoft.VisualBasic.Right("00" & countcode, 2)
+            countcode = Microsoft.VisualBasic.Right(DTRresto.GetString(0), 3) + 1
+            propercode = "OD" + Microsoft.VisualBasic.Right("00" & countcode, 3)
         End If
         lblOrderID.Text = propercode
 
@@ -70,7 +70,7 @@ Public Class OrderDBForm
                    " values (
                            '" & lblOrderID.Text & "'," &
                            "'" & txtMenuID.Text & "'," &
-                           "'" & txtOrderQty.Text & "',", DBresto)
+                           "'" & txtOrderQty.Text & "')", DBresto)
         CMDresto.ExecuteNonQuery()
         MsgBox("Succesfull Adding data!")
         lblStats.Text = "New Data Added!"
@@ -82,8 +82,8 @@ Public Class OrderDBForm
         CMDresto = New SqlCommand("UPDATE Orders set " &
                     "Order_ID ='" & lblOrderID.Text & "'," &
                     "Menu_ID ='" & txtMenuID.Text & "'," &
-                    "Order_Qty ='" & txtOrderQty.Text & "'," & "' where " &
-                    "Order_ID ='" & lblOrderID.Text & "'", DBresto)
+                    "Order_Qty ='" & txtOrderQty.Text & "' where " &
+                    "Order_ID ='" & lblOrderID.Text & "' AND Menu_ID ='" & txtMenuID.Text & "'", DBresto)
         CMDresto.ExecuteNonQuery()
         MsgBox("Succesfull Editting data!")
         lblStats.Text = "Data Updated!"
@@ -94,13 +94,13 @@ Public Class OrderDBForm
     Sub editcondition()
         enablecondition()
         btnConfirmation.Text = "Confirm Edit"
-        If txtOrderQty.Text Is "" Then
+        If lblOrderID.Text Is "" Then
             resetcondition()
         End If
     End Sub
 
     Sub editValidation()
-        CMDresto = New SqlCommand("SELECT * FROM Orders WHERE CUS_ID ='" & lblOrderID.Text & "'", DBresto)
+        CMDresto = New SqlCommand("SELECT * FROM Orders WHERE Order_ID ='" & lblOrderID.Text & "'", DBresto)
         DTRresto = CMDresto.ExecuteReader
         If DTRresto.Read Then
             editcondition()
@@ -130,7 +130,8 @@ Public Class OrderDBForm
         Dim cusrow = dgOrder.CurrentRow.Index
         With dgOrder
             lblOrderID.Text = .Item(0, cusrow).Value
-            .Text = .Item(1, cusrow).Value
+            txtMenuID.Text = .Item(1, cusrow).Value
+            txtOrderQty.Text = .Item(2, cusrow).Value
         End With
     End Sub
 

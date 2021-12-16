@@ -43,14 +43,10 @@ Public Class MainForm
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Me.Close()
-        LoadingForm.Close()
         AuthenForm.Show()
     End Sub
     Sub logout()
         Me.Close()
-        LoginForm.Show()
-        LoadingForm.progBar.Value = 0
-        LoadingForm.loadTime.Enabled = True
     End Sub
 
     Private Sub btnMenu_Click(sender As Object, e As EventArgs) Handles btnMenu.Click

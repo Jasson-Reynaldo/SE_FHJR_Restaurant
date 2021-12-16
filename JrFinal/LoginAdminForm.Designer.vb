@@ -44,7 +44,7 @@ Partial Class LoginAdminForm
         Me.btnExit.FlatAppearance.BorderSize = 0
         Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnExit.ForeColor = System.Drawing.Color.LightGray
-        Me.btnExit.ImageIndex = 0
+        Me.btnExit.ImageIndex = 2
         Me.btnExit.ImageList = Me.imgExit
         Me.btnExit.Location = New System.Drawing.Point(770, 0)
         Me.btnExit.Margin = New System.Windows.Forms.Padding(2)
@@ -59,6 +59,7 @@ Partial Class LoginAdminForm
         Me.imgExit.TransparentColor = System.Drawing.Color.Transparent
         Me.imgExit.Images.SetKeyName(0, "power (1).png")
         Me.imgExit.Images.SetKeyName(1, "power.png")
+        Me.imgExit.Images.SetKeyName(2, "back.png")
         '
         'Label1
         '

@@ -40,30 +40,30 @@ Partial Class MenuDBForm
         Me.pnlMainData = New System.Windows.Forms.Panel()
         Me.splitCus = New System.Windows.Forms.SplitContainer()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.txtMenuPrice = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.btnConfirmation = New System.Windows.Forms.Button()
+        Me.cmbSearchChoice = New System.Windows.Forms.ComboBox()
+        Me.lblMenuID = New System.Windows.Forms.Label()
+        Me.txtFind = New System.Windows.Forms.TextBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.lblTotalMenu = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.txtMenuName = New System.Windows.Forms.TextBox()
+        Me.LabelTotal = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.cmbSearchChoice = New System.Windows.Forms.ComboBox()
-        Me.txtFind = New System.Windows.Forms.TextBox()
-        Me.lblTotalMenu = New System.Windows.Forms.Label()
-        Me.Label9 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.LabelTotal = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.lblmenutitle = New System.Windows.Forms.Label()
         Me.StatsCus = New System.Windows.Forms.StatusStrip()
         Me.lblStats = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.dgCustomer = New System.Windows.Forms.DataGridView()
+        Me.dgMenu = New System.Windows.Forms.DataGridView()
         Me.cmsCustomer = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.CmsRefresh = New System.Windows.Forms.ToolStripMenuItem()
         Me.CmsAddCus = New System.Windows.Forms.ToolStripMenuItem()
         Me.CmsDelData = New System.Windows.Forms.ToolStripMenuItem()
         Me.CmsEditCus = New System.Windows.Forms.ToolStripMenuItem()
-        Me.txtMenuPrice = New System.Windows.Forms.TextBox()
-        Me.lblMenuID = New System.Windows.Forms.Label()
         Me.pnlDataMenu.SuspendLayout()
         Me.MsCustomer.SuspendLayout()
         Me.pnlMainData.SuspendLayout()
@@ -74,7 +74,7 @@ Partial Class MenuDBForm
         Me.Panel2.SuspendLayout()
         Me.Panel3.SuspendLayout()
         Me.StatsCus.SuspendLayout()
-        CType(Me.dgCustomer, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgMenu, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.cmsCustomer.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -107,25 +107,25 @@ Partial Class MenuDBForm
         'msRefresh
         '
         Me.msRefresh.Name = "msRefresh"
-        Me.msRefresh.Size = New System.Drawing.Size(180, 22)
+        Me.msRefresh.Size = New System.Drawing.Size(140, 22)
         Me.msRefresh.Text = "Refresh Data"
         '
         'MsInsertCus
         '
         Me.MsInsertCus.Name = "MsInsertCus"
-        Me.MsInsertCus.Size = New System.Drawing.Size(180, 22)
+        Me.MsInsertCus.Size = New System.Drawing.Size(140, 22)
         Me.MsInsertCus.Text = "Insert Data"
         '
         'MsEditCus
         '
         Me.MsEditCus.Name = "MsEditCus"
-        Me.MsEditCus.Size = New System.Drawing.Size(180, 22)
+        Me.MsEditCus.Size = New System.Drawing.Size(140, 22)
         Me.MsEditCus.Text = "Update Data"
         '
         'MsDeleteCus
         '
         Me.MsDeleteCus.Name = "MsDeleteCus"
-        Me.MsDeleteCus.Size = New System.Drawing.Size(180, 22)
+        Me.MsDeleteCus.Size = New System.Drawing.Size(140, 22)
         Me.MsDeleteCus.Text = "Delete Data"
         '
         'ToolsToolStripMenuItem
@@ -197,15 +197,17 @@ Partial Class MenuDBForm
         'splitCus.Panel2
         '
         Me.splitCus.Panel2.AutoScroll = True
+        Me.splitCus.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(182, Byte), Integer))
         Me.splitCus.Panel2.Controls.Add(Me.Panel3)
         Me.splitCus.Panel2.Controls.Add(Me.StatsCus)
-        Me.splitCus.Panel2.Controls.Add(Me.dgCustomer)
+        Me.splitCus.Panel2.Controls.Add(Me.dgMenu)
         Me.splitCus.Size = New System.Drawing.Size(730, 497)
         Me.splitCus.SplitterDistance = 165
         Me.splitCus.TabIndex = 0
         '
         'Panel2
         '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(182, Byte), Integer))
         Me.Panel2.Controls.Add(Me.txtMenuPrice)
         Me.Panel2.Controls.Add(Me.Label1)
         Me.Panel2.Controls.Add(Me.btnConfirmation)
@@ -222,11 +224,29 @@ Partial Class MenuDBForm
         Me.Panel2.Controls.Add(Me.Label2)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel2.Font = New System.Drawing.Font("Raleway", 10.0!)
-        Me.Panel2.ForeColor = System.Drawing.Color.White
+        Me.Panel2.ForeColor = System.Drawing.Color.Black
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(730, 165)
         Me.Panel2.TabIndex = 4
+        '
+        'txtMenuPrice
+        '
+        Me.txtMenuPrice.Location = New System.Drawing.Point(229, 130)
+        Me.txtMenuPrice.Name = "txtMenuPrice"
+        Me.txtMenuPrice.Size = New System.Drawing.Size(282, 23)
+        Me.txtMenuPrice.TabIndex = 8
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Raleway", 10.0!)
+        Me.Label1.ForeColor = System.Drawing.Color.Black
+        Me.Label1.Location = New System.Drawing.Point(115, 45)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(101, 16)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "Search Menu :"
         '
         'btnConfirmation
         '
@@ -238,46 +258,6 @@ Partial Class MenuDBForm
         Me.btnConfirmation.Text = "Confirm Input"
         Me.btnConfirmation.UseVisualStyleBackColor = True
         '
-        'txtMenuName
-        '
-        Me.txtMenuName.Location = New System.Drawing.Point(229, 103)
-        Me.txtMenuName.Name = "txtMenuName"
-        Me.txtMenuName.Size = New System.Drawing.Size(282, 23)
-        Me.txtMenuName.TabIndex = 1
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Raleway", 10.0!)
-        Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(132, 132)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(84, 16)
-        Me.Label4.TabIndex = 0
-        Me.Label4.Text = "Menu Price:"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Raleway", 10.0!)
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(125, 106)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(91, 16)
-        Me.Label3.TabIndex = 0
-        Me.Label3.Text = "Menu Name:"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Raleway", 10.0!)
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(152, 80)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(64, 16)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Menu ID:"
-        '
         'cmbSearchChoice
         '
         Me.cmbSearchChoice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
@@ -288,6 +268,16 @@ Partial Class MenuDBForm
         Me.cmbSearchChoice.Size = New System.Drawing.Size(121, 23)
         Me.cmbSearchChoice.TabIndex = 3
         '
+        'lblMenuID
+        '
+        Me.lblMenuID.AutoSize = True
+        Me.lblMenuID.ForeColor = System.Drawing.Color.Black
+        Me.lblMenuID.Location = New System.Drawing.Point(229, 80)
+        Me.lblMenuID.Name = "lblMenuID"
+        Me.lblMenuID.Size = New System.Drawing.Size(61, 16)
+        Me.lblMenuID.TabIndex = 6
+        Me.lblMenuID.Text = "Menu ID"
+        '
         'txtFind
         '
         Me.txtFind.Location = New System.Drawing.Point(369, 43)
@@ -295,55 +285,89 @@ Partial Class MenuDBForm
         Me.txtFind.Size = New System.Drawing.Size(145, 23)
         Me.txtFind.TabIndex = 2
         '
-        'lblTotalMenu
-        '
-        Me.lblTotalMenu.AutoSize = True
-        Me.lblTotalMenu.Location = New System.Drawing.Point(96, 3)
-        Me.lblTotalMenu.Name = "lblTotalMenu"
-        Me.lblTotalMenu.Size = New System.Drawing.Size(124, 16)
-        Me.lblTotalMenu.TabIndex = 1
-        Me.lblTotalMenu.Text = "number of menus"
-        '
         'Label9
         '
         Me.Label9.AutoSize = True
+        Me.Label9.ForeColor = System.Drawing.Color.Black
         Me.Label9.Location = New System.Drawing.Point(403, 26)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(45, 16)
         Me.Label9.TabIndex = 0
         Me.Label9.Text = "Value"
         '
+        'lblTotalMenu
+        '
+        Me.lblTotalMenu.AutoSize = True
+        Me.lblTotalMenu.ForeColor = System.Drawing.Color.Black
+        Me.lblTotalMenu.Location = New System.Drawing.Point(96, 3)
+        Me.lblTotalMenu.Name = "lblTotalMenu"
+        Me.lblTotalMenu.Size = New System.Drawing.Size(124, 16)
+        Me.lblTotalMenu.TabIndex = 1
+        Me.lblTotalMenu.Text = "number of menus"
+        '
         'Label8
         '
         Me.Label8.AutoSize = True
+        Me.Label8.ForeColor = System.Drawing.Color.Black
         Me.Label8.Location = New System.Drawing.Point(270, 26)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(76, 16)
         Me.Label8.TabIndex = 0
         Me.Label8.Text = " Based On"
         '
-        'Label1
+        'txtMenuName
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Raleway", 10.0!)
-        Me.Label1.Location = New System.Drawing.Point(115, 45)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(101, 16)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Search Menu :"
+        Me.txtMenuName.Location = New System.Drawing.Point(229, 103)
+        Me.txtMenuName.Name = "txtMenuName"
+        Me.txtMenuName.Size = New System.Drawing.Size(282, 23)
+        Me.txtMenuName.TabIndex = 1
         '
         'LabelTotal
         '
         Me.LabelTotal.AutoSize = True
+        Me.LabelTotal.ForeColor = System.Drawing.Color.Black
         Me.LabelTotal.Location = New System.Drawing.Point(3, 3)
         Me.LabelTotal.Name = "LabelTotal"
         Me.LabelTotal.Size = New System.Drawing.Size(94, 16)
         Me.LabelTotal.TabIndex = 0
         Me.LabelTotal.Text = "Total Menus :"
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Raleway", 10.0!)
+        Me.Label4.ForeColor = System.Drawing.Color.Black
+        Me.Label4.Location = New System.Drawing.Point(132, 132)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(84, 16)
+        Me.Label4.TabIndex = 0
+        Me.Label4.Text = "Menu Price:"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Raleway", 10.0!)
+        Me.Label3.ForeColor = System.Drawing.Color.Black
+        Me.Label3.Location = New System.Drawing.Point(125, 106)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(91, 16)
+        Me.Label3.TabIndex = 0
+        Me.Label3.Text = "Menu Name:"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Raleway", 10.0!)
+        Me.Label2.ForeColor = System.Drawing.Color.Black
+        Me.Label2.Location = New System.Drawing.Point(152, 80)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(64, 16)
+        Me.Label2.TabIndex = 0
+        Me.Label2.Text = "Menu ID:"
+        '
         'Panel3
         '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(228, Byte), Integer), CType(CType(182, Byte), Integer), CType(CType(26, Byte), Integer))
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(63, Byte), Integer))
         Me.Panel3.Controls.Add(Me.lblmenutitle)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
@@ -354,9 +378,10 @@ Partial Class MenuDBForm
         'lblmenutitle
         '
         Me.lblmenutitle.AutoSize = True
+        Me.lblmenutitle.BackColor = System.Drawing.Color.Transparent
         Me.lblmenutitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.lblmenutitle.Font = New System.Drawing.Font("Milkshake", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.lblmenutitle.ForeColor = System.Drawing.Color.White
+        Me.lblmenutitle.ForeColor = System.Drawing.Color.Black
         Me.lblmenutitle.Location = New System.Drawing.Point(254, -1)
         Me.lblmenutitle.Name = "lblmenutitle"
         Me.lblmenutitle.Size = New System.Drawing.Size(195, 37)
@@ -379,16 +404,16 @@ Partial Class MenuDBForm
         Me.lblStats.Size = New System.Drawing.Size(45, 17)
         Me.lblStats.Text = "Status: "
         '
-        'dgCustomer
+        'dgMenu
         '
-        Me.dgCustomer.AllowUserToAddRows = False
-        Me.dgCustomer.AllowUserToDeleteRows = False
-        Me.dgCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgCustomer.Location = New System.Drawing.Point(37, 70)
-        Me.dgCustomer.Name = "dgCustomer"
-        Me.dgCustomer.ReadOnly = True
-        Me.dgCustomer.Size = New System.Drawing.Size(653, 233)
-        Me.dgCustomer.TabIndex = 0
+        Me.dgMenu.AllowUserToAddRows = False
+        Me.dgMenu.AllowUserToDeleteRows = False
+        Me.dgMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgMenu.Location = New System.Drawing.Point(37, 70)
+        Me.dgMenu.Name = "dgMenu"
+        Me.dgMenu.ReadOnly = True
+        Me.dgMenu.Size = New System.Drawing.Size(653, 233)
+        Me.dgMenu.TabIndex = 0
         '
         'cmsCustomer
         '
@@ -420,22 +445,6 @@ Partial Class MenuDBForm
         Me.CmsEditCus.Size = New System.Drawing.Size(140, 22)
         Me.CmsEditCus.Text = "Update Data"
         '
-        'txtMenuPrice
-        '
-        Me.txtMenuPrice.Location = New System.Drawing.Point(229, 130)
-        Me.txtMenuPrice.Name = "txtMenuPrice"
-        Me.txtMenuPrice.Size = New System.Drawing.Size(282, 23)
-        Me.txtMenuPrice.TabIndex = 8
-        '
-        'lblMenuID
-        '
-        Me.lblMenuID.AutoSize = True
-        Me.lblMenuID.Location = New System.Drawing.Point(229, 80)
-        Me.lblMenuID.Name = "lblMenuID"
-        Me.lblMenuID.Size = New System.Drawing.Size(61, 16)
-        Me.lblMenuID.TabIndex = 6
-        Me.lblMenuID.Text = "Menu ID"
-        '
         'MenuDBForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -465,7 +474,7 @@ Partial Class MenuDBForm
         Me.Panel3.PerformLayout()
         Me.StatsCus.ResumeLayout(False)
         Me.StatsCus.PerformLayout()
-        CType(Me.dgCustomer, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgMenu, System.ComponentModel.ISupportInitialize).EndInit()
         Me.cmsCustomer.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -482,7 +491,7 @@ Partial Class MenuDBForm
     Friend WithEvents MsName As ToolStripMenuItem
     Friend WithEvents SortByAgeToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents splitCus As SplitContainer
-    Friend WithEvents dgCustomer As DataGridView
+    Friend WithEvents dgMenu As DataGridView
     Friend WithEvents cmsCustomer As ContextMenuStrip
     Friend WithEvents CmsRefresh As ToolStripMenuItem
     Friend WithEvents CmsAddCus As ToolStripMenuItem
