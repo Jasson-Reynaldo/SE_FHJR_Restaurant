@@ -23,6 +23,7 @@
     Private Sub btnAdmin_Click(sender As Object, e As EventArgs) Handles btnAdmin.Click
         Me.Hide()
         LoginAdminForm.Show()
+        MainForm.lblUrName.Text = "Admin"
     End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
@@ -38,27 +39,31 @@
     End Sub
 
     Private Sub btnAdmin_MouseEnter(sender As Object, e As EventArgs) Handles btnAdmin.MouseHover
-        btnAdmin.BackColor = Color.Orange
+        btnAdmin.BackColor = Color.FromArgb(255, 171, 47)
     End Sub
     Private Sub btnAdmin_MouseLeave(sender As Object, e As EventArgs) Handles btnAdmin.MouseLeave
-        btnAdmin.BackColor = Color.Black
+        btnAdmin.BackColor = Color.FromArgb(255, 210, 63)
     End Sub
 
     Private Sub btnCustomer_Click(sender As Object, e As EventArgs) Handles btnCustomer.Click
         Me.Hide()
         MainForm.Show()
+        MainForm.btnTransaction.Enabled = False
+        MainForm.btnFeedBack.Enabled = False
         MainForm.btnTransactionDB.Visible = False
         MainForm.btnOrderDB.Visible = False
         MainForm.btnMenuDB.Visible = False
         MainForm.btnFeedbackDB.Visible = False
+        MainForm.lblUrName.Text = "Customer"
     End Sub
 
     Private Sub btnCustomer_MouseEnter(sender As Object, e As EventArgs) Handles btnCustomer.MouseHover
-        btnCustomer.BackColor = Color.Orange
+        btnCustomer.BackColor = Color.FromArgb(255, 171, 47)
+
     End Sub
 
     Private Sub btnCustomer_MouseLeave(sender As Object, e As EventArgs) Handles btnCustomer.MouseLeave
-        btnCustomer.BackColor = Color.Black
+        btnCustomer.BackColor = Color.FromArgb(255, 210, 63)
     End Sub
 
     Private Sub AuthenForm_MouseMove(sender As Object, e As MouseEventArgs) Handles MyBase.MouseMove

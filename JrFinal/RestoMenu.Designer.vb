@@ -47,7 +47,7 @@ Partial Class RestoMenu
         '
         'Panel1
         '
-        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(36, Byte), Integer), CType(CType(36, Byte), Integer), CType(CType(35, Byte), Integer))
+        Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(63, Byte), Integer))
         Me.Panel1.Controls.Add(Me.Panel3)
         Me.Panel1.Controls.Add(Me.Panel2)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
@@ -58,7 +58,7 @@ Partial Class RestoMenu
         '
         'Panel3
         '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(228, Byte), Integer), CType(CType(182, Byte), Integer), CType(CType(26, Byte), Integer))
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(182, Byte), Integer))
         Me.Panel3.Controls.Add(Me.lblmenutitle)
         Me.Panel3.Location = New System.Drawing.Point(182, 3)
         Me.Panel3.Name = "Panel3"
@@ -70,7 +70,7 @@ Partial Class RestoMenu
         Me.lblmenutitle.AutoSize = True
         Me.lblmenutitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.lblmenutitle.Font = New System.Drawing.Font("Milkshake", 26.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblmenutitle.ForeColor = System.Drawing.Color.White
+        Me.lblmenutitle.ForeColor = System.Drawing.Color.Black
         Me.lblmenutitle.Location = New System.Drawing.Point(117, 6)
         Me.lblmenutitle.Name = "lblmenutitle"
         Me.lblmenutitle.Size = New System.Drawing.Size(171, 53)
@@ -79,7 +79,7 @@ Partial Class RestoMenu
         '
         'Panel2
         '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(228, Byte), Integer), CType(CType(182, Byte), Integer), CType(CType(26, Byte), Integer))
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(182, Byte), Integer))
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(0, 0)
         Me.Panel2.Name = "Panel2"
@@ -134,7 +134,7 @@ Partial Class RestoMenu
         Me.lsMenu.TabIndex = 1
         Me.lsMenu.UseCompatibleStateImageBehavior = False
         '
-        'IceMenu
+        'RestoMenu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -142,7 +142,7 @@ Partial Class RestoMenu
         Me.Controls.Add(Me.lsMenu)
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Name = "IceMenu"
+        Me.Name = "RestoMenu"
         Me.Text = "IceMenu"
         Me.Panel1.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)

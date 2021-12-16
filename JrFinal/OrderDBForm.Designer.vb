@@ -139,38 +139,38 @@ Partial Class OrderDBForm
         '
         Me.MsName.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MsNameAsc, Me.MsNameDesc})
         Me.MsName.Name = "MsName"
-        Me.MsName.Size = New System.Drawing.Size(180, 22)
+        Me.MsName.Size = New System.Drawing.Size(172, 22)
         Me.MsName.Text = "Sort data by Name"
         '
         'MsNameAsc
         '
         Me.MsNameAsc.Name = "MsNameAsc"
-        Me.MsNameAsc.Size = New System.Drawing.Size(180, 22)
+        Me.MsNameAsc.Size = New System.Drawing.Size(136, 22)
         Me.MsNameAsc.Text = "Ascending"
         '
         'MsNameDesc
         '
         Me.MsNameDesc.Name = "MsNameDesc"
-        Me.MsNameDesc.Size = New System.Drawing.Size(180, 22)
+        Me.MsNameDesc.Size = New System.Drawing.Size(136, 22)
         Me.MsNameDesc.Text = "Descending"
         '
         'SortByAgeToolStripMenuItem
         '
         Me.SortByAgeToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MsIdAsc, Me.MsIdDesc})
         Me.SortByAgeToolStripMenuItem.Name = "SortByAgeToolStripMenuItem"
-        Me.SortByAgeToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SortByAgeToolStripMenuItem.Size = New System.Drawing.Size(172, 22)
         Me.SortByAgeToolStripMenuItem.Text = "Sort by ID"
         '
         'MsIdAsc
         '
         Me.MsIdAsc.Name = "MsIdAsc"
-        Me.MsIdAsc.Size = New System.Drawing.Size(180, 22)
+        Me.MsIdAsc.Size = New System.Drawing.Size(136, 22)
         Me.MsIdAsc.Text = "Ascending"
         '
         'MsIdDesc
         '
         Me.MsIdDesc.Name = "MsIdDesc"
-        Me.MsIdDesc.Size = New System.Drawing.Size(180, 22)
+        Me.MsIdDesc.Size = New System.Drawing.Size(136, 22)
         Me.MsIdDesc.Text = "Descending"
         '
         'pnlMainData
@@ -197,6 +197,7 @@ Partial Class OrderDBForm
         'splitCus.Panel2
         '
         Me.splitCus.Panel2.AutoScroll = True
+        Me.splitCus.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(182, Byte), Integer))
         Me.splitCus.Panel2.Controls.Add(Me.Panel3)
         Me.splitCus.Panel2.Controls.Add(Me.StatsCus)
         Me.splitCus.Panel2.Controls.Add(Me.dgOrder)
@@ -206,6 +207,7 @@ Partial Class OrderDBForm
         '
         'Panel2
         '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(253, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(182, Byte), Integer))
         Me.Panel2.Controls.Add(Me.txtMenuID)
         Me.Panel2.Controls.Add(Me.lblOrderID)
         Me.Panel2.Controls.Add(Me.txtOrderQty)
@@ -238,6 +240,8 @@ Partial Class OrderDBForm
         'lblOrderID
         '
         Me.lblOrderID.AutoSize = True
+        Me.lblOrderID.BackColor = System.Drawing.Color.Transparent
+        Me.lblOrderID.ForeColor = System.Drawing.Color.Black
         Me.lblOrderID.Location = New System.Drawing.Point(229, 80)
         Me.lblOrderID.Name = "lblOrderID"
         Me.lblOrderID.Size = New System.Drawing.Size(62, 17)
@@ -254,7 +258,9 @@ Partial Class OrderDBForm
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
+        Me.Label1.ForeColor = System.Drawing.Color.Black
         Me.Label1.Location = New System.Drawing.Point(105, 45)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(102, 17)
@@ -291,6 +297,8 @@ Partial Class OrderDBForm
         'Label9
         '
         Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.Transparent
+        Me.Label9.ForeColor = System.Drawing.Color.Black
         Me.Label9.Location = New System.Drawing.Point(417, 23)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(44, 17)
@@ -300,6 +308,8 @@ Partial Class OrderDBForm
         'lblTotalMenu
         '
         Me.lblTotalMenu.AutoSize = True
+        Me.lblTotalMenu.BackColor = System.Drawing.Color.Transparent
+        Me.lblTotalMenu.ForeColor = System.Drawing.Color.Black
         Me.lblTotalMenu.Location = New System.Drawing.Point(96, 3)
         Me.lblTotalMenu.Name = "lblTotalMenu"
         Me.lblTotalMenu.Size = New System.Drawing.Size(117, 17)
@@ -309,6 +319,8 @@ Partial Class OrderDBForm
         'Label8
         '
         Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.ForeColor = System.Drawing.Color.Black
         Me.Label8.Location = New System.Drawing.Point(258, 23)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(75, 17)
@@ -318,6 +330,8 @@ Partial Class OrderDBForm
         'LabelTotal
         '
         Me.LabelTotal.AutoSize = True
+        Me.LabelTotal.BackColor = System.Drawing.Color.Transparent
+        Me.LabelTotal.ForeColor = System.Drawing.Color.Black
         Me.LabelTotal.Location = New System.Drawing.Point(3, 3)
         Me.LabelTotal.Name = "LabelTotal"
         Me.LabelTotal.Size = New System.Drawing.Size(96, 17)
@@ -327,8 +341,9 @@ Partial Class OrderDBForm
         'Label4
         '
         Me.Label4.AutoSize = True
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.ForeColor = System.Drawing.Color.Black
         Me.Label4.Location = New System.Drawing.Point(132, 132)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(75, 17)
@@ -338,8 +353,9 @@ Partial Class OrderDBForm
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.ForeColor = System.Drawing.Color.Black
         Me.Label3.Location = New System.Drawing.Point(144, 106)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(64, 17)
@@ -349,8 +365,9 @@ Partial Class OrderDBForm
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.0!)
-        Me.Label2.ForeColor = System.Drawing.Color.White
+        Me.Label2.ForeColor = System.Drawing.Color.Black
         Me.Label2.Location = New System.Drawing.Point(142, 80)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(66, 17)
@@ -359,7 +376,7 @@ Partial Class OrderDBForm
         '
         'Panel3
         '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(228, Byte), Integer), CType(CType(182, Byte), Integer), CType(CType(26, Byte), Integer))
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(63, Byte), Integer))
         Me.Panel3.Controls.Add(Me.lblmenutitle)
         Me.Panel3.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel3.Location = New System.Drawing.Point(0, 0)
@@ -370,12 +387,13 @@ Partial Class OrderDBForm
         'lblmenutitle
         '
         Me.lblmenutitle.AutoSize = True
+        Me.lblmenutitle.BackColor = System.Drawing.Color.Transparent
         Me.lblmenutitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.lblmenutitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.lblmenutitle.ForeColor = System.Drawing.Color.White
+        Me.lblmenutitle.Font = New System.Drawing.Font("Milkshake", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblmenutitle.ForeColor = System.Drawing.Color.Black
         Me.lblmenutitle.Location = New System.Drawing.Point(281, 0)
         Me.lblmenutitle.Name = "lblmenutitle"
-        Me.lblmenutitle.Size = New System.Drawing.Size(191, 29)
+        Me.lblmenutitle.Size = New System.Drawing.Size(191, 37)
         Me.lblmenutitle.TabIndex = 1
         Me.lblmenutitle.Text = "All Orders Data"
         '

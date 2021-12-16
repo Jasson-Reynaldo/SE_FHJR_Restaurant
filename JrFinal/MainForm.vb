@@ -43,14 +43,10 @@ Public Class MainForm
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Me.Close()
-        LoadingForm.Close()
         AuthenForm.Show()
     End Sub
     Sub logout()
         Me.Close()
-        LoginForm.Show()
-        LoadingForm.progBar.Value = 0
-        LoadingForm.loadTime.Enabled = True
     End Sub
 
     Private Sub btnMenu_Click(sender As Object, e As EventArgs) Handles btnMenu.Click
@@ -85,11 +81,15 @@ Public Class MainForm
         switchPanel(HomeForm)
     End Sub
 
-    Private Sub btnHome_Click(sender As Object, e As EventArgs) Handles btnHome.Click
+    Private Sub btnHome_Click(sender As Object, e As EventArgs)
         switchPanel(HomeForm)
     End Sub
 
     Private Sub btnFeedbackDB_Click(sender As Object, e As EventArgs) Handles btnFeedbackDB.Click
         switchPanel(FeedBackDBForm)
+    End Sub
+
+    Private Sub pbHomeLogo_Click(sender As Object, e As EventArgs) Handles pbHomeLogo.Click
+        switchPanel(HomeForm)
     End Sub
 End Class

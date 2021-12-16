@@ -1,35 +1,25 @@
 ﻿Imports System.Data.SqlClient
 Module ModuleDbConnect
-    Public DBicecream As New SqlConnection
-    Public CMDiceJr As New SqlCommand
-    Public DTRiceJr As SqlDataReader
+    Public DBresto As New SqlConnection
+    Public CMDresto As New SqlCommand
+    Public DTRresto As SqlDataReader
 
-    Public AdptEmployee As New SqlDataAdapter
-    Public TblEmployeeData As New DataTable
+    Public AdptMenu As New SqlDataAdapter
+    Public TblMenu As New DataTable
 
-    Public AdptCustomer As New SqlDataAdapter
-    Public TblCustomer As New DataTable
+    Public AdptOrders As New SqlDataAdapter
+    Public TblOrders As New DataTable
 
-    Public AdptIceCream As New SqlDataAdapter
-    Public TblIceCream As New DataTable
+    Public AdptTransactions As New SqlDataAdapter
+    Public TblTransactions As New DataTable
 
-    Public AdptTopping As New SqlDataAdapter
-    Public TblTopping As New DataTable
-
-    Public AdptFlavor As New SqlDataAdapter
-    Public TblFlavor As New DataTable
-
-    Public AdptOrder As New SqlDataAdapter
-    Public TblOrder As New DataTable
-
-    Public AdptLineOrder As New SqlDataAdapter
-    Public TblLineOrder As New DataTable
-
+    Public AdptFeedback As New SqlDataAdapter
+    Public TblFeedback As New DataTable
 
     Sub DB_Connect()
-        DBicecream = New SqlConnection("server=DESKTOP-PRT29ON; database=IceCreamShopDB; trusted_connection=true")
-        If DBicecream.State = ConnectionState.Closed Then
-            DBicecream.Open()
+        DBresto = New SqlConnection("server=DESKTOP-PRT29ON; database=RestoDB; trusted_connection=true")
+        If DBresto.State = ConnectionState.Closed Then
+            DBresto.Open()
         End If
     End Sub
 End Module

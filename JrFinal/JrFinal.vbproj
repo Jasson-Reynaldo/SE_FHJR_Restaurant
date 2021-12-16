@@ -79,42 +79,6 @@
     <Compile Include="AuthenForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BlankForm.Designer.vb">
-      <DependentUpon>BlankForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="BlankForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CustomerDataForm.Designer.vb">
-      <DependentUpon>CustomerDataForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="CustomerDataForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Assets.Designer.vb">
-      <DependentUpon>Assets.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Assets.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CVHolderForm.Designer.vb">
-      <DependentUpon>CVHolderForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="CVHolderForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DummyForm.Designer.vb">
-      <DependentUpon>DummyForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="DummyForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EmployeeData.Designer.vb">
-      <DependentUpon>EmployeeData.vb</DependentUpon>
-    </Compile>
-    <Compile Include="EmployeeData.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="FeedBackDBForm.Designer.vb">
       <DependentUpon>FeedBackDBForm.vb</DependentUpon>
     </Compile>
@@ -127,22 +91,10 @@
     <Compile Include="feedbackForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FlavorData.Designer.vb">
-      <DependentUpon>FlavorData.vb</DependentUpon>
-    </Compile>
-    <Compile Include="FlavorData.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="HomeForm.Designer.vb">
       <DependentUpon>HomeForm.vb</DependentUpon>
     </Compile>
     <Compile Include="HomeForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="IceCreamData.Designer.vb">
-      <DependentUpon>IceCreamData.vb</DependentUpon>
-    </Compile>
-    <Compile Include="IceCreamData.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MenuDBForm.Designer.vb">
@@ -175,41 +127,10 @@
     <Compile Include="LoginAdminForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="OrderStatusForm.Designer.vb">
-      <DependentUpon>OrderStatusForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="OrderStatusForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DataAnalyzingForm.Designer.vb">
-      <DependentUpon>DataAnalyzingForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="DataAnalyzingForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="OrderFormSS.Designer.vb">
-      <DependentUpon>OrderFormSS.vb</DependentUpon>
-    </Compile>
-    <Compile Include="OrderFormSS.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="MainForm.Designer.vb">
       <DependentUpon>MainForm.vb</DependentUpon>
     </Compile>
     <Compile Include="MainForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoadingForm.Designer.vb">
-      <DependentUpon>LoadingForm.vb</DependentUpon>
-    </Compile>
-    <Compile Include="LoadingForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginForm.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LoginForm.Designer.vb">
-      <DependentUpon>LoginForm.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ModuleDbConnect.vb" />
@@ -229,12 +150,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ToppingData.Designer.vb">
-      <DependentUpon>ToppingData.vb</DependentUpon>
-    </Compile>
-    <Compile Include="ToppingData.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="TransactionDBForm.Designer.vb">
       <DependentUpon>TransactionDBForm.vb</DependentUpon>
     </Compile>
@@ -247,34 +162,10 @@
     <Compile Include="TransactionForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Transactions Data.Designer.vb">
-      <DependentUpon>Transactions Data.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Transactions Data.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AuthenForm.resx">
       <DependentUpon>AuthenForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="BlankForm.resx">
-      <DependentUpon>BlankForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CustomerDataForm.resx">
-      <DependentUpon>CustomerDataForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Assets.resx">
-      <DependentUpon>Assets.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CVHolderForm.resx">
-      <DependentUpon>CVHolderForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DummyForm.resx">
-      <DependentUpon>DummyForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EmployeeData.resx">
-      <DependentUpon>EmployeeData.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FeedBackDBForm.resx">
       <DependentUpon>FeedBackDBForm.vb</DependentUpon>
@@ -282,14 +173,8 @@
     <EmbeddedResource Include="feedbackForm.resx">
       <DependentUpon>feedbackForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FlavorData.resx">
-      <DependentUpon>FlavorData.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="HomeForm.resx">
       <DependentUpon>HomeForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="IceCreamData.resx">
-      <DependentUpon>IceCreamData.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuDBForm.resx">
       <DependentUpon>MenuDBForm.vb</DependentUpon>
@@ -306,21 +191,6 @@
     <EmbeddedResource Include="LoginAdminForm.resx">
       <DependentUpon>LoginAdminForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="OrderStatusForm.resx">
-      <DependentUpon>OrderStatusForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DataAnalyzingForm.resx">
-      <DependentUpon>DataAnalyzingForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OrderFormSS.resx">
-      <DependentUpon>OrderFormSS.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LoadingForm.resx">
-      <DependentUpon>LoadingForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
-      <DependentUpon>LoginForm.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.vb</DependentUpon>
     </EmbeddedResource>
@@ -330,17 +200,11 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="ToppingData.resx">
-      <DependentUpon>ToppingData.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="TransactionDBForm.resx">
       <DependentUpon>TransactionDBForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TransactionForm.resx">
       <DependentUpon>TransactionForm.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Transactions Data.resx">
-      <DependentUpon>Transactions Data.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

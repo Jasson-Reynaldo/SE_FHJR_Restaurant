@@ -44,6 +44,6 @@
 
     Private Sub btnClaimOrder_Click(sender As Object, e As EventArgs) Handles btnClaimOrder.Click
         Me.Hide()
-        TransactionForm.Show()
+        MainForm.switchPanel(TransactionForm)
     End Sub
 End Class
