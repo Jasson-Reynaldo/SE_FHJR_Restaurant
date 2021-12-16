@@ -251,7 +251,7 @@ Partial Class MenuDBForm
         'btnConfirmation
         '
         Me.btnConfirmation.ForeColor = System.Drawing.Color.Black
-        Me.btnConfirmation.Location = New System.Drawing.Point(585, 80)
+        Me.btnConfirmation.Location = New System.Drawing.Point(591, 80)
         Me.btnConfirmation.Name = "btnConfirmation"
         Me.btnConfirmation.Size = New System.Drawing.Size(75, 75)
         Me.btnConfirmation.TabIndex = 7

@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+
 Public Class MenuDBForm
     Dim CusGend, sortCategory As String
     Sub totalMenu()
@@ -8,6 +9,8 @@ Public Class MenuDBForm
         Dim totalmenu As Integer = Convert.ToInt16(CMDresto.ExecuteScalar())
         lblTotalMenu.Text = totalmenu.ToString
     End Sub
+
+
 
     Sub ShowData()
         AdptMenu = New SqlDataAdapter("SELECT * from Menu", DBresto)
