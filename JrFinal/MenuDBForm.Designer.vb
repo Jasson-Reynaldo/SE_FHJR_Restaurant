@@ -262,7 +262,7 @@ Partial Class MenuDBForm
         '
         Me.cmbSearchChoice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbSearchChoice.FormattingEnabled = True
-        Me.cmbSearchChoice.Items.AddRange(New Object() {"CUS_ID", "CUS_NAME", "CUS_EMAIL", "CUS_GENDER", "CUS_PHONE"})
+        Me.cmbSearchChoice.Items.AddRange(New Object() {"Menu_ID", "Menu_Name", "Menu_Price"})
         Me.cmbSearchChoice.Location = New System.Drawing.Point(232, 42)
         Me.cmbSearchChoice.Name = "cmbSearchChoice"
         Me.cmbSearchChoice.Size = New System.Drawing.Size(121, 23)

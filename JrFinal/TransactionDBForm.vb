@@ -61,8 +61,9 @@ Public Class TransactionDBForm
             propercode = "T" + Microsoft.VisualBasic.Right("000" & countcode, 4)
         End If
         lblTransID.Text = propercode
+        DTRresto.Close()
 
-        CMDresto = New SqlCommand("SELECT * FROM Order WHERE Order_ID IN (SELECT MAX(Order_ID) FROM Order)", DBresto)
+        CMDresto = New SqlCommand("SELECT * FROM Transactions WHERE Order_ID IN (SELECT MAX(Order_ID) FROM Transactions)", DBresto)
         DTRresto = CMDresto.ExecuteReader
         DTRresto.Read()
         If Not DTRresto.HasRows Then
@@ -80,7 +81,9 @@ Public Class TransactionDBForm
     Sub Addingdata()
         CMDresto = New SqlCommand("insert into Transactions " &
                    " values (
-                           '" & lblTransID.Text & "',", DBresto)
+                           '" & lblTransID.Text & "'," &
+                           "'" & lblOrderID.Text & "'," &
+                           "'" & txtTransTotal.Text & "')", DBresto)
 
         CMDresto.ExecuteNonQuery()
         MsgBox("Succesfull Adding data!")
@@ -92,8 +95,9 @@ Public Class TransactionDBForm
     Sub Updatingdata()
         CMDresto = New SqlCommand("UPDATE Transactions set " &
                     "Trans_ID ='" & lblTransID.Text & "'," &
-                    "Order_ID ='" & lblOrderID.Text & "'", DBresto)
-        CMDresto.ExecuteNonQuery()
+                    "Order_ID ='" & lblOrderID.Text & "'," &
+                    "Trans_Total ='" & txtTransTotal.Text & "' where " &
+                    "Order_ID ='" & lblOrderID.Text & "' AND Trans_ID ='" & lblTransID.Text & "'", DBresto)
         MsgBox("Succesfull Editting data!")
         lblStats.Text = "Data Updated!"
         ShowData()
@@ -139,9 +143,8 @@ Public Class TransactionDBForm
         Dim cusrow = dgTransactions.CurrentRow.Index
         With dgTransactions
             lblTransID.Text = .Item(0, cusrow).Value
-            .Text = .Item(1, cusrow).Value
             lblOrderID.Text = .Item(1, cusrow).Value
-            .Text = .Item(1, cusrow).Value
+            txtTransTotal.Text = .Item(2, cusrow).Value
         End With
     End Sub
 
@@ -238,5 +241,9 @@ Public Class TransactionDBForm
     Private Sub MsNameDesc_Click(sender As Object, e As EventArgs) Handles MsNameDesc.Click
         sortCategory = "Order_ID"
         SortingDataDESC()
+    End Sub
+
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+
     End Sub
 End Class

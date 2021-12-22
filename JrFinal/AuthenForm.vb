@@ -23,6 +23,8 @@
     Private Sub btnAdmin_Click(sender As Object, e As EventArgs) Handles btnAdmin.Click
         Me.Hide()
         LoginAdminForm.Show()
+        MainForm.btnTransaction.Enabled = False
+        MainForm.btnFeedBack.Enabled = False
         MainForm.lblUrName.Text = "Admin"
     End Sub
 

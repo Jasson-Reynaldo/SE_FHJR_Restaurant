@@ -61,7 +61,7 @@ Public Class MenuDBForm
             propercode = "M" + "0001"
         Else
             countcode = Microsoft.VisualBasic.Right(DTRresto.GetString(0), 3) + 1
-            propercode = "M" + Microsoft.VisualBasic.Right("000" & countcode, 3)
+            propercode = "M" + Microsoft.VisualBasic.Right("000" & countcode, 4)
         End If
         lblMenuID.Text = propercode
         txtMenuName.Focus()
@@ -84,8 +84,8 @@ Public Class MenuDBForm
     Sub Updatingdata()
         CMDresto = New SqlCommand("UPDATE Menu set " &
                     "Menu_ID ='" & lblMenuID.Text & "'," &
-                    "Menu_NAME ='" & txtMenuName.Text & "'" &
-                    "Menu_PRICE = '" & txtMenuPrice.Text & "," & "' Where " &
+                    "Menu_NAME ='" & txtMenuName.Text & "'," &
+                    "Menu_PRICE = '" & txtMenuPrice.Text & "'" & " Where " &
                     "Menu_ID = '" & lblMenuID.Text & "'", DBresto)
         CMDresto.ExecuteNonQuery()
         MsgBox("Succesfull Editting data!")
@@ -114,7 +114,7 @@ Public Class MenuDBForm
         DTRresto.Close()
     End Sub
     Sub Deletingdata()
-        CMDresto = New SqlCommand(" DELETE from Menu where Menu_ID ='" & dgMenu.SelectedCells(0).Value & "'", DBresto)
+        CMDresto = New SqlCommand(" DELETE from Menu where Menu_ID ='" & lblMenuID.Text & "'", DBresto)
         CMDresto.ExecuteNonQuery()
         ShowData()
         MsgBox("Succesfull Deleting data!")
@@ -134,6 +134,7 @@ Public Class MenuDBForm
         With dgMenu
             lblMenuID.Text = .Item(0, cusrow).Value
             txtMenuName.Text = .Item(1, cusrow).Value
+            txtMenuPrice.Text = .Item(2, cusrow).Value
         End With
     End Sub
 

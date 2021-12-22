@@ -1,0 +1,28 @@
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\bin\Debug\Interop.AcroPDFLib.dll
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\bin\Debug\AxInterop.AcroPDFLib.dll
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\Interop.AcroPDFLib.dll
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\AxInterop.AcroPDFLib.dll
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\Delicioso Restaurant.vbproj.ResolveComReference.cache
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.AuthenForm.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.FeedBackDBForm.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.feedbackForm.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.HomeForm.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.MenuDBForm.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.OrderDBForm.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.RestoMenu.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.OrderForm.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.LoginAdminForm.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.MainForm.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.Resources.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.TransactionDBForm.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\JrFinal.TransactionForm.resources
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\Delicioso Restaurant.vbproj.GenerateResource.cache
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\Delicioso Restaurant.vbproj.CoreCompileInputs.cache
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\bin\Debug\Delicioso Restaurant.exe.config
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\bin\Debug\Delicioso Restaurant.exe
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\bin\Debug\Delicioso Restaurant.pdb
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\bin\Debug\Delicioso Restaurant.xml
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\Delicioso Restaurant.exe
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\Delicioso Restaurant.xml
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\Delicioso Restaurant.pdb
+D:\Semester 7\SE\SE_FHJR_Restaurant\JrFinal\obj\Debug\Delicioso Restaurant.vbprojAssemblyReference.cache

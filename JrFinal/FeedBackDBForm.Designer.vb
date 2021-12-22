@@ -107,25 +107,25 @@ Partial Class FeedBackDBForm
         'msRefresh
         '
         Me.msRefresh.Name = "msRefresh"
-        Me.msRefresh.Size = New System.Drawing.Size(180, 22)
+        Me.msRefresh.Size = New System.Drawing.Size(140, 22)
         Me.msRefresh.Text = "Refresh Data"
         '
         'MsInsertFeed
         '
         Me.MsInsertFeed.Name = "MsInsertFeed"
-        Me.MsInsertFeed.Size = New System.Drawing.Size(180, 22)
+        Me.MsInsertFeed.Size = New System.Drawing.Size(140, 22)
         Me.MsInsertFeed.Text = "Insert Data"
         '
         'MsEditFeed
         '
         Me.MsEditFeed.Name = "MsEditFeed"
-        Me.MsEditFeed.Size = New System.Drawing.Size(180, 22)
+        Me.MsEditFeed.Size = New System.Drawing.Size(140, 22)
         Me.MsEditFeed.Text = "Update Data"
         '
         'MsDeleteFeed
         '
         Me.MsDeleteFeed.Name = "MsDeleteFeed"
-        Me.MsDeleteFeed.Size = New System.Drawing.Size(180, 22)
+        Me.MsDeleteFeed.Size = New System.Drawing.Size(140, 22)
         Me.MsDeleteFeed.Text = "Delete Data"
         '
         'ToolsToolStripMenuItem
@@ -272,7 +272,7 @@ Partial Class FeedBackDBForm
         '
         Me.cmbSearchChoice.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbSearchChoice.FormattingEnabled = True
-        Me.cmbSearchChoice.Items.AddRange(New Object() {"CUS_ID", "CUS_NAME", "CUS_EMAIL", "CUS_GENDER", "CUS_PHONE"})
+        Me.cmbSearchChoice.Items.AddRange(New Object() {"Feed_ID", "Feed_Detail", "Trans_ID"})
         Me.cmbSearchChoice.Location = New System.Drawing.Point(232, 42)
         Me.cmbSearchChoice.Name = "cmbSearchChoice"
         Me.cmbSearchChoice.Size = New System.Drawing.Size(121, 23)

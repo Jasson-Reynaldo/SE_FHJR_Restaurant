@@ -82,7 +82,7 @@ Public Class OrderDBForm
         CMDresto = New SqlCommand("UPDATE Orders set " &
                     "Order_ID ='" & lblOrderID.Text & "'," &
                     "Menu_ID ='" & txtMenuID.Text & "'," &
-                    "Order_Qty ='" & txtOrderQty.Text & "' where " &
+                    "Order_Qty ='" & txtOrderQty.Text & "'" & " where " &
                     "Order_ID ='" & lblOrderID.Text & "' AND Menu_ID ='" & txtMenuID.Text & "'", DBresto)
         CMDresto.ExecuteNonQuery()
         MsgBox("Succesfull Editting data!")

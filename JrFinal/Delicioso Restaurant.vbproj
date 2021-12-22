@@ -6,11 +6,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{A5E38FE2-BDF0-4FC0-9849-2C58A40DD44F}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>JrFinal.My.MyApplication</StartupObject>
+    <StartupObject>JrFinal.AuthenForm</StartupObject>
     <RootNamespace>JrFinal</RootNamespace>
-    <AssemblyName>JrFinal</AssemblyName>
+    <AssemblyName>Delicioso Restaurant</AssemblyName>
     <FileAlignment>512</FileAlignment>
-    <MyType>WindowsForms</MyType>
+    <MyType>WindowsFormsWithCustomSubMain</MyType>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
@@ -22,7 +22,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>JrFinal.xml</DocumentationFile>
+    <DocumentationFile>Delicioso Restaurant.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -32,7 +32,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>JrFinal.xml</DocumentationFile>
+    <DocumentationFile>Delicioso Restaurant.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>

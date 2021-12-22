@@ -8,4 +8,5 @@
         homeTime.Start()
         lblTime.Text = DateTime.Now.ToLongDateString
     End Sub
+
 End Class

@@ -51,36 +51,40 @@ Public Class FeedBackDBForm
         btnConfirmation.Text = "Confirm Input"
         Dim propercode, propercode1 As String
         Dim countcode, countcode1 As Long
-        CMDresto = New SqlCommand("SELECT * FROM Feedback WHERE CUS_ID IN (SELECT MAX(Feed_ID) FROM Feedback)", DBresto)
+        CMDresto = New SqlCommand("SELECT * FROM Feedback WHERE Feed_ID IN (SELECT MAX(Feed_ID) FROM Feedback)", DBresto)
         DTRresto = CMDresto.ExecuteReader
         DTRresto.Read()
         If Not DTRresto.HasRows Then
             propercode = "F" + "0001"
         Else
-            countcode = Microsoft.VisualBasic.Right(DTRresto.GetString(0), 7) + 1
-            propercode = "F" + Microsoft.VisualBasic.Right("000" & countcode, 7)
+            countcode = Microsoft.VisualBasic.Right(DTRresto.GetString(0), 4) + 1
+            propercode = "F" + Microsoft.VisualBasic.Right("000" & countcode, 4)
         End If
         lblFeedID.Text = propercode
+        DTRresto.Close()
 
         CMDresto = New SqlCommand("SELECT * FROM Transactions WHERE Trans_ID IN (SELECT MAX(Trans_ID) FROM Transactions)", DBresto)
         DTRresto = CMDresto.ExecuteReader
         DTRresto.Read()
 
+
         If Not DTRresto.HasRows Then
-                propercode = "T" + "0001"
-            Else
+            propercode = "T" + "0001"
+        Else
             countcode1 = Microsoft.VisualBasic.Right(DTRresto.GetString(0), 4) + 1
             propercode1 = "T" + Microsoft.VisualBasic.Right("000" & countcode1, 4)
         End If
-            lblTransactionID.Text = propercode1
+        lblTransactionID.Text = propercode1
 
-            DTRresto.Close()
+        DTRresto.Close()
     End Sub
 
     Sub Addingdata()
         CMDresto = New SqlCommand("insert into Customer " &
                    " values (
-                           '" & lblFeedID.Text & "',", DBresto)
+                           '" & lblFeedID.Text & "'," &
+                           "'" & lblTransactionID.Text & "'," &
+                           "'" & txtFeedDetail.Text & "')", DBresto)
 
         CMDresto.ExecuteNonQuery()
         MsgBox("Succesfull Adding data!")
@@ -90,9 +94,10 @@ Public Class FeedBackDBForm
     End Sub
 
     Sub Updatingdata()
-        CMDresto = New SqlCommand("UPDATE Customer set " &
+        CMDresto = New SqlCommand("UPDATE Feedback set " &
                     "Feed_ID ='" & lblFeedID.Text & "'," &
-                    "Trans_ID ='" & lblTransactionID.Text & "'", DBresto)
+                    "Trans_ID ='" & lblTransactionID.Text & "'" & " where " &
+                    "Feed_ID ='" & lblFeedID.Text & "' AND Trans_ID ='" & lblTransactionID.Text & "'", DBresto)
         CMDresto.ExecuteNonQuery()
         MsgBox("Succesfull Editting data!")
         lblStats.Text = "Data Updated!"
@@ -139,9 +144,8 @@ Public Class FeedBackDBForm
         Dim cusrow = dgFeedback.CurrentRow.Index
         With dgFeedback
             lblFeedID.Text = .Item(0, cusrow).Value
-            .Text = .Item(1, cusrow).Value
             lblTransactionID.Text = .Item(2, cusrow).Value
-            .Text = .Item(1, cusrow).Value
+            txtFeedDetail.Text = .Item(1, cusrow).Value
         End With
     End Sub
 

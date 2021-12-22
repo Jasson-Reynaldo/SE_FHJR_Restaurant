@@ -24,8 +24,8 @@ Partial Class feedbackForm
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.btnSubmitFB = New System.Windows.Forms.Button()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -49,14 +49,6 @@ Partial Class feedbackForm
         Me.Panel1.Size = New System.Drawing.Size(613, 380)
         Me.Panel1.TabIndex = 1
         '
-        'RichTextBox1
-        '
-        Me.RichTextBox1.Location = New System.Drawing.Point(34, 78)
-        Me.RichTextBox1.Name = "RichTextBox1"
-        Me.RichTextBox1.Size = New System.Drawing.Size(550, 274)
-        Me.RichTextBox1.TabIndex = 2
-        Me.RichTextBox1.Text = ""
-        '
         'btnSubmitFB
         '
         Me.btnSubmitFB.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(210, Byte), Integer), CType(CType(63, Byte), Integer))
@@ -68,6 +60,14 @@ Partial Class feedbackForm
         Me.btnSubmitFB.TabIndex = 2
         Me.btnSubmitFB.Text = "Submit Feedback"
         Me.btnSubmitFB.UseVisualStyleBackColor = False
+        '
+        'RichTextBox1
+        '
+        Me.RichTextBox1.Location = New System.Drawing.Point(34, 78)
+        Me.RichTextBox1.Name = "RichTextBox1"
+        Me.RichTextBox1.Size = New System.Drawing.Size(550, 274)
+        Me.RichTextBox1.TabIndex = 2
+        Me.RichTextBox1.Text = ""
         '
         'feedbackForm
         '
@@ -90,6 +90,6 @@ Partial Class feedbackForm
 
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents btnSubmitFB As Button
+    Friend WithEvents RichTextBox1 As RichTextBox
 End Class
